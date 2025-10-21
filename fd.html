@@ -1,0 +1,2182 @@
+<header>
+  <div class="logo">WF</div>
+  <div class="logo-title">
+    <h1>WasteFlow — Documentation mécanique</h1>
+    <p class="lead">Système de convoyeur intelligent — Tekbot Robotics Challenge 2025</p>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="hero-content">
+    <h1>WasteFlow</h1>
+    <p><strong><i>Triez intelligemment, assemblez facilement.</i></strong><br><br> Un convoyeur modulaire 3D qui
+      détecte, trie
+      et oriente automatiquement vos pièces pour le Tekbot Robotics Challenge 2025.</p>
+    <a href="#contexte-objectifs" class="cta-btn">Découvrir le projet</a>
+  </div>
+</div>
+
+<main>
+  <section id="contexte-objectifs"
+    style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 24px; margin-bottom: 64px;">
+    <div style="flex: 1 1 700px; min-width: 300px;">
+      <h2>Section 1 — Contexte & objectifs</h2>
+
+      <p>
+        Dans le cadre du Tekbot Robotics Challenge 2025, une entreprise innovante souhaite déployer un convoyeur
+        intelligent pour automatiser le tri de déchets sous forme de cubes colorés (vert, jaune, rouge, bleu). Ce
+        projet multidisciplinaire mobilise trois équipes : électronique, informatique et mécanique, qui doivent
+        collaborer étroitement pour concevoir un système complet et fonctionnel.
+      </p>
+
+      <p>Le système doit détecter la présence des déchets, les identifier par couleur et les orienter vers la benne
+        adéquate, avec un suivi en temps réel via une interface web intuitive.</p>
+
+      <p>
+        La mécanique est responsable de la conception de la structure physique du convoyeur. Elle doit garantir la
+        robustesse, la stabilité, la précision des déplacements, ainsi que la modularité pour faciliter l’assemblage,
+        la maintenance et les évolutions futures du système. Le design mécanique doit aussi prendre en compte les
+        contraintes liées à l’intégration des composants électroniques et à l’impression 3D.
+      </p>
+
+      <p><strong>Les objectifs mécaniques principaux sont :</strong></p>
+      <ul style="list-style-type: disc; padding-left: 20px; line-height: 1.6;">
+        <li style="margin-bottom: 0.4em;">respecter les dimensions du convoyeur (650 mm de long, 100 mm de haut) pour
+          une intégration optimale</li>
+        <li style="margin-bottom: 0.4em;">garantir la compatibilité avec les composants électroniques et
+          l’alimentation par batterie lithium</li>
+        <li style="margin-bottom: 0.4em;">concevoir une structure modulaire, robuste et imprimable en 3D</li>
+        <li style="margin-bottom: 0.4em;">documenter rigoureusement chaque étape de la conception mécanique pour
+          assurer traçabilité et réutilisabilité</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="analyse-besoins-contrainte" style="margin-bottom: 64px;">
+    <h2>Section 2 — Analyse des besoins et contraintes mécaniques</h2>
+
+    <article id="collaboration-reunions" style="margin-bottom: 32px;">
+      <h3>2.1 Collaboration et réunions stratégiques</h3>
+      <p>
+        Avant de débuter la conception mécanique du convoyeur WasteFlow, plusieurs réunions stratégiques ont été
+        organisées, réunissant les équipes électronique, informatique et mécanique. Ces échanges collaboratifs ont été
+        essentiels pour garantir une vision commune et une compréhension approfondie des besoins et contraintes
+        propres à chaque discipline.
+      </p>
+      <p>
+        Durant ces ateliers, chaque équipe a pu exposer ses attentes, ses exigences techniques, ainsi que les
+        limitations liées à ses composants et méthodes. La mécanique, par exemple, a présenté les spécificités liées à
+        l’impression 3D, la robustesse structurelle et la modularité du système. Les échanges ont également porté sur
+        la compatibilité des interfaces physiques, la gestion des câblages, et les accès nécessaires pour la
+        maintenance.
+      </p>
+      <p>
+        Ces réunions ont permis de mettre en lumière les points critiques d’intégration, d’anticiper les difficultés
+        potentielles, et d’aligner les priorités pour le développement. Un cadre commun a été défini afin d’assurer la
+        cohérence des choix techniques et faciliter la collaboration continue tout au long du projet.
+      </p>
+      <p>Les principaux objectifs de ces échanges étaient :</p>
+      <ul style="line-height: 1.6; margin-top: 1em;">
+        <li>partager les attentes et contraintes spécifiques à chaque équipe,</li>
+        <li>identifier les interfaces critiques et points d’intégration,</li>
+        <li>définir un cadre commun de conception et validation,</li>
+        <li>prioriser les exigences fonctionnelles et techniques,</li>
+        <li>assurer une coordination globale et un suivi régulier du projet.</li>
+      </ul>
+      <p>
+        Cette approche collaborative a posé les bases solides nécessaires à la réussite du développement du convoyeur
+        WasteFlow, en garantissant que les solutions mécaniques soient pleinement compatibles avec les contraintes
+        électroniques et informatiques.
+      </p>
+    </article>
+
+
+    <article id="analyse-fonctionnelle-graphique" style="margin-bottom: 32px;">
+      <h3>2.2 Analyse fonctionnelle graphique</h3>
+      <p>
+        L’analyse fonctionnelle graphique permet de visualiser les interactions entre le système mécanique du
+        convoyeur WasteFlow et son environnement, ainsi que les interfaces avec les autres disciplines. Le diagramme
+        de pieuvre ci-dessous synthétise les principales fonctions contraintes et échanges, en mettant en évidence les
+        flux d’énergie, d’information et de matière.
+      </p>
+      <p>
+        Ce diagramme facilite la compréhension globale des exigences mécaniques, tout en servant de base pour affiner
+        la conception et identifier les points d’attention majeurs.
+      </p>
+
+      <!-- Exemple simple de diagramme de pieuvre inséré ici -->
+      <figure style="text-align:center; margin-top: 1em;">
+        <img src="assets/imgs/diagram.png" alt="Diagramme de pieuvre du convoyeur WasteFlow"
+          style="max-width: 100%; height: auto; border: 1px solid #ccc; padding: 8px;">
+        <figcaption style="font-size: 0.9em; color: #666; margin-top: 0.5em;">
+          Diagramme de pieuvre simplifié illustrant les interactions principales du convoyeur WasteFlow.
+        </figcaption>
+      </figure>
+
+    </article>
+
+
+    <article id="contraintes-generales" style="margin-bottom: 48px;">
+      <h3>2.3 Contraintes générales</h3>
+      <p>
+        À la lumière des échanges entre les équipes électronique, informatique et mécanique, il ressort plusieurs
+        contraintes globales qui encadrent la conception du système. Ces contraintes concernent l’ensemble des
+        sous-systèmes et assurent une cohérence optimale entre les différentes parties du projet.
+      </p>
+      <p>
+        Parmi les contraintes communes retenues, on trouve notamment :
+      </p>
+      <ul style="list-style-type: disc; padding-left: 20px; line-height: 1.6;">
+        <li style="margin-bottom: 0.5em;">la nécessité d’une communication fluide et continue entre les équipes tout
+          au long du projet</li>
+        <li style="margin-bottom: 0.5em;">le respect des dimensions globales du convoyeur pour une installation
+          optimale dans l’espace prévu</li>
+        <li style="margin-bottom: 0.5em;">l’intégration harmonieuse des sous-systèmes (mécanique, électronique,
+          informatique)</li>
+        <li style="margin-bottom: 0.5em;">l’utilisation de composants standards et modulaires pour faciliter la
+          maintenance et l’évolution du système</li>
+        <li style="margin-bottom: 0.5em;">le respect des contraintes d’alimentation électrique pour assurer
+          l’autonomie et la sécurité</li>
+      </ul>
+      <p>
+        Ces contraintes ont guidé toutes les phases du projet, depuis la conception jusqu’à la réalisation,
+        garantissant ainsi un convoyeur à la fois fonctionnel, fiable et adaptable.
+      </p>
+    </article>
+
+
+    <article id="contraintes-mecaniques" style="margin-bottom: 48px;">
+      <h3>2.4 Contraintes mécaniques spécifiques</h3>
+      <p>
+        Voici un tableau récapitulatif des principales contraintes mécaniques retenues, leur description et leur
+        priorité dans la conception du convoyeur "WasteFlow".
+      </p>
+      <table style="width: 100%; border-collapse: collapse; margin-top: 16px;">
+        <thead>
+          <tr style="background-color: #004080; color: white;">
+            <th style="padding: 10px; border: 1px solid #ddd; text-align: left;">Contraintes</th>
+            <th style="padding: 10px; border: 1px solid #ddd; text-align: left;">Description</th>
+            <th style="padding: 10px; border: 1px solid #ddd; text-align: center; width: 100px;">Priorité</th>
+            <th style="padding: 10px; border: 1px solid #ddd; text-align: left;">Remarques</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="background-color: #f9f9f9;">
+            <td style="padding: 10px; border: 1px solid #ddd;">Dimensions</td>
+            <td style="padding: 10px; border: 1px solid #ddd;">Longueur totale de 650 mm et hauteur du tapis de 100
+              mm, contraintes d’encombrement</td>
+            <td style="padding: 10px; border: 1px solid #ddd; text-align: center;">Élevée</td>
+            <td style="padding: 10px; border: 1px solid #ddd;">Respect strict pour intégration dans l’espace défini
+            </td>
+          </tr>
+          <tr>
+            <td style="padding: 10px; border: 1px solid #ddd;">Compatibilité capteurs</td>
+            <td style="padding: 10px; border: 1px solid #ddd;">Supports réglables pour capteurs de couleur et laser
+              intégrés à la structure</td>
+            <td style="padding: 10px; border: 1px solid #ddd; text-align: center;">Moyenne</td>
+            <td style="padding: 10px; border: 1px solid #ddd;">Nécessite flexibilité pour ajustements lors des tests
+            </td>
+          </tr>
+          <tr style="background-color: #f9f9f9;">
+            <td style="padding: 10px; border: 1px solid #ddd;">Assemblage</td>
+            <td style="padding: 10px; border: 1px solid #ddd;">Démontage facile pour maintenance et modifications</td>
+            <td style="padding: 10px; border: 1px solid #ddd; text-align: center;">Élevée</td>
+            <td style="padding: 10px; border: 1px solid #ddd;">Utilisation de vis M3/M4 et emboîtements adaptés</td>
+          </tr>
+          <tr>
+            <td style="padding: 10px; border: 1px solid #ddd;">Robustesse</td>
+            <td style="padding: 10px; border: 1px solid #ddd;">Résistance aux vibrations et chocs pendant le
+              fonctionnement</td>
+            <td style="padding: 10px; border: 1px solid #ddd; text-align: center;">Élevée</td>
+            <td style="padding: 10px; border: 1px solid #ddd;">Matériaux et épaisseurs adaptées, renforts locaux</td>
+          </tr>
+          <tr style="background-color: #f9f9f9;">
+            <td style="padding: 10px; border: 1px solid #ddd;">Modularité</td>
+            <td style="padding: 10px; border: 1px solid #ddd;">Conception modulaire pour évolutions et réparations
+              rapides</td>
+            <td style="padding: 10px; border: 1px solid #ddd; text-align: center;">Moyenne</td>
+            <td style="padding: 10px; border: 1px solid #ddd;">Pièces découplées et connecteurs standards</td>
+          </tr>
+          <tr>
+            <td style="padding: 10px; border: 1px solid #ddd;">Tolérances impression 3D</td>
+            <td style="padding: 10px; border: 1px solid #ddd;">Jeu fonctionnel minimal de 0,3 mm sur pièces mobiles
+            </td>
+            <td style="padding: 10px; border: 1px solid #ddd; text-align: center;">Élevée</td>
+            <td style="padding: 10px; border: 1px solid #ddd;">Adaptation aux spécificités FDM et matériaux utilisés
+            </td>
+          </tr>
+          <tr style="background-color: #f9f9f9;">
+            <td style="padding: 10px; border: 1px solid #ddd;">Centre de masse</td>
+            <td style="padding: 10px; border: 1px solid #ddd;">Positionnement pour assurer stabilité et équilibre du
+              convoyeur</td>
+            <td style="padding: 10px; border: 1px solid #ddd; text-align: center;">Moyenne</td>
+            <td style="padding: 10px; border: 1px solid #ddd;">Influence directe sur le comportement dynamique</td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
+
+    <article id="analyse-fonctionnelle-mecanique" style="margin-bottom: 48px;">
+      <h3>2.5 Analyse fonctionnelle mécanique</h3>
+      <p>
+        L’analyse fonctionnelle mécanique vise à décomposer le système du convoyeur en fonctions principales et
+        secondaires, afin d’identifier précisément les besoins mécaniques à satisfaire pour assurer le bon
+        fonctionnement du système. Cette étape est cruciale pour orienter la conception et garantir la fiabilité de la
+        structure.
+      </p>
+
+      <p>
+        Les fonctions principales du convoyeur mécanique sont :
+      </p>
+      <ul style="padding-left: 20px; line-height: 1.6; margin-bottom: 24px;">
+        <li style="margin-bottom: 0.6em;">supporter la bande transporteuse et assurer son guidage sans déformation
+        </li>
+        <li style="margin-bottom: 0.6em;">permettre la détection précise des déchets via une intégration stable des
+          capteurs</li>
+        <li style="margin-bottom: 0.6em;">faciliter le déplacement fluide et contrôlé des objets (cubes colorés) sur
+          la surface du tapis</li>
+        <li style="margin-bottom: 0.6em;">assurer la robustesse face aux vibrations et aux sollicitations mécaniques
+          répétées</li>
+        <li style="margin-bottom: 0.6em;">permettre un accès facile aux composants pour la maintenance et les
+          ajustements</li>
+      </ul>
+
+      <p>
+        En complément, les fonctions secondaires participent à la modularité, à la facilité d’assemblage et à la
+        compatibilité avec les contraintes d’impression 3D et d’intégration électronique.
+      </p>
+
+      <p>
+        Cette analyse guidera la sélection des matériaux, le choix des procédés de fabrication, ainsi que la
+        définition des jeux et tolérances.
+      </p>
+
+      <!-- Exemple simple de diagramme de pieuvre inséré ici -->
+      <figure style="text-align:center; margin-top: 2em;">
+        <img src="assets/imgs/diagramm.png" alt="Diagramme de pieuvre du convoyeur WasteFlow"
+          style="max-width: 100%; height: auto; border: 1px solid #ccc; padding: 8px;">
+        <figcaption style="font-size: 0.9em; color: #666; margin-top: 0.5em;">
+          Diagramme fonctionnel « bête à cornes » simplifié du convoyeur WasteFlow.
+        </figcaption>
+      </figure>
+
+      <p style="font-size: 14px; color: #333;">
+        Ce diagramme simplifié illustre le convoyeur comme un système mécanique soumis à son environnement, aux
+        contraintes spécifiques (dimensions, matériaux, intégration électronique) et aux besoins fonctionnels
+        (déplacement, guidage, robustesse). Il aide à visualiser les interactions et les paramètres clés à prendre
+        en compte lors de la conception.
+      </p>
+    </article>
+
+
+
+    <article id="hypotheses-techniques" style="margin-bottom: 64px; max-width: 900px;">
+      <h3>2.6 Hypothèses techniques</h3>
+
+      <h4>2.6.1 Environnement et conditions d’utilisation</h4>
+      <p>
+        Le système est conçu pour un usage intérieur, mais doit fonctionner de manière fiable dans différents
+        environnements lumineux et conditions ambiantes.<br>
+        Pour assurer la stabilité des mesures du capteur couleur, celui-ci est fixé à une distance constante de 5 cm
+        au-dessus de la bande transporteuse, conformément aux recommandations de l’équipe électronique.
+      </p>
+
+      <h4>2.6.2 Matériaux et composants mécaniques</h4>
+      <ul style="line-height: 1.6; padding-left: 20px;">
+        <li style="margin-bottom: 0.5em;">
+          <strong>Impression 3D PLA :</strong> Le choix du PLA pour la fabrication des pièces imprimées repose sur sa
+          rigidité, sa stabilité dimensionnelle et sa facilité d’impression. Ce matériau est adapté pour des pièces
+          structurelles et fonctionnelles sous faibles charges, avec un remplissage optimisé (50 %) pour un bon
+          compromis solidité/légèreté.
+        </li>
+        <li style="margin-bottom: 0.5em;">
+          <strong>Composants standards :</strong> Certains éléments mécaniques comme les roulements 6202-2RS et les
+          écrous M3/M4 ont été sélectionnés pour garantir la fiabilité des assemblages mobiles.
+        </li>
+        <li style="margin-bottom: 0.5em;">
+          <strong>Tapis :</strong> La bande transporteuse est conçue en matériau de chambre à air de moto, retenu pour
+          sa résistance et flexibilité. Malgré son poids élevé, ce choix a été validé pour assurer une bonne adhérence
+          et longévité. Les difficultés liées à ce matériau seront détaillées dans la section dédiée.
+        </li>
+      </ul>
+
+      <h4>2.6.3 Moyens de fabrication et optimisation</h4>
+      <p>
+        Les pièces seront imprimées sur des imprimantes 3D BambuLab et Prusa, compatibles avec des volumes jusqu’à 220
+        x 220 x 250 mm.<br>
+        L’optimisation porte sur :
+      </p>
+      <ul style="line-height: 1.6; padding-left: 20px;">
+        <li style="margin-bottom: 0.5em;">le découpage en sous-ensembles assemblables facilement,</li>
+        <li style="margin-bottom: 0.5em;">l’orientation des pièces pour minimiser les supports et maximiser la
+          résistance,</li>
+        <li style="margin-bottom: 0.5em;">la réduction de la consommation de matière sans compromettre la solidité.
+        </li>
+      </ul>
+
+      <h4>2.6.4 Durabilité et usage industriel</h4>
+      <p>
+        Le convoyeur est conçu pour un usage industriel, avec des matériaux et assemblages offrant une durabilité
+        adaptée à un fonctionnement continu.<br>
+        Le PLA imprimé, bien conçu, assure une robustesse satisfaisante, mais la modularité permet aussi un
+        remplacement facile des pièces en cas d’usure.
+      </p>
+
+      <h4>2.6.5 Mouvements et charges</h4>
+      <p>
+        Les éléments mécaniques incluent des mouvements rotatifs (roulements 6202-2RS, tambours, arbres) et linéaires
+        (glissières pour la tension de la bande).<br>
+        Les charges exercées restent faibles, liées au poids des cubes en PLA (30 mm, creux, remplissage 50 %) et à la
+        force moteur DC. La vitesse n’est pas encore définie précisément, la conception intègre une marge de sécurité.
+      </p>
+
+      <h4>2.6.6 Interface avec l’électronique centrale</h4>
+      <p>
+        La conception mécanique intègre la nécessité de recevoir les composants électroniques centraux (Arduino Nano,
+        ESP32) dans des logements adaptés.<br>
+        Le dimensionnement précis de ces logements attend les spécifications finales de l’équipe électronique, pour
+        garantir intégration, accessibilité et protection optimales.
+      </p>
+    </article>
+
+
+    <article id="specifications-minimales" style="margin-bottom: 32px;">
+      <h3>2.7 Rappel des spécifications minimales</h3>
+      <p>Cette liste synthétise les exigences dimensionnelles et techniques essentielles à respecter pour garantir la
+        réussite du projet :</p>
+      <ul style="list-style-type: disc; padding-left: 20px; line-height: 1.6;">
+        <li style="margin-bottom: 0.4em;">longueur totale du convoyeur : 650 mm</li>
+        <li style="margin-bottom: 0.4em;">hauteur du tapis par rapport au sol : 100 mm</li>
+        <li style="margin-bottom: 0.4em;">dimensions des déchets : cubes de 30 mm de côté</li>
+        <li style="margin-bottom: 0.4em;">utilisation d’un microcontrôleur Arduino Nano ou ATmega328P</li>
+        <li style="margin-bottom: 0.4em;">alimentation par bloc de batteries Lithium</li>
+        <li style="margin-bottom: 0.4em;">capteur couleur placé à 5 cm du tapis transporteur</li>
+        <li style="margin-bottom: 0.4em;">utilisation du PLA imprimable en 3D pour la majorité des pièces mécaniques
+        </li>
+        <li style="margin-bottom: 0.4em;">roulements 6202-2RS et écrous M3/M4 pour les assemblages mécaniques</li>
+        <li style="margin-bottom: 0.4em;">structure modulaire et robuste pour faciliter maintenance et évolutions</li>
+      </ul>
+
+      <p><strong>Cette synthèse marque la transition vers la phase de conception mécanique</strong>, où chaque
+        exigence sera traduite en modélisations précises.</p>
+    </article>
+
+  </section>
+
+  <section id="conception-mecanique" style="margin-bottom: 64px;">
+    <h2>Section 3 — Conception mécanique</h2>
+
+    <p>
+      À partir des analyses, contraintes et spécifications minimales précédemment définies, la phase de conception
+      mécanique débute ici.
+      L’objectif est de traduire les exigences en modèles 3D précis, fonctionnels et optimisés, compatibles avec les
+      matériaux et techniques retenues.
+    </p>
+
+    <p>
+      Cette étape inclut la modélisation des pièces principales, la définition des assemblages, ainsi que la prise en
+      compte des aspects d’impression 3D, robustesse et modularité.
+      Chaque choix sera justifié en fonction des contraintes mécaniques et des objectifs du projet.
+    </p>
+
+    <p><strong>Nous détaillerons successivement :</strong></p>
+    <ul style="list-style-type: disc; padding-left: 20px; line-height: 1.6;">
+      <li style="margin-bottom: 0.4em;">la conception des pièces et sous-ensembles principaux</li>
+      <li style="margin-bottom: 0.4em;">les choix techniques pour les assemblages et fixations</li>
+      <li style="margin-bottom: 0.4em;">les stratégies pour assurer robustesse, modularité et facilité de maintenance
+      </li>
+      <li style="margin-bottom: 0.4em;">les contraintes d’impression 3D et optimisation des matériaux</li>
+    </ul>
+
+    <article id="architecture-globale" style="margin-bottom: 48px;">
+      <h3>3.1 Aperçu global de l’architecture mécanique</h3>
+
+      <p>
+        Le tableau ci-dessous présente les différents sous-ensembles mécaniques, leur rôle principal et les points
+        clés de conception associés.
+      </p>
+
+      <table style="width: 100%; border-collapse: collapse; margin-top: 16px; font-size: 0.95rem;">
+        <thead>
+          <tr style="background-color: #f2f2f2;">
+            <th style="border: 1px solid #ccc; padding: 8px; text-align: left;">Sous-ensemble</th>
+            <th style="border: 1px solid #ccc; padding: 8px; text-align: left;">Rôle principal</th>
+            <th style="border: 1px solid #ccc; padding: 8px; text-align: left;">Points clés de conception</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="border: 1px solid #ccc; padding: 8px;">Châssis principal</td>
+            <td style="border: 1px solid #ccc; padding: 8px;">Supporter et stabiliser l’ensemble du système</td>
+            <td style="border: 1px solid #ccc; padding: 8px;">Robustesse, rigidité, intégration des autres composants
+            </td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #ccc; padding: 8px;">Bande transporteuse</td>
+            <td style="border: 1px solid #ccc; padding: 8px;">Transporter les cubes entre les différents points du tri
+            </td>
+            <td style="border: 1px solid #ccc; padding: 8px;">Matériau résistant, poids optimisé, bonne adhérence</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #ccc; padding: 8px;">Système de motorisation</td>
+            <td style="border: 1px solid #ccc; padding: 8px;">Assurer la rotation fluide de la bande</td>
+            <td style="border: 1px solid #ccc; padding: 8px;">Roulements adaptés (6202-2RS), arbre aligné, moteur DC
+            </td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #ccc; padding: 8px;">Glissières et tension</td>
+            <td style="border: 1px solid #ccc; padding: 8px;">Régler et maintenir la tension optimale de la bande</td>
+            <td style="border: 1px solid #ccc; padding: 8px;">Système ajustable, tolérance d’usure, entretien facile
+            </td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #ccc; padding: 8px;">Supports capteurs</td>
+            <td style="border: 1px solid #ccc; padding: 8px;">Maintenir les capteurs en position idéale</td>
+            <td style="border: 1px solid #ccc; padding: 8px;">Positionnement précis (5 cm de la bande), protection
+            </td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #ccc; padding: 8px;">Fixations et assemblages</td>
+            <td style="border: 1px solid #ccc; padding: 8px;">Relier les composants de manière modulaire</td>
+            <td style="border: 1px solid #ccc; padding: 8px;">Vis M3/M4, démontage rapide, résistance mécanique</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p style="margin-top: 16px;">
+        Cette architecture a été pensée pour favoriser la maintenance, la modularité et la compatibilité avec
+        l’impression 3D, tout en assurant une intégration harmonieuse avec l’électronique et les capteurs.
+      </p>
+    </article>
+
+    <article id="composants-standards" style="margin-bottom: 48px;">
+      <h3>3.2 Composants standards utilisés</h3>
+      <p>
+        Certains éléments du convoyeur ont été conçus en intégrant des composants standards du commerce.
+        Leur utilisation permet de garantir fiabilité, compatibilité et gain de temps en conception, tout en
+        facilitant le remplacement en cas de maintenance. Les modèles 3D ont été intégrés à la conception
+        mécanique lorsque nécessaire.
+      </p>
+
+      <table style="width: 100%; border-collapse: collapse; margin-top: 16px; font-size: 0.95em;">
+        <thead>
+          <tr style="background-color: #f4f4f4;">
+            <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Composant</th>
+            <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Description / Rôle</th>
+            <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Lien modèle 3D (.zip)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="border: 1px solid #ddd; padding: 8px;">Roulement 6202-2RS</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">
+              Roulement à billes étanche utilisé pour assurer la rotation fluide des tambours du convoyeur.
+            </td>
+            <td style="border: 1px solid #ddd; padding: 8px;">
+              <a href="assets/roulement-6202.zip" download
+                style="text-decoration: none; color: #007BFF;">Télécharger</a>
+            </td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #ddd; padding: 8px;">Moteur DC</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">
+              Moteur électrique à courant continu pour entraîner la bande transporteuse.
+            </td>
+            <td style="border: 1px solid #ddd; padding: 8px;">
+              <a href="assets/motor_DC.zip" download style="text-decoration: none; color: #007BFF;">Télécharger</a>
+            </td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #ddd; padding: 8px;">Capteur KY-008 (Laser)</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">
+              Module laser utilisé pour la détection de passage et synchronisation avec la mécanique.
+            </td>
+            <td style="border: 1px solid #ddd; padding: 8px;">
+              <a href="assets/ky008.zip" download style="text-decoration: none; color: #007BFF;">Télécharger</a>
+            </td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #ddd; padding: 8px;">Capteur de couleur TCS34725</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">
+              Capteur RGB haute précision utilisé pour identifier les couleurs des cubes avec correction de lumière.
+            </td>
+            <td style="border: 1px solid #ddd; padding: 8px;">
+              <a href="assets/tcs34725.zip" download style="text-decoration: none; color: #007BFF;">Télécharger</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p style="margin-top: 12px; font-style: italic;">
+        Tous les modèles 3D ont été recherchés principalement sur
+        <a href="https://grabcad.com" target="_blank" style="text-decoration: none; color: #007BFF; font-weight: bold;">
+          GrabCAD – la mine d’or des ingénieurs !
+        </a>
+      </p>
+
+      <!-- Prévisualisation des composants -->
+      <div style="margin-top: 24px;">
+        <h4>Prévisualisation des composants</h4>
+        <div style="display: flex; flex-wrap: wrap; gap: 16px;">
+          <div style="flex: 1 1 200px; border: 1px solid #ddd; border-radius: 8px; padding: 8px; text-align: center;">
+            <img src="assets/imgs/moteur_DC.png" alt="Moteur DC" style="max-width: 100%; height: 220px;">
+            <p style="margin-top: 8px; font-size: 0.9em; font-style: italic; font-weight: 700;">Moteur DC</p>
+          </div>
+          <div style="flex: 1 1 200px; border: 1px solid #ddd; border-radius: 8px; padding: 8px; text-align: center;">
+            <img src="assets/imgs/ky008_laser.png" alt="Capteur KY-008" style="max-width: 100%; height: 220px;">
+            <p style="margin-top: 8px; font-size: 0.9em; font-style: italic; font-weight: 700;">Capteur KY-008</p>
+          </div>
+          <div style="flex: 1 1 200px; border: 1px solid #ddd; border-radius: 8px; padding: 8px; text-align: center;">
+            <img src="assets/imgs/roulement-6202.png" alt="Roulement 6202-2RS" style="max-width: 100%; height: 220px;">
+            <p style="margin-top: 8px; font-size: 0.9em; font-style: italic; font-weight: 700;">Roulement 6202-2RS</p>
+          </div>
+          <div style="flex: 1 1 200px; border: 1px solid #ddd; border-radius: 8px; padding: 8px; text-align: center;">
+            <img src="assets/imgs/tcs34725.png" alt="Capteur TCS34725" style="max-width: 100%; height: 220px;">
+            <p style="margin-top: 8px; font-size: 0.9em; font-style: italic; font-weight: 700;">Capteur de couleur
+              TCS34725</p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article id="modelisation-3d-preliminaire" style="margin-bottom: 48px;">
+      <h2>3.3 Modélisation 3D préliminaire</h2>
+      <p>
+        La modélisation 3D est une étape clé dans la conception mécanique du convoyeur. Elle permet
+        de visualiser les pièces et assemblages, de vérifier la faisabilité des solutions retenues,
+        et de préparer les fichiers nécessaires à l’impression 3D.
+        Au cours du projet, plusieurs itérations de la modélisation ont été réalisées pour améliorer la
+        robustesse, la modularité et la compatibilité avec les contraintes mécaniques et électroniques.
+        Chaque étape correspond à une version de conception, dont les caractéristiques évoluent pour répondre
+        aux exigences du projet.
+      </p>
+
+      <!-- Première étape -->
+      <article id="modele-v1-detail" style="margin-bottom:48px; max-width:1100px;">
+        <h3>3.3.1 Première itération — Version initiale avec système de poulie</h3>
+
+        <p>
+          La première itération visait à obtenir rapidement une représentation tangible du convoyeur en 3D. Le
+          modèle
+          présentait un
+          convoyeur réalisé en un bloc unique intégrant tambours, tapis, arbre, un moteur et un système de poulie.
+          Deux supports pour
+          capteurs (couleur et laser) ont été ajoutés pour visualiser l'implantation des capteurs dans l'espace.
+          Cette
+          étape permettait
+          essentiellement de valider l'implantation générale et les proportions, et non de produire une pièce
+          directement imprimable.
+        </p>
+
+        <p>
+          À l'examen du modèle, plusieurs insuffisances ont été relevées sans entrer dans des détails techniques
+          complexes : les roulements
+          avaient été modélisés directement dans la CAO par nos soins (ce qui n'est pas représentatif d'un montage
+          réel pour ce stade),
+          et ont ensuite été placés à l'intérieur du tambour mais de façon approximative. Par conséquent leur
+          intégration ne garantissait
+          pas un comportement mécanique fiable. De plus, le système de poulie ne disposait pas d'un support dédié et
+          suffisamment
+          rigide ; cette absence met en péril ce sous-système et augmente fortement le risque d'usure lors d'une
+          utilisation prolongée.
+          Enfin, l'ensemble étant conçu comme un bloc monolithique, il n'était pas exploitable pour l'impression 3D
+          telle quelle et
+          posait des difficultés pour la maintenance ou le remplacement de pièces.
+        </p>
+
+        <p>
+          Les composants modélisés pour cette version sont, de manière synthétique :
+        </p>
+        <ul style="list-style-type: disc; padding-left: 20px; line-height: 1.6;">
+          <li style="margin-bottom: 0.4em;">le bâti du convoyeur (en un bloc),</li>
+          <li style="margin-bottom: 0.4em;">le support du capteur couleur,</li>
+          <li style="margin-bottom: 0.4em;">le support du capteur laser,</li>
+          <li style="margin-bottom: 0.4em;">le système de poulie,</li>
+          <li style="margin-bottom: 0.4em;">les roulements,</li>
+          <li style="margin-bottom: 0.4em;">le tambour et</li>
+          <li style="margin-bottom: 0.4em;">l'arbre</li>
+        </ul>
+        <div style="margin-top:18px;">
+          <h5>Illustrations et masses</h5>
+          <p>
+            Ci-dessous les images des composants modélisés...
+          </p>
+
+          <div style="display:flex; flex-wrap:wrap; gap:16px; margin-top:12px;">
+            <figure style="flex:1 1 48%; text-align:center; margin:0;">
+              <img src="assets/imgs/part0-convoyeur_v0.png" alt="Bloc convoyeur - vue 3D"
+                style="width:100%; height: 400px; border:1px solid #ddd; border-radius:6px;">
+              <figcaption style="font-size:13px; color:#555; margin-top:6px;">Bâti du convoyeur — Vue 3D
+              </figcaption>
+            </figure>
+
+            <figure style="flex:1 1 48%; text-align:center; margin:0;">
+              <img src="assets/imgs/part0-conv_v0-mass-properties.png" alt="Bloc convoyeur - mass properties"
+                style="width:100%; height: 400px; border:1px solid #ddd; border-radius:6px;">
+              <figcaption style="font-size:13px; color:#555; margin-top:6px;">Bâti du convoyeur — Propriétes de
+                masse
+              </figcaption>
+            </figure>
+          </div>
+          <div style="display:flex; flex-wrap:wrap; gap:16px; margin-top:30px;">
+            <figure style="flex:1 1 48%; text-align:center; margin:0;">
+              <img src="assets/imgs/support-tcs34725-conv_v0.png" alt="Support capteur couleur - 3D"
+                style="width:100%; height: 400px; border:1px solid #ddd; border-radius:6px;">
+              <figcaption style="font-size:13px; color:#555; margin-top:6px;">Support capteur couleur — Vue 3D
+              </figcaption>
+            </figure>
+
+            <figure style="flex:1 1 48%; text-align:center; margin:0;">
+              <img src="assets/imgs/support-tcs34725-conv_v0-mass-properties.png" alt="Support capteur couleur - masse"
+                style="width:100%; height: 400px; border:1px solid #ddd; border-radius:6px;">
+              <figcaption style="font-size:13px; color:#555; margin-top:6px;">Support capteur couleur — Propriétés
+                de
+                masse</figcaption>
+            </figure>
+          </div>
+          <div style="display:flex; flex-wrap:wrap; gap:16px; margin-top:30px;">
+            <figure style="flex:1 1 48%; text-align:center; margin:0;">
+              <img src="assets/imgs/support-ky008-conv_v0.png" alt="Support capteur laser - 3D"
+                style="width:100%; height: 400px; border:1px solid #ddd; border-radius:6px;">
+              <figcaption style="font-size:13px; color:#555; margin-top:6px;">Support capteur laser — Vue 3D
+              </figcaption>
+            </figure>
+
+            <figure style="flex:1 1 48%; text-align:center; margin:0;">
+              <img src="assets/imgs/support-ky008-conv_v0-mass-properties.png" alt="Support capteur laser - masse"
+                style="width:100%; height: 400px; border:1px solid #ddd; border-radius:6px;">
+              <figcaption style="font-size:13px; color:#555; margin-top:6px;">Support capteur laser — Propriétés de
+                masse
+              </figcaption>
+            </figure>
+          </div>
+          <div style="display:flex; flex-wrap:wrap; gap:16px; margin-top:30px;">
+            <figure style="flex:1 1 48%; text-align:center; margin:0;">
+              <img src="assets/imgs/poulie-conv_v0.png" alt="Système de poulie - 3D"
+                style="width:100%; height: 400px; border:1px solid #ddd; border-radius:6px;">
+              <figcaption style="font-size:13px; color:#555; margin-top:6px;">Système de poulie — Vue 3D
+              </figcaption>
+            </figure>
+
+            <figure style="flex:1 1 48%; text-align:center; margin:0;">
+              <img src="assets/imgs/poulie-conv_v0-mass-properties.png" alt="Système de poulie - masse"
+                style="width:100%; height: 400px; border:1px solid #ddd; border-radius:6px;">
+              <figcaption style="font-size:13px; color:#555; margin-top:6px;">Système de poulie — Propriétes de
+                masse
+              </figcaption>
+            </figure>
+          </div>
+
+          <div style="display:flex; flex-wrap:wrap; gap:16px; margin-top:30px;">
+            <figure style="flex:1 1 32%; text-align:center; margin:0;">
+              <img src="assets/imgs/roulement-conv_v0.png" alt="roulement - vue 3D"
+                style="width:100%; height: 350px; border:1px solid #ddd; border-radius:6px;">
+              <figcaption style="font-size:13px; color:#555; margin-top:6px;">Roulement — Vue 3D</figcaption>
+            </figure>
+            <figure style="flex:1 1 32%; text-align:center; margin:0;">
+              <img src="assets/imgs/arbre-conv_v0.png" alt="arbre - vue 3D"
+                style="width:100%; height: 350px; border:1px solid #ddd; border-radius:6px;">
+              <figcaption style="font-size:13px; color:#555; margin-top:6px;">Arbre — Vue 3D</figcaption>
+            </figure>
+            <figure style="flex:1 1 32%; text-align:center; margin:0;">
+              <img src="assets/imgs/tambour-conv_v0.png" alt="tambour - vue 3D"
+                style="width:100%; height: 350px; border:1px solid #ddd; border-radius:6px;">
+              <figcaption style="font-size:13px; color:#555; margin-top:6px;">Tambour — Vue 3D</figcaption>
+            </figure>
+          </div>
+        </div>
+        <br><br>
+        <h4>Illustrations de l'assemblage au complet et de sa masse</h4>
+        <div style="display:flex; flex-wrap:wrap; gap:16px; margin-top:30px;">
+          <figure style="flex:1 1 48%; text-align:center; margin:0;">
+            <img src="assets/imgs/convoyeur_v0.png" alt="Support capteur laser - 3D"
+              style="width:100%; height: 400px; border:1px solid #ddd; border-radius:6px;">
+            <figcaption style="font-size:13px; color:#555; margin-top:6px;">Convoyeur_v0 — Vue 3D
+            </figcaption>
+          </figure>
+
+          <figure style="flex:1 1 48%; text-align:center; margin:0;">
+            <img src="assets/imgs/conv_v0-mass-properties.png" alt="Support capteur laser - masse"
+              style="width:100%; height: 400px; border:1px solid #ddd; border-radius:6px;">
+            <figcaption style="font-size:13px; color:#555; margin-top:6px;">Convoyeur_v0 — Propriétés de
+              masse
+            </figcaption>
+          </figure>
+        </div>
+        <br><br>
+        <h4>Tableau récapitulatif de l'état du convoyeur</h4>
+        <p style="margin-top:18px;">
+          Le tableau ci-dessous synthétise l'état actuel des composants pour cette première version. À ce stade
+          aucune
+          des pièces n'est considérée
+          comme imprimable telle quelle : le bloc convoyeur est monolithique, les supports nécessitent un redesign
+          pour inserts/visserie, et le système de poulie
+          réclame un support rigide et des éléments de tension.
+        </p>
+
+        <table style="width:100%; border-collapse:collapse; margin-top:12px; font-size:0.95rem;">
+          <thead>
+            <tr style="background:#f3f4f6;">
+              <th style="border:1px solid #ddd; padding:10px; text-align:center; width:200px;">Composants</th>
+              <th style="border:1px solid #ddd; padding:10px; text-align:center; width:180px;">Masse (en grammes)
+              </th>
+              <th style="border:1px solid #ddd; padding:10px; text-align:center; width:180px;">Prêt pour impression
+              </th>
+              <th style="border:1px solid #ddd; padding:10px; text-align:center;">Commentaires</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="border:1px solid #ddd; padding:10px;">Bâti
+              </td>
+              <td style="border:1px solid #ddd; padding:10px; text-align:right;">4828</td>
+              <td style="border:1px solid #ddd; padding:10px; text-align:center;">Non</td>
+              <td style="border:1px solid #ddd; padding:10px;">
+                Conçu comme un seul bloc ; non imprimable en l'état. À découper en sous-ensembles imprimables et
+                ajouter points de fixation pour visserie.
+              </td>
+            </tr>
+
+            <tr>
+              <td style="border:1px solid #ddd; padding:10px;">Support capteur couleur</td>
+              <td style="border:1px solid #ddd; padding:10px; text-align:right;">41</td>
+              <td style="border:1px solid #ddd; padding:10px; text-align:center;">Non</td>
+              <td style="border:1px solid #ddd; padding:10px;">
+                Position envisagée ; nécessite ajout de cache anti-lumière ambiante et fixation modulable pour
+                ajustement à 5 cm.
+              </td>
+            </tr>
+
+            <tr>
+              <td style="border:1px solid #ddd; padding:10px;">Support capteur laser</td>
+              <td style="border:1px solid #ddd; padding:10px; text-align:right;">11</td>
+              <td style="border:1px solid #ddd; padding:10px; text-align:center;">Non</td>
+              <td style="border:1px solid #ddd; padding:10px;">
+                Similaire au support couleur ; prévoir positionnement fin et protection contre vibrations.
+              </td>
+            </tr>
+
+            <tr>
+              <td style="border:1px solid #ddd; padding:10px;">Système de poulie (poulie, courroie, tendeur
+                approximatif)</td>
+              <td style="border:1px solid #ddd; padding:10px; text-align:right;">182</td>
+              <td style="border:1px solid #ddd; padding:10px; text-align:center;">Non</td>
+              <td style="border:1px solid #ddd; padding:10px;">
+                Présent mais sans support dédié et sans dispositif de tension fiable ; ce point compromet la
+                durabilité de la transmission.
+              </td>
+            </tr>
+
+            <tr>
+              <td style="border:1px solid #ddd; padding:10px;">Roulements</td>
+              <td style="border:1px solid #ddd; padding:10px; text-align:right;">---</td>
+              <td style="border:1px solid #ddd; padding:10px; text-align:center;">Non</td>
+              <td style="border:1px solid #ddd; padding:10px;">
+                Modélisés pour visualisation mais non intégrés de façon réaliste ; repositionnement et sièges
+                adéquats
+                à prévoir dans la version suivante.
+              </td>
+            </tr>
+
+            <tr>
+              <td style="border:1px solid #ddd; padding:10px;">Tambour</td>
+              <td style="border:1px solid #ddd; padding:10px; text-align:right;">---</td>
+              <td style="border:1px solid #ddd; padding:10px; text-align:center;">Non</td>
+              <td style="border:1px solid #ddd; padding:10px;">
+                Intègre les roulements modélisés ; ajustements d'alésage et retenue axiale nécessaires lors du
+                redesign.
+              </td>
+            </tr>
+
+            <tr>
+              <td style="border:1px solid #ddd; padding:10px;">Arbre</td>
+              <td style="border:1px solid #ddd; padding:10px; text-align:right;">---</td>
+              <td style="border:1px solid #ddd; padding:10px; text-align:center;">Non</td>
+              <td style="border:1px solid #ddd; padding:10px;">
+                Éléments standards à prévoir en métal ; dans la CAO il est présent mais intégré au bloc, à sortir et
+                standardiser.
+              </td>
+            </tr>
+
+            <tr style="background:#fafafa; font-weight:600;">
+              <td style="border:1px solid #ddd; padding:10px;">Total / Remarque globale</td>
+              <td style="border:1px solid #ddd; padding:10px; text-align:right;">6220.34g</td>
+              <td style="border:1px solid #ddd; padding:10px; text-align:center;">---</td>
+              <td style="border:1px solid #ddd; padding:10px;">
+                À ce stade, aucune pièce n'est directement imprimable ; la version sert de base visuelle pour
+                itérations. Les images et fichiers CAO permettront d'établir des masses exactes et de lancer le
+                redesign.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+
+      <article id="modele-v2-detail" style="margin-bottom:48px; max-width:1100px;">
+        <h3>3.3.2 Deuxième itération — Découpage en deux et optimisation des tambours</h3>
+
+        <p>
+          Suite aux enseignements tirés de la première itération, la deuxième version a opéré un changement structurel
+          fort : le convoyeur a été découpé en deux sous-ensembles pour tenir compte des limites d'impression (volume
+          utile ≈ 250 × 250 mm) et faciliter la fabrication. Le découpage vise aussi à améliorer la manutention et la
+          maintenance. Les roulements, qui avaient été précédemment seulement modélisés « pour montrer », ont été
+          replacés dans des paliers en U usinés dans le bâti afin de permettre le passage du tambour ; le tambour a
+          lui-même été remanié pour intégrer l'arbre et des cavités d'adhérence destinées à améliorer l'engagement du
+          tapis.
+        </p>
+
+        <p>
+          Le système de poulie a été supprimé ; le moteur a été rapproché vers l'un des bâti — dorénavant appelé «
+          bâti moteur » — et monté sur un support distinct. Ce support est traité comme un composant séparé, fixé sur
+          le bâti moteur pour concentrer les efforts et limiter les sollicitations sur la structure principale.
+          Parallèlement, des enlèvements de matière ont été effectués sur les poteaux et certaines faces pour réduire
+          la masse globale. Ces réductions restent partielles et pourront être optimisées ultérieurement sans
+          compromettre la rigidité.
+        </p>
+
+        <p>
+          Après modification, plusieurs points techniques importants subsistent. Le raccordement mécanique entre les
+          deux moitiés n'a pas été finalisé : il est crucial de définir un mode d'assemblage (lignes de référence,
+          goupilles de centrage et visserie) afin d'assurer une continuité géométrique et un bon transfert des
+          efforts. Les paliers en U ont été conçus pour recevoir les roulements, mais l'intégration actuelle n'est pas
+          définitive et peut laisser du jeu axial ou radial s'il n'y a pas de dispositif de retenue (bagues, vis de
+          blocage ou circlips). Le mouvement de translation observé sur certains axes, dû à l'absence de retenues
+          efficaces, est préoccupant et devra être corrigé pour éviter un jeu excessif lors du fonctionnement.
+        </p>
+
+        <p>
+          La gestion de la bande n'est pas encore stabilisée : sans tendeur ni réglage précis du contact
+          tambour/tapis, la bande peut glisser ou se décentrer. Le rapproché du moteur vers le bâti moteur améliore la
+          compacité mais nécessite un support rigide et vissé sur la structure pour garantir la fiabilité. Enfin, la
+          structure générale manque encore de rigidité locale (rayons de congé, chanfreins d'assemblage et renforts
+          sur zones sollicitées) ; ces améliorations relatives à la géométrie réduiront les concentrations de
+          contrainte et faciliteront l'impression.
+        </p>
+
+        <p>
+          Les composants modélisés pour cette version sont, de manière synthétique :
+        </p>
+        <ul style="list-style-type: disc; padding-left: 20px; line-height: 1.6;">
+          <li style="margin-bottom: 0.4em;">le bâti moteur,</li>
+          <li style="margin-bottom: 0.4em;">le bâti non moteur,</li>
+          <li style="margin-bottom: 0.4em;">le support du moteur DC,</li>
+          <li style="margin-bottom: 0.4em;">le tambour moteur,</li>
+          <li style="margin-bottom: 0.4em;">le tambour non moteur</li>
+        </ul>
+        <div style="margin-top:18px;">
+          <h5>Illustrations et masses</h5>
+          <p>
+            Ci-dessous les images des composants modélisés...
+          </p>
+
+          <div style="display:flex; flex-wrap:wrap; gap:25px; margin-top:12px;">
+            <figure style="flex:1 1 100%; text-align:center; margin:0;">
+              <img src="assets/imgs/bâti-decoupe-conv_v1-mass-properties.png" alt="Bloc convoyeur - vue 3D"
+                style="width:100%; height: 400px; border:1px solid #ddd; border-radius:6px;">
+              <figcaption style="font-size:13px; color:#555; margin-top:6px;">Bâti découpé du convoyeur — Vue 3D +
+                Propriétes de
+                masse
+              </figcaption>
+            </figure>
+
+            <figure style="flex:1 1 100%; text-align:center; margin:0;">
+              <img src="assets/imgs/tambour-non-moteur-conv_v1-mass-properties.png"
+                alt="Bloc convoyeur - mass properties"
+                style="width:100%; height: 400px; border:1px solid #ddd; border-radius:6px;">
+              <figcaption style="font-size:13px; color:#555; margin-top:6px;">Tambour non moteur — Vue 3D + Propriétes
+                de
+                masse
+              </figcaption>
+            </figure>
+            <figure style="flex:1 1 100%; text-align:center; margin:0;">
+              <img src="assets/imgs/tambour-moteur-conv_v1-mass-properties.png" alt="Bloc convoyeur - mass properties"
+                style="width:100%; height: 400px; border:1px solid #ddd; border-radius:6px;">
+              <figcaption style="font-size:13px; color:#555; margin-top:6px;">Tambour moteur — Vue 3D + Propriétes de
+                masse
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+        <br><br>
+        <h4>Illustrations de l'assemblage au complet et de sa masse</h4>
+        <div style="display:flex; flex-wrap:wrap; gap:16px; margin-top:30px;">
+          <figure style="flex:1 1 48%; text-align:center; margin:0;">
+            <img src="assets/imgs/convoyeur_v1.png" alt="Support capteur laser - 3D"
+              style="width:100%; height: 400px; border:1px solid #ddd; border-radius:6px;">
+            <figcaption style="font-size:13px; color:#555; margin-top:6px;">Convoyeur_v1 — Vue 3D
+            </figcaption>
+          </figure>
+
+          <figure style="flex:1 1 48%; text-align:center; margin:0;">
+            <img src="assets/imgs/conv_v1-mass-properties.png" alt="Support capteur laser - masse"
+              style="width:100%; height: 400px; border:1px solid #ddd; border-radius:6px;">
+            <figcaption style="font-size:13px; color:#555; margin-top:6px;">Convoyeur_v1 — Propriétés de
+              masse
+            </figcaption>
+          </figure>
+        </div>
+        <br><br>
+        <h4>Tableau récapitulatif de l'état du convoyeur</h4>
+        <p style="margin-top:18px;">
+          Le tableau récapitulatif ci-dessous présente l'état des composants dans cette deuxième itération. Les masses
+          sont à compléter à partir de tes captures Mass Properties ; pour l'instant les cases sont positionnées en
+          placeholder (XXXX) afin d'être remplacées par les valeurs CAO.
+        </p>
+
+        <table style="width:100%; border-collapse:collapse; margin-top:12px; font-size:0.95rem;">
+          <thead>
+            <tr style="background:#f3f4f6;">
+              <th style="border:1px solid #ddd; padding:10px; text-align:center; width:200px;">Composants</th>
+              <th style="border:1px solid #ddd; padding:10px; text-align:center; width:180px;">Masse (en grammes)</th>
+              <th style="border:1px solid #ddd; padding:10px; text-align:center; width:180px;">Prêt pour impression
+              </th>
+              <th style="border:1px solid #ddd; padding:10px; text-align:center;">Commentaires</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="border:1px solid #ddd; padding:10px;">Bâti découpé du convoyeur + support moteur</td>
+              <td style="border:1px solid #ddd; padding:10px; text-align:right;">3346</td>
+              <td style="border:1px solid #ddd; padding:10px; text-align:center;">Non (à ajuster)</td>
+              <td style="border:1px solid #ddd; padding:10px;">
+                Moitié du convoyeur conçue pour l'impression. Paliers en U présents mais retention non finalisée ;
+                prévoir points de fixation/goupilles de centrage pour l'assemblage.
+              </td>
+            </tr>
+
+            <tr>
+              <td style="border:1px solid #ddd; padding:10px;">Support capteur couleur</td>
+              <td style="border:1px solid #ddd; padding:10px; text-align:right;">41</td>
+              <td style="border:1px solid #ddd; padding:10px; text-align:center;">Non</td>
+              <td style="border:1px solid #ddd; padding:10px;">
+                Position envisagée ; nécessite ajout de cache anti-lumière ambiante et fixation modulable pour
+                ajustement à 5 cm.
+              </td>
+            </tr>
+
+            <tr>
+              <td style="border:1px solid #ddd; padding:10px;">Support capteur laser</td>
+              <td style="border:1px solid #ddd; padding:10px; text-align:right;">11</td>
+              <td style="border:1px solid #ddd; padding:10px; text-align:center;">Non</td>
+              <td style="border:1px solid #ddd; padding:10px;">
+                Similaire au support couleur ; prévoir positionnement fin et protection contre vibrations.
+              </td>
+            </tr>
+
+            <tr>
+              <td style="border:1px solid #ddd; padding:10px;">Tambour non moteur</td>
+              <td style="border:1px solid #ddd; padding:10px; text-align:right;">441</td>
+              <td style="border:1px solid #ddd; padding:10px; text-align:center;">Non (ajustements d'alésage)</td>
+              <td style="border:1px solid #ddd; padding:10px;">
+                Conception consolidée pour améliorer adhérence du tapis. Prévoir manchon d'ajustement ou arbre
+                métallique pour montage réel.
+              </td>
+            </tr>
+
+            <tr>
+              <td style="border:1px solid #ddd; padding:10px;">Tambour moteur</td>
+              <td style="border:1px solid #ddd; padding:10px; text-align:right;">453</td>
+              <td style="border:1px solid #ddd; padding:10px; text-align:center;">Non (ajustements d'alésage)</td>
+              <td style="border:1px solid #ddd; padding:10px;">
+                Conception consolidée pour améliorer adhérence du tapis. Prévoir manchon d'ajustement ou arbre
+                métallique pour montage réel.
+              </td>
+            </tr>
+
+            <tr style="background:#fafafa; font-weight:600;">
+              <td style="border:1px solid #ddd; padding:10px;">Total / Remarque</td>
+              <td style="border:1px solid #ddd; padding:10px; text-align:right;">4785.83g</td>
+              <td style="border:1px solid #ddd; padding:10px; text-align:center;">---</td>
+              <td style="border:1px solid #ddd; padding:10px;">
+                Version préparée pour tests d'assemblage. Nécessite finalisation des sièges de roulement, retenues
+                axiales, jonction entre demi-bâti et renforts locaux.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+
+      <article id="modele-v3-final" style="margin-bottom:48px; max-width:1100px;">
+        <h3>3.3.3 Troisième itération — Version finale préparée pour impression</h3>
+
+        <p>
+          La dernière itération reflète le travail de recherche, d’essais et d’optimisation effectué après les
+          premières
+          versions. Les roulements ont été correctement montés grâce à l’ajout de couvercles à lèvres (droite /
+          gauche)
+          et d’épaulements sur les tambours pour assurer une retenue axiale fiable. Le couvercle gauche est
+          volontairement
+          légèrement plus petit que le droit afin de laisser l’espace nécessaire au montage des roulements. Le support
+          du
+          moteur a été fixé sur le bâti moteur pour améliorer la rigidité et la tenue mécanique du montage.
+        </p>
+
+        <p>
+          Des chanfreins et congés ont été ajoutés sur les arêtes saillantes pour réduire les risques de blessure et
+          diminuer localement la matière. Un système de tension a été conçu au niveau du bâti non-moteur : il s’agit
+          d’une
+          glissière réglable maintenue par vis et écrous qui permet d’ajuster précisément la pré-tension du tapis. Les
+          couvercles des paliers sont fixés par visserie (M3/M4) avec inserts prévus dans les pièces imprimées.
+        </p>
+
+        <p>
+          Pour gagner de la matière et alléger l’ensemble, des enlèvements de matière ont été réalisés de façon ciblée
+          sur
+          les poteaux et faces non sollicitées, tout en ajoutant des détails esthétiques pour donner une identité
+          originale
+          au convoyeur. Les paliers côté bâti non moteur ont été repensés sous forme de coulisseaux (coulisse /
+          coulisseau)
+          intégrés à la glissière pour assurer un guidage précis et une maintenance facilitée. Les supports capteurs
+          (couleur
+          et laser) ont aussi été améliorés pour faciliter le réglage et la protection des capteurs.
+        </p>
+
+        <p>
+          Ce travail a été precedé d'une recherche approfondie sur le montage des roulements, les montages
+          arbre-moyeu, la
+          conception de glissières coulisse/coulisseau et les dispositifs de retenue axiale. De nombreux essais CAO
+          ont permis
+          d’aboutir à une géométrie fiable et imprimable.
+        </p>
+
+        <h4>Composants modélisés (liste exhaustive)</h4>
+        <p>
+          Les pièces suivantes ont été modélisées pour cette version finale et feront l’objet d’illustrations
+          individuelles
+          (vue 3D + capture Mass Properties) ainsi que d’un fichier téléchargeable (STEP / STL) :
+        </p>
+        <ul style="padding-left:20px; line-height:1.6;">
+          <li>2 tambours (moteur / non-moteur)</li>
+          <li>2 couvercles à lèvres (gauche / droite)</li>
+          <li>support - capteur de couleur</li>
+          <li>support - capteur laser</li>
+          <li>bâti moteur - partie 1</li>
+          <li>bâti moteur - partie 2</li>
+          <li>paliers porte-roulements (coulisseau)</li>
+          <li>bâti non-moteur - partie 1</li>
+          <li>bâti non-moteur - partie 2</li>
+          <li>jointure - partie 1</li>
+          <li>jointure - partie 2</li>
+          <li>cube (élément de test / déchet)</li>
+        </ul>
+
+        <div style="margin-top:18px;">
+          <h5>Illustrations et masses</h5>
+          <p>
+            Ci-dessous les images des composants modélisés...
+          </p>
+
+          <div style="display:flex; flex-wrap:wrap; gap:25px; margin-top:12px;">
+            <figure style="flex:1 1 100%; text-align:center; margin:0;">
+              <img src="assets/imgs/tambour-non-moteur-conv_v3-mass-properties.png" alt="Bloc convoyeur - vue 3D"
+                style="width:100%; height: 400px; border:1px solid #ddd; border-radius:6px;">
+              <figcaption style="font-size:13px; color:#555; margin-top:6px;">Tambour non moteur — Vue 3D +
+                Propriétes de
+                masse
+              </figcaption>
+            </figure>
+
+            <figure style="flex:1 1 100%; text-align:center; margin:0;">
+              <img src="assets/imgs/tambour-moteur-conv_v3-mass-properties.png" alt="Bloc convoyeur - mass properties"
+                style="width:100%; height: 400px; border:1px solid #ddd; border-radius:6px;">
+              <figcaption style="font-size:13px; color:#555; margin-top:6px;">Tambour moteur — Vue 3D + Propriétes
+                de
+                masse
+              </figcaption>
+            </figure>
+            <figure style="flex:1 1 100%; text-align:center; margin:0;">
+              <img src="assets/imgs/support-ky008-conv_v3-mass-properties.png" alt="Bloc convoyeur - mass properties"
+                style="width:100%; height: 400px; border:1px solid #ddd; border-radius:6px;">
+              <figcaption style="font-size:13px; color:#555; margin-top:6px;">Support capteur laser — Vue 3D +
+                Propriétes de
+                masse
+              </figcaption>
+            </figure>
+            <figure style="flex:1 1 100%; text-align:center; margin:0;">
+              <img src="assets/imgs/support-tcs34725-conv_v3-mass-properties.png" alt="Bloc convoyeur - vue 3D"
+                style="width:100%; height: 400px; border:1px solid #ddd; border-radius:6px;">
+              <figcaption style="font-size:13px; color:#555; margin-top:6px;">Support capteur couleur — Vue 3D +
+                Propriétes de
+                masse
+              </figcaption>
+            </figure>
+
+            <figure style="flex:1 1 100%; text-align:center; margin:0;">
+              <img src="assets/imgs/couvercle-a-levres-conv_v3-mass-properties.png"
+                alt="Bloc convoyeur - mass properties"
+                style="width:100%; height: 400px; border:1px solid #ddd; border-radius:6px;">
+              <figcaption style="font-size:13px; color:#555; margin-top:6px;">Couvercle à lèvres — Vue 3D + Propriétes
+                de
+                masse
+              </figcaption>
+            </figure>
+            <figure style="flex:1 1 100%; text-align:center; margin:0;">
+              <img src="assets/imgs/porte-roulemement-non-moteur-conv_v3-mass-properties.png"
+                alt="Bloc convoyeur - mass properties"
+                style="width:100%; height: 400px; border:1px solid #ddd; border-radius:6px;">
+              <figcaption style="font-size:13px; color:#555; margin-top:6px;">Coulisseau porte roulement — Vue 3D +
+                Propriétes de
+                masse
+              </figcaption>
+            </figure>
+          </div>
+          <br><br>
+
+          <h5>--- Convoyeur : Partie moteur ---</h5>
+          <div style="display:flex; flex-wrap:wrap; gap:25px; margin-top:12px;">
+            <figure style="flex:1 1 100%; text-align:center; margin:0;">
+              <img src="assets/imgs/bâti-moteur-1-conv_v3-mass-properties.png" alt="Bloc convoyeur - mass properties"
+                style="width:100%; height: 400px; border:1px solid #ddd; border-radius:6px;">
+              <figcaption style="font-size:13px; color:#555; margin-top:6px;">Bâti moteur_partie1 — Vue 3D +
+                Propriétes
+                de
+                masse
+              </figcaption>
+            </figure>
+            <figure style="flex:1 1 100%; text-align:center; margin:0;">
+              <img src="assets/imgs/bâti-moteur-2-conv_v3-mass-properties.png" alt="Bloc convoyeur - mass properties"
+                style="width:100%; height: 400px; border:1px solid #ddd; border-radius:6px;">
+              <figcaption style="font-size:13px; color:#555; margin-top:6px;">Bâti moteur_partie2 — Vue 3D +
+                Propriétes de
+                masse
+              </figcaption>
+            </figure>
+          </div>
+          <br><br>
+
+          <h5>--- Convoyeur : Partie non moteur ---</h5>
+          <div style="display:flex; flex-wrap:wrap; gap:25px; margin-top:12px;">
+            <figure style="flex:1 1 100%; text-align:center; margin:0;">
+              <img src="assets/imgs/bâti-non-moteur-1-conv_v3-mass-properties.png"
+                alt="Bloc convoyeur - mass properties"
+                style="width:100%; height: 400px; border:1px solid #ddd; border-radius:6px;">
+              <figcaption style="font-size:13px; color:#555; margin-top:6px;">Bâti non moteur_partie1 — Vue 3D +
+                Propriétes
+                de
+                masse
+              </figcaption>
+            </figure>
+            <figure style="flex:1 1 100%; text-align:center; margin:0;">
+              <img src="assets/imgs/bâti-non-moteur-2-conv_v3-mass-properties.png"
+                alt="Bloc convoyeur - mass properties"
+                style="width:100%; height: 400px; border:1px solid #ddd; border-radius:6px;">
+              <figcaption style="font-size:13px; color:#555; margin-top:6px;">Bâti non moteur_partie2 — Vue 3D +
+                Propriétes de
+                masse
+              </figcaption>
+            </figure>
+          </div>
+          <br><br>
+
+          <h5>--- Convoyeur : Jointure ---</h5>
+          <div style="display:flex; flex-wrap:wrap; gap:25px; margin-top:12px;">
+            <figure style="flex:1 1 100%; text-align:center; margin:0;">
+              <img src="assets/imgs/jointure-1-conv_v3-mass-properties.png" alt="Bloc convoyeur - mass properties"
+                style="width:100%; height: 400px; border:1px solid #ddd; border-radius:6px;">
+              <figcaption style="font-size:13px; color:#555; margin-top:6px;">Jointure_partie1 — Vue 3D +
+                Propriétes
+                de
+                masse
+              </figcaption>
+            </figure>
+            <figure style="flex:1 1 100%; text-align:center; margin:0;">
+              <img src="assets/imgs/jointure-2-conv_v3-mass-properties.png" alt="Bloc convoyeur - mass properties"
+                style="width:100%; height: 400px; border:1px solid #ddd; border-radius:6px;">
+              <figcaption style="font-size:13px; color:#555; margin-top:6px;">Jointure_partie2 — Vue 3D +
+                Propriétes de
+                masse
+              </figcaption>
+            </figure>
+          </div>
+          <h5>--- Convoyeur : en 4 parties ---</h5>
+          <div style="display:flex; flex-wrap:wrap; gap:25px; margin-top:12px;">
+            <figure style="flex:1 1 48%; text-align:center; margin:0;">
+              <img src="assets/imgs/bâti-moteur-conv_v3.png" alt="Bloc convoyeur - mass properties"
+                style="width:100%; height: 400px; border:1px solid #ddd; border-radius:6px;">
+              <figcaption style="font-size:13px; color:#555; margin-top:6px;">Bâti moteur — Vue 3D
+              </figcaption>
+            </figure>
+            <figure style="flex:1 1 48%; text-align:center; margin:0;">
+              <img src="assets/imgs/bâti-non-moteur-conv_v3.png" alt="Bloc convoyeur - mass properties"
+                style="width:100%; height: 400px; border:1px solid #ddd; border-radius:6px;">
+              <figcaption style="font-size:13px; color:#555; margin-top:6px;">Bâti non moteur — Vue 3D
+              </figcaption>
+            </figure>
+            <figure style="flex:1 1 48%; text-align:center; margin:0;">
+              <img src="assets/imgs/jointure-conv_v3.png" alt="Bloc convoyeur - mass properties"
+                style="width:100%; height: 400px; border:1px solid #ddd; border-radius:6px;">
+              <figcaption style="font-size:13px; color:#555; margin-top:6px;">Jointure — Vue 3D
+              </figcaption>
+            </figure>
+            <figure style="flex:1 1 48%; text-align:center; margin:0;">
+              <img src="assets/imgs/bande-transporteuse.png" alt="Bloc convoyeur - mass properties"
+                style="width:100%; height: 400px; border:1px solid #ddd; border-radius:6px;">
+              <figcaption style="font-size:13px; color:#555; margin-top:6px;">Bande transporteuse — Vue 3D
+              </figcaption>
+            </figure>
+          </div>
+          <br><br>
+
+          <h5>--- Convoyeur : Cube 30*30mm ---</h5>
+          <div style="display:flex; flex-wrap:wrap; gap:25px; margin-top:12px;">
+            <figure style="flex:1 1 48%; text-align:center; margin:0;">
+              <img src="assets/imgs/cube-decoupe.png" alt="Bloc convoyeur - mass properties"
+                style="width:100%; height: 400px; border:1px solid #ddd; border-radius:6px;">
+              <figcaption style="font-size:13px; color:#555; margin-top:6px;">Cube découpé de profil — Vue 3D
+              </figcaption>
+            </figure>
+            <figure style="flex:1 1 48%; text-align:center; margin:0;">
+              <img src="assets/imgs/cube-decoupe-0.png" alt="Bloc convoyeur - mass properties"
+                style="width:100%; height: 400px; border:1px solid #ddd; border-radius:6px;">
+              <figcaption style="font-size:13px; color:#555; margin-top:6px;">Cube découpé de dessus — Vue 3D
+              </figcaption>
+            </figure>
+            <figure style="flex:1 1 100%; text-align:center; margin:0;">
+              <img src="assets/imgs/cube-mass-properties.png" alt="Bloc convoyeur - vue 3D"
+                style="width:100%; height: 400px; border:1px solid #ddd; border-radius:6px;">
+              <figcaption style="font-size:13px; color:#555; margin-top:6px;">Cube — Vue 3D +
+                Propriétes de
+                masse
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+        <br><br>
+        <h4>Illustrations de l'assemblage au complet et de sa masse</h4>
+        <div style="display:flex; flex-wrap:wrap; gap:16px; margin-top:30px;">
+          <figure style="flex:1 1 48%; text-align:center; margin:0;">
+            <img src="assets/imgs/convoyeur_v3.png" alt="Support capteur laser - 3D"
+              style="width:100%; height: 400px; border:1px solid #ddd; border-radius:6px;">
+            <figcaption style="font-size:13px; color:#555; margin-top:6px;">Convoyeur_v3 — Vue 3D
+            </figcaption>
+          </figure>
+
+          <figure style="flex:1 1 48%; text-align:center; margin:0;">
+            <img src="assets/imgs/conv_v3-mass-properties.png" alt="Support capteur laser - masse"
+              style="width:100%; height: 400px; border:1px solid #ddd; border-radius:6px;">
+            <figcaption style="font-size:13px; color:#555; margin-top:6px;">Convoyeur_v3 — Propriétés de
+              masse
+            </figcaption>
+          </figure>
+        </div>
+        <br><br>
+        <h4>Convoyeur - Vue 3D</h4>
+        <div style="display:flex; flex-wrap:wrap; gap:16px; margin-top:30px;">
+          <figure style="flex:1 1 49%; text-align:center; margin:0;">
+            <img src="assets/imgs/convoyeur_v3-dessus.png" alt="Support capteur laser - 3D"
+              style="width:100%; height: 200px; border:1px solid #ddd; border-radius:6px;">
+            <figcaption style="font-size:13px; color:#555; margin-top:6px;">Convoyeur_v3 — Vue de dessus
+            </figcaption>
+          </figure>
+
+          <figure style="flex:1 1 49%; text-align:center; margin:0;">
+            <img src="assets/imgs/convoyeur_v3-face.png" alt="Support capteur laser - masse"
+              style="width:100%; height: 200px; border:1px solid #ddd; border-radius:6px;">
+            <figcaption style="font-size:13px; color:#555; margin-top:6px;">Convoyeur_v3 — Vue de face
+            </figcaption>
+          </figure>
+          <figure style="flex:1 1 49%; text-align:center; margin:0;">
+            <img src="assets/imgs/convoyeur_v3-droite.png" alt="Support capteur laser - 3D"
+              style="width:100%; height: 200px; border:1px solid #ddd; border-radius:6px;">
+            <figcaption style="font-size:13px; color:#555; margin-top:6px;">Convoyeur_v3 — Vue de droite
+            </figcaption>
+          </figure>
+
+          <figure style="flex:1 1 49%; text-align:center; margin:0;">
+            <img src="assets/imgs/convoyeur_v3-dessous.png" alt="Support capteur laser - masse"
+              style="width:100%; height: 200px; border:1px solid #ddd; border-radius:6px;">
+            <figcaption style="font-size:13px; color:#555; margin-top:6px;">Convoyeur_v3 — Vue de dessous
+            </figcaption>
+          </figure>
+        </div>
+
+        <br><br>
+        <h4>Tableau récapitulatif de l'état du convoyeur</h4>
+        <p style="margin-top:18px;">
+          Le tableau ci-dessous récapitule l'état final des composants : masses (à remplir depuis Mass Properties si
+          nécessaire),
+          statut d'impression et commentaires. Dans cette itération, les composants sont considérés comme
+          <strong>prêts pour impression</strong>
+          (pièces découpées, chanfreins et inserts prévus) — il reste à exporter les STL et procéder aux tests
+          d'impression.
+        </p>
+
+        <table style="width:100%; border-collapse:collapse; margin-top:12px; font-size:0.95rem;">
+          <thead>
+            <tr style="background:#f3f4f6;">
+              <th style="border:1px solid #ddd; padding:10px; text-align: center; width:200px;">Composants</th>
+              <th style="border:1px solid #ddd; padding:10px; text-align:center; width:180px;">Masse (en grammes)</th>
+              <th style="border:1px solid #ddd; padding:10px; text-align:center; width:180px;">Prêt pour impression
+              </th>
+              <th style="border:1px solid #ddd; padding:10px; text-align:center;">Commentaires</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="border:1px solid #ddd; padding:10px;">Tambour moteur</td>
+              <td style="border:1px solid #ddd; padding:10px; text-align:right;">92</td>
+              <td style="border:1px solid #ddd; padding:10px; text-align:center;">Oui</td>
+              <td style="border:1px solid #ddd; padding:10px;">
+                Épaulement ajouté, alésage ajusté pour arbre/manchon. Prêt à l'export STL.
+              </td>
+            </tr>
+
+            <tr>
+              <td style="border:1px solid #ddd; padding:10px;">Tambour non-moteur</td>
+              <td style="border:1px solid #ddd; padding:10px; text-align:right;">88</td>
+              <td style="border:1px solid #ddd; padding:10px; text-align:center;">Oui</td>
+              <td style="border:1px solid #ddd; padding:10px;">
+                Même remarques que pour le tambour moteur ; retenue axiale assurée par couvercles à lèvres.
+              </td>
+            </tr>
+
+            <tr>
+              <td style="border:1px solid #ddd; padding:10px;">Couvercle à lèvres</td>
+              <td style="border:1px solid #ddd; padding:10px; text-align:right;">31</td>
+              <td style="border:1px solid #ddd; padding:10px; text-align:center;">Oui</td>
+              <td style="border:1px solid #ddd; padding:10px;">
+                Couvercles dimensionnés pour montage des roulements ; gauche plus petit pour montage facilité.
+              </td>
+            </tr>
+
+            <tr>
+              <td style="border:1px solid #ddd; padding:10px;">Support capteur couleur</td>
+              <td style="border:1px solid #ddd; padding:10px; text-align:right;">45</td>
+              <td style="border:1px solid #ddd; padding:10px; text-align:center;">Oui</td>
+              <td style="border:1px solid #ddd; padding:10px;">
+                Ajustable, avec cache anti-lumière intégré et inserts pour fixation.
+              </td>
+            </tr>
+
+            <tr>
+              <td style="border:1px solid #ddd; padding:10px;">Support capteur laser</td>
+              <td style="border:1px solid #ddd; padding:10px; text-align:right;">10</td>
+              <td style="border:1px solid #ddd; padding:10px; text-align:center;">Oui</td>
+              <td style="border:1px solid #ddd; padding:10px;">
+                Renforcé et amorti pour limiter vibrations ; prêt pour export.
+              </td>
+            </tr>
+
+            <tr>
+              <td style="border:1px solid #ddd; padding:10px;">Paliers porte-roulements (coulisseau)</td>
+              <td style="border:1px solid #ddd; padding:10px; text-align:right;">83</td>
+              <td style="border:1px solid #ddd; padding:10px; text-align:center;">Oui</td>
+              <td style="border:1px solid #ddd; padding:10px;">
+                Coulisseau dimensionné pour emmanchement précis du roulement ; glissière associée pour réglage.
+              </td>
+            </tr>
+
+            <tr>
+              <td style="border:1px solid #ddd; padding:10px;">Bâti moteur — partie 1</td>
+              <td style="border:1px solid #ddd; padding:10px; text-align:right;">978</td>
+              <td style="border:1px solid #ddd; padding:10px; text-align:center;">Oui</td>
+              <td style="border:1px solid #ddd; padding:10px;">
+                Support moteur intégré et renforcé ; inserts et bossages M4 prévus.
+              </td>
+            </tr>
+
+            <tr>
+              <td style="border:1px solid #ddd; padding:10px;">Bâti moteur — partie 2</td>
+              <td style="border:1px solid #ddd; padding:10px; text-align:right;">99</td>
+              <td style="border:1px solid #ddd; padding:10px; text-align:center;">Oui</td>
+              <td style="border:1px solid #ddd; padding:10px;">
+                Deuxième moitié conçue pour assemblage par vis + goupilles de centrage.
+              </td>
+            </tr>
+
+            <tr>
+              <td style="border:1px solid #ddd; padding:10px;">Bâti non-moteur — partie 1</td>
+              <td style="border:1px solid #ddd; padding:10px; text-align:right;">631</td>
+              <td style="border:1px solid #ddd; padding:10px; text-align:center;">Oui</td>
+              <td style="border:1px solid #ddd; padding:10px;">
+                Contrepartie du bâti moteur, avec glissière pour tendeur intégré.
+              </td>
+            </tr>
+
+            <tr>
+              <td style="border:1px solid #ddd; padding:10px;">Bâti non-moteur — partie 2</td>
+              <td style="border:1px solid #ddd; padding:10px; text-align:right;">104</td>
+              <td style="border:1px solid #ddd; padding:10px; text-align:center;">Oui</td>
+              <td style="border:1px solid #ddd; padding:10px;">
+                Seconde moitié prévue pour assemblage, renforts et passages de câbles intégrés.
+              </td>
+            </tr>
+
+            <tr>
+              <td style="border:1px solid #ddd; padding:10px;">Jointure — partie 1 / partie 2</td>
+              <td style="border:1px solid #ddd; padding:10px; text-align:right;">62 / 78</td>
+              <td style="border:1px solid #ddd; padding:10px; text-align:center;">Oui</td>
+              <td style="border:1px solid #ddd; padding:10px;">
+                Plats de jonction prévus avec goupilles de centrage et vissage ; surfaces d'appui calibrées.
+              </td>
+            </tr>
+
+            <tr>
+              <td style="border:1px solid #ddd; padding:10px;">Cube (élément test)</td>
+              <td style="border:1px solid #ddd; padding:10px; text-align:right;">17</td>
+              <td style="border:1px solid #ddd; padding:10px; text-align:center;">Oui</td>
+              <td style="border:1px solid #ddd; padding:10px;">
+                Cube test imprimé (30 mm, remplissage 50 %) utilisé pour vérifier guidage et détection couleur.
+              </td>
+            </tr>
+
+            <tr style="background:#fafafa; font-weight:600;">
+              <td style="border:1px solid #ddd; padding:10px;">Total / Remarques finales</td>
+              <td style="border:1px solid #ddd; padding:10px; text-align:right;">2854.65g</td>
+              <td style="border:1px solid #ddd; padding:10px; text-align:center;">—</td>
+              <td style="border:1px solid #ddd; padding:10px;">
+                Pièces découpées et préparées pour impression. Prochaine étape : export STL, tests d'impression,
+                ajustements mineurs, puis assemblage et validation fonctionnelle. Il est également important de soulever
+                que la masse finale est environs trois fois moins que celle de départ.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+
+      <p> La phase de conception 3D est close : nous disposons d’une version finale découpée, modélisée et prête à
+        l’export pour impression. On passe maintenant à la phase technique d’assemblage et de fabrication. </p>
+
+      <h5>Vous pouvez maintenant télécharger le zip de l'assemblage au complet. Il contient toutes les pièces
+        modélisés et l'assemblage lui même.</h5>
+      <h5><i>Pour télécharger, cliquez <a href="assets/zips/convoyeur.zip" style="text-decoration: none;">ici</a></i>
+      </h5>
+    </article>
+
+  </section>
+
+  <section id="details-techniques-assemblage" style="margin-bottom:64px;">
+    <h2 style="color:var(--teal-dark);">Section 4 — Détails techniques et assemblage</h2>
+
+    <p>
+      Cette partie décrit les aspects concrets de fabrication et d’assemblage du convoyeur.
+      Après la phase de conception, chaque composant doit maintenant être documenté pour
+      l’impression, la préparation et le montage. L’objectif est d’assurer que toute personne
+      puisse reproduire le système à partir des fichiers fournis et des indications techniques.
+    </p>
+
+    <!-- Sous-section 4.1 -->
+    <article id="pieces-imprimees-3d" style="margin-bottom:48px;">
+      <h3 style="color:var(--blue-dark);">4.1 Pièces imprimées en 3D</h3>
+
+      <p>
+        Les éléments principaux ont été découpés et optimisés pour entrer dans le volume d’impression
+        disponible (≈ 250 × 220 × 220 mm). Chaque pièce imprimée – qu’il s’agisse des tambours moteur
+        et non-moteur, des becs à lèvres, des supports de capteurs ou des parties de bâti – sera
+        présentée avec une vue 3D, une capture de sa masse issue de la CAO, et un lien de téléchargement
+        aux formats STEP et STL.
+      </p>
+
+      <p>
+        Les matériaux et formes ont été choisis pour allier solidité et facilité d’impression.
+        Le PLA est privilégié pour sa stabilité dimensionnelle et sa simplicité de mise en œuvre.
+        Les zones soumises à contraintes, comme les fixations moteur ou sièges de roulements,
+        ont été renforcées par des épaulements et des congés. Les logements pour vis M3/M4 et
+        inserts chauffants ont été intégrés dès la modélisation.
+      </p>
+
+      <p>
+        Les roulements 6202-2RS sont intégrés dans des coulisseaux avec couvercles à lèvres.
+        Bien que les roulements eux-mêmes soient achetés, les alésages sont conçus pour un ajustement précis.
+        Les surfaces d’appui et d’assemblage sont planes pour faciliter le perçage et la pose
+        d’inserts ou d’écrous prisonniers.
+      </p>
+
+      <div style="margin-top:16px; padding:16px; border-left:4px solid var(--teal-dark); background:var(--bg);">
+        <strong style="color:var(--accent-color);">Paramètres d’impression conseillés</strong>
+        <p style="margin:8px 0 0 0; color:var(--text-light);">
+          Hauteur de couche : 0,20 mm<br>
+          Remplissage : 20 à 30 % (structurelles : 30 % / esthétiques : 15–20 %)<br>
+          Épaisseur paroi : ≥ 2 mm (2–3 périmètres)<br>
+          Supports : uniquement pour porte-à-faux &gt; 45°<br>
+          Jeu fonctionnel : ≥ 0,3 mm pour pièces mobiles<br>
+          Prévoir bossages et perçages adaptés pour inserts M3/M4
+        </p>
+      </div>
+
+      <p style="margin-top:16px;">
+        Les fichiers seront organisés par composant, avec pour chacun : STEP, STL, capture Mass Properties,
+        orientation d’impression recommandée et éventuelles remarques spécifiques.
+      </p>
+    </article>
+
+    <!-- Sous-section 4.2 -->
+    <article id="composants-standards">
+      <h3 style="color:var(--blue-dark);">4.2 Composants standards</h3>
+
+      <p>
+        Certains éléments essentiels du convoyeur ne sont pas imprimés mais achetés, afin de garantir fiabilité,
+        précision et durabilité. Le roulement <strong>6202-2RS</strong>, par exemple, a été retenu car il est
+        facilement disponible sur le marché, conforme aux normes industrielles et difficilement fabricable
+        par impression 3D dans le cadre de notre projet. Les <strong>vis et écrous</strong> ont été choisis
+        pour assurer une fixation solide et répétable, avec un gain de temps considérable par rapport à
+        une fabrication artisanale.
+      </p>
+
+      <p>
+        Le <strong>moteur DC</strong> utilisé est celui déjà disponible dans notre stock. Il offre un bon
+        compromis entre consommation électrique et fiabilité, tout en étant adapté aux contraintes du convoyeur.
+        Les <strong>capteurs de couleur</strong> et <strong>capteurs laser</strong> ont également été choisis
+        sur la base de leur disponibilité, compatibilité avec notre électronique et performances stables
+        pour la détection en mouvement.
+      </p>
+
+      <p>
+        L’ensemble de ces composants standards est listé dans le tableau <abbr title="Bill of Materials">BOM</abbr>
+        qui suivra, avec les références, quantités, et liens éventuels vers les fournisseurs.
+      </p>
+
+      <table border="1" cellpadding="5" cellspacing="0"
+        style="border-collapse: collapse; text-align: center; width: 100%;">
+        <thead style="background-color: #f2f2f2;">
+          <tr>
+            <th>Référence</th>
+            <th>Désignation</th>
+            <th>Quantité</th>
+            <th>Spécifications techniques</th>
+            <th>Justification</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>STD-001</td>
+            <td>Roulement 6202-2RS</td>
+            <td>4</td>
+            <td>Norme ISO, Ø intérieur 15 mm, Ø extérieur 35 mm, largeur 11 mm</td>
+            <td>Disponible, conforme aux normes, impossible à fabriquer dans les délais</td>
+          </tr>
+          <tr>
+            <td>STD-002</td>
+            <td>Vis M3/M4 + écrous</td>
+            <td>20</td>
+            <td>Acier zingué, longueur 30 mm, pas standard métrique</td>
+            <td>Fixation robuste et fiable, standard ISO</td>
+          </tr>
+          <tr>
+            <td>STD-003</td>
+            <td>Moteur DC</td>
+            <td>1</td>
+            <td>12V, 30W, 3000 rpm</td>
+            <td>Déjà disponible, fiable, consommation modérée</td>
+          </tr>
+          <tr>
+            <td>STD-004</td>
+            <td>Capteur de couleur - TCS34725</td>
+            <td>1</td>
+            <td>Détection RGB, faible consommation, temps de réponse rapide</td>
+            <td>Disponible et adapté à l’application</td>
+          </tr>
+          <tr>
+            <td>STD-005</td>
+            <td>Capteur laser - KY008</td>
+            <td>2</td>
+            <td>Portée 10 cm, précision ±1 mm</td>
+            <td>Disponible et précis pour la détection d’objets</td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
+    <article id="fixations-ajustements" style="margin-top:48px;">
+      <h3 style="color:var(--blue-dark);">4.3 Systèmes de fixation et ajustements mécaniques</h3>
+
+      <p>
+        L’assemblage du convoyeur repose sur des fixations mécaniques simples et standardisées
+        (vis, écrous, rondelles) associées à des ajustements pensés dès la modélisation.
+        L’objectif est de garantir un montage fiable, démontable et précis,
+        sans nécessiter de pièces spécifiques complexes.
+      </p>
+
+      <p>
+        Les pièces imprimées intègrent directement des <strong>alésages et perçages</strong> adaptés
+        aux dimensions des vis et aux écrous standards utilisés (M3, M4 selon les zones).
+        Ces emplacements sont dimensionnés avec un léger <strong>jeu fonctionnel</strong>
+        (≈ +0,3 mm sur le diamètre nominal) afin de compenser les tolérances d’impression
+        et d’éviter tout forçage lors du montage.
+      </p>
+
+      <p>
+        Les <strong>roulements 6202-2RS</strong> sont logés dans des alésages précis
+        (tolérance serrée pour maintien radial), avec un épaulement interne
+        empêchant leur déplacement axial. Le maintien est complété par des
+        <em>couvercles à lèvres</em> fixés par vis, assurant à la fois la protection
+        contre les poussières et la tenue mécanique.
+      </p>
+
+      <p>
+        Le réglage de la tension de la bande transporteuse est assuré par
+        un système de <strong>glissière</strong> : les paliers d’extrémité sont
+        montés dans des supports coulissants, maintenus par des vis traversant
+        des lumières oblongues. Cela permet un ajustement fin de la position
+        du tambour de renvoi sans avoir à démonter l’ensemble.
+      </p>
+
+      <p>
+        Les zones de contact entre pièces mécaniques et pièces imprimées
+        ont été renforcées par des <strong>bossages et parois épaissies</strong>
+        pour éviter la déformation au serrage. Les faces d’appui sont planes
+        afin d’assurer un bon alignement et limiter les contraintes parasites.
+      </p>
+
+      <div style="margin-top:16px; padding:16px; border-left:4px solid var(--blue-dark); background:var(--bg);">
+        <strong style="color:var(--accent-color-dark);">Points clés de conception</strong>
+        <ul style="margin:8px 0 0 0; color:var(--text-light);">
+          <li>Utilisation de vis et écrous standard M3/M4 pour l’ensemble du montage</li>
+          <li>Jeu fonctionnel prévu dès la modélisation pour faciliter l’assemblage</li>
+          <li>Logements de roulements précis avec épaulement interne</li>
+          <li>Maintien axial des roulements par couvercles vissés</li>
+          <li>Glissières à lumière oblongue pour réglage de tension de bande</li>
+          <li>Renforts aux points de fixation pour éviter la déformation</li>
+        </ul>
+      </div>
+    </article>
+  </section>
+  <section id="fabrication" style="margin-bottom:64px;">
+    <h2 style="color:var(--teal-dark);">Section 5 — Fabrication</h2>
+
+    <article id="parametres-impression" style="margin-top:32px;">
+      <h3 style="color:var(--blue-dark);">5.1 Paramètres d’impression 3D (matériaux, remplissage, orientation)</h3>
+
+      <p>
+        Avant de détailler les réglages, voici un tableau récapitulatif des pièces à imprimer en 3D.
+        Il reprend le principe d’une nomenclature (BOM) mais appliquée uniquement aux éléments imprimés.
+        Chaque ligne précise la référence, la description, le matériau recommandé, la quantité et
+        l’orientation d’impression.
+      </p>
+
+      <div style="overflow-x:auto; margin-top:16px;">
+        <table style="border-collapse:collapse; width:100%; font-size:0.95em; border-spacing:0 6px;">
+          <thead>
+            <tr style="background:var(--teal-dark); color:white;">
+              <th style="padding:12px; border:1px solid var(--teal-dark);">Réf.</th>
+              <th style="padding:12px; border:1px solid var(--teal-dark);">Nom de la pièce</th>
+              <th style="padding:12px; border:1px solid var(--teal-dark);">Qté</th>
+              <th style="padding:12px; border:1px solid var(--teal-dark);">Matériau recommandé</th>
+              <th style="padding:12px; border:1px solid var(--teal-dark);">Orientation conseillée</th>
+              <th style="padding:12px; border:1px solid var(--teal-dark);">Remarques</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="padding:10px;">P01</td>
+              <td style="padding:10px;">Partie gauche - jointure</td>
+              <td style="padding:10px;">1</td>
+              <td style="padding:10px;">PLA / PETG</td>
+              <td style="padding:10px;">Face plane sur plateau</td>
+              <td style="padding:10px;">Alignement précis avec partie droite</td>
+            </tr>
+            <tr>
+              <td style="padding:10px;">P02</td>
+              <td style="padding:10px;">Partie droite - jointure</td>
+              <td style="padding:10px;">1</td>
+              <td style="padding:10px;">PLA / PETG</td>
+              <td style="padding:10px;">Face plane sur plateau</td>
+              <td style="padding:10px;">Prévoir jeu de 0,2 mm pour emboîtement</td>
+            </tr>
+            <tr>
+              <td style="padding:10px;">P03</td>
+              <td style="padding:10px;">Couvercle à lèvres gauche</td>
+              <td style="padding:10px;">2</td>
+              <td style="padding:10px;">PLA</td>
+              <td style="padding:10px;">Face extérieure vers le haut</td>
+              <td style="padding:10px;">Surface visible, soigner finition</td>
+            </tr>
+            <tr>
+              <td style="padding:10px;">P04</td>
+              <td style="padding:10px;">Couvercle à lèvres droit</td>
+              <td style="padding:10px;">2</td>
+              <td style="padding:10px;">PLA</td>
+              <td style="padding:10px;">Face extérieure vers le haut</td>
+              <td style="padding:10px;">Surface visible, soigner finition</td>
+            </tr>
+            <tr>
+              <td style="padding:10px;">P05</td>
+              <td style="padding:10px;">Partie 2 - bâtis 1</td>
+              <td style="padding:10px;">1</td>
+              <td style="padding:10px;">PETG</td>
+              <td style="padding:10px;">Face de base sur plateau</td>
+              <td style="padding:10px;">Pièce structurelle</td>
+            </tr>
+            <tr>
+              <td style="padding:10px;">P06</td>
+              <td style="padding:10px;">Partie 2 - bâtis 2</td>
+              <td style="padding:10px;">1</td>
+              <td style="padding:10px;">PETG</td>
+              <td style="padding:10px;">Face de base sur plateau</td>
+              <td style="padding:10px;">Pièce structurelle</td>
+            </tr>
+            <tr>
+              <td style="padding:10px;">P07</td>
+              <td style="padding:10px;">Paliers en U - glissière</td>
+              <td style="padding:10px;">2</td>
+              <td style="padding:10px;">PLA</td>
+              <td style="padding:10px;">Ouverture vers le haut</td>
+              <td style="padding:10px;">Prévoir jeu fonctionnel</td>
+            </tr>
+            <tr>
+              <td style="padding:10px;">P08</td>
+              <td style="padding:10px;">Support capteur couleur</td>
+              <td style="padding:10px;">1</td>
+              <td style="padding:10px;">PLA</td>
+              <td style="padding:10px;">Face capteur vers le haut</td>
+              <td style="padding:10px;">Respect passage de câble</td>
+            </tr>
+            <tr>
+              <td style="padding:10px;">P09</td>
+              <td style="padding:10px;">Support capteur laser</td>
+              <td style="padding:10px;">4</td>
+              <td style="padding:10px;">PLA</td>
+              <td style="padding:10px;">Face capteur vers le haut</td>
+              <td style="padding:10px;">Alignement précis pour détection</td>
+            </tr>
+            <tr>
+              <td style="padding:10px;">P10</td>
+              <td style="padding:10px;">Tambour moteur</td>
+              <td style="padding:10px;">1</td>
+              <td style="padding:10px;">PLA / PETG</td>
+              <td style="padding:10px;">Axe horizontal</td>
+              <td style="padding:10px;">Alésage serré pour roulement</td>
+            </tr>
+            <tr>
+              <td style="padding:10px;">P11</td>
+              <td style="padding:10px;">Tambour non moteur</td>
+              <td style="padding:10px;">1</td>
+              <td style="padding:10px;">PLA</td>
+              <td style="padding:10px;">Axe horizontal</td>
+              <td style="padding:10px;">Identique P10 sans interface moteur</td>
+            </tr>
+            <tr>
+              <td style="padding:10px;">P12</td>
+              <td style="padding:10px;">Partie 1 - châssis 1 - gauche</td>
+              <td style="padding:10px;">1</td>
+              <td style="padding:10px;">PETG</td>
+              <td style="padding:10px;">Face base sur plateau</td>
+              <td style="padding:10px;">Partie structurelle</td>
+            </tr>
+            <tr>
+              <td style="padding:10px;">P13</td>
+              <td style="padding:10px;">Partie 1 - châssis 1 - droite</td>
+              <td style="padding:10px;">1</td>
+              <td style="padding:10px;">PETG</td>
+              <td style="padding:10px;">Face base sur plateau</td>
+              <td style="padding:10px;">Partie structurelle</td>
+            </tr>
+            <tr>
+              <td style="padding:10px;">P14</td>
+              <td style="padding:10px;">Partie 1 - châssis 2 - gauche</td>
+              <td style="padding:10px;">1</td>
+              <td style="padding:10px;">PETG</td>
+              <td style="padding:10px;">Face base sur plateau</td>
+              <td style="padding:10px;">Partie structurelle</td>
+            </tr>
+            <tr>
+              <td style="padding:10px;">P15</td>
+              <td style="padding:10px;">Partie 1 - châssis 2 - droite</td>
+              <td style="padding:10px;">1</td>
+              <td style="padding:10px;">PETG</td>
+              <td style="padding:10px;">Face base sur plateau</td>
+              <td style="padding:10px;">Partie structurelle</td>
+            </tr>
+            <tr>
+              <td style="padding:10px;">P16</td>
+              <td style="padding:10px;">Cube</td>
+              <td style="padding:10px;">4</td>
+              <td style="padding:10px;">PLA</td>
+              <td style="padding:10px;">Face plane sur plateau</td>
+              <td style="padding:10px;">Éviter surchauffe pour précision</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+
+      <h4 style="margin-top:32px; color:var(--blue-dark);">Cohérence des paramètres</h4>
+      <p>
+        Les réglages d’impression sont choisis pour équilibrer <strong>précision</strong>,
+        <strong>solidité</strong> et <strong>temps de production</strong>. Les pièces soumises
+        à des contraintes mécaniques (P01, P03) reçoivent plus de périmètres et un remplissage
+        plus dense (30 %), tandis que les éléments moins sollicités peuvent être allégés
+        (15–20 %).
+      </p>
+
+      <div style="margin-top:16px; padding:16px; border-left:4px solid var(--teal-dark); background:var(--bg);">
+        <ul style="margin:0; color:var(--text-light);">
+          <li>Hauteur de couche : <strong>0,20 mm</strong> (polyvalence)</li>
+          <li>Largeur de ligne : <strong>0,4 mm</strong> (buse standard)</li>
+          <li>Remplissage : <strong>20–30 %</strong></li>
+          <li>Épaisseur parois : <strong>≥ 2 mm</strong></li>
+          <li>Supports : uniquement pour porte-à-faux &gt; 45°</li>
+          <li>Jeu fonctionnel : <strong>≥ 0,3 mm</strong> sur glissières et emboîtements</li>
+        </ul>
+      </div>
+
+      <h4 style="margin-top:32px; color:var(--blue-dark);">Aperçu après slicing (dans le logiciel Prusa)</h4>
+
+      <h5>Images illustrant des problèmes d'impression</h5>
+      <div style="display:flex; flex-wrap:wrap; gap:16px; margin-top:12px; justify-content: center;">
+        <figure style="margin:16px 0;">
+          <img src="assets/imgs/impression_bambulab-10.png"
+            alt="Aperçu slicing raté du convoyeur en entier dans PrusaSlicer"
+            style="max-width:100%; text-align: center; border:1px solid #ccc;">
+          <figcaption style="font-size:0.85em; color:var(--text-light);">Slicing raté 1 - PrusaSlicer</figcaption>
+        </figure>
+        <figure style="margin:16px 0;">
+          <img src="assets/imgs/impression_bambulab-11.png"
+            alt="Aperçu slicing raté du convoyeur en entier dans PrusaSlicer"
+            style="max-width:100%; text-align: center; border:1px solid #ccc;">
+          <figcaption style="font-size:0.85em; color:var(--text-light);">Slicing raté 2 - PrusaSlicer</figcaption>
+        </figure>
+      </div>
+      <p>Ces deux images montrent clairement les problèmes que nous avons eu lors de notre première impression oùnotre
+        modèle n'arrivait pas à s'intégrer etse poser correctement sur le plateau. Ce qui nous a donc amené à découper
+        en plusieurs morceaux.</p><br>
+      <div style="display:flex; flex-wrap:wrap; gap:16px; margin-top:12px; justify-content: center;">
+        <figure style="margin:16px 0;">
+          <img src="assets/imgs/impression_bambulab-9.png" alt="Aperçu slicing raté du bâti moteur dans PrusaSlicer"
+            style="max-width:100%; text-align: center; border:1px solid #ccc;">
+          <figcaption style="font-size:0.85em; color:var(--text-light);">Slicing raté 3 - PrusaSlicer</figcaption>
+        </figure>
+      </div>
+      <p>Ici plus haut, on voit clairement que les supports débordent du plateau. Nous avons également procéder à un
+        découpage pour que ça puisse être imprimé</p><br><br>
+      <h5>Illustrations de nos slicings réussis et les infos supplémentaires utiles (quantité de matière / temps
+        d'impression)</h5>
+      <div style="display:flex; flex-wrap:wrap; gap:16px; margin-top:12px; justify-content: center;">
+        <figure style="margin:16px 0;">
+          <img src="assets/imgs/impression_bambulab-3.png" alt="Aperçu slicing dans PrusaSlicer"
+            style="max-width:100%; text-align: center; border:1px solid #ccc;">
+          <figcaption style="font-size:0.85em; color:var(--text-light);">Slicing 1 - PrusaSlicer</figcaption>
+        </figure>
+        <figure style="margin:16px 0;">
+          <img src="assets/imgs/impression_bambulab-4.png" alt="Aperçu slicing dans PrusaSlicer"
+            style="max-width:100%; text-align: center; border:1px solid #ccc;">
+          <figcaption style="font-size:0.85em; color:var(--text-light);">Slicing 2 - PrusaSlicer</figcaption>
+        </figure>
+        <figure style="margin:16px 0;">
+          <img src="assets/imgs/impression_bambulab-5.png" alt="Aperçu slicing PrusaSlicer"
+            style="max-width:100%; text-align: center; border:1px solid #ccc;">
+          <figcaption style="font-size:0.85em; color:var(--text-light);">Slicing 3 - PrusaSlicer</figcaption>
+        </figure>
+        <figure style="margin:16px 0;">
+          <img src="assets/imgs/impression_bambulab-6.png" alt="Aperçu slicing dans PrusaSlicer"
+            style="max-width:100%; text-align: center; border:1px solid #ccc;">
+          <figcaption style="font-size:0.85em; color:var(--text-light);">Slicing 4 - PrusaSlicer</figcaption>
+        </figure>
+        <figure style="margin:16px 0;">
+          <img src="assets/imgs/impression_bambulab-7.png" alt="Aperçu slicing dans PrusaSlicer"
+            style="max-width:100%; text-align: center; border:1px solid #ccc;">
+          <figcaption style="font-size:0.85em; color:var(--text-light);">Slicing 5 - PrusaSlicer</figcaption>
+        </figure>
+        <figure style="margin:16px 0;">
+          <img src="assets/imgs/impression_bambulab-8.png" alt="Aperçu slicing dans PrusaSlicer"
+            style="max-width:100%; text-align: center; border:1px solid #ccc;">
+          <figcaption style="font-size:0.85em; color:var(--text-light);">Slicing 6 - PrusaSlicer</figcaption>
+        </figure>
+        <figure style="margin:16px 0;">
+          <img src="assets/imgs/impression_bambulab-1.png" alt="Aperçu slicing dans BambuLab"
+            style="max-width:100%; text-align: center; border:1px solid #ccc;">
+          <figcaption style="font-size:0.85em; color:var(--text-light);">Slicing 1 - Bambulab</figcaption>
+        </figure>
+        <figure style="margin:16px 0;">
+          <img src="assets/imgs/impression_bambulab-2.png" alt="Aperçu slicing dans BambuLab"
+            style="max-width:100%; text-align: center; border:1px solid #ccc;">
+          <figcaption style="font-size:0.85em; color:var(--text-light);">Slicing 2 - Bambulab</figcaption>
+        </figure>
+      </div>
+
+      <p style="margin-top:32px;">
+        Ces aperçus permettent de valider visuellement l’orientation des pièces, la répartition du remplissage,
+        et la présence éventuelle de supports. Ce contrôle évite les erreurs avant lancement de l’impression.
+      </p>
+
+      <p style="margin-top:16px;">
+        En suivant cette méthodologie, les pièces imprimées sont directement prêtes à être utilisées
+        ou nécessitent seulement un ébavurage minimal. On peut alors passer au post-traitement
+        et à l’assemblage final.
+      </p>
+
+    </article>
+    <article id="post-traitement" style="margin-top:64px;">
+      <h3 style="color:var(--blue-dark);">5.2 Post-traitement et assemblage final</h3>
+
+      <p>
+        Une fois les pièces imprimées, plusieurs étapes de finition et de montage sont nécessaires
+        pour assurer la précision d’ajustement, la fluidité des mouvements et la fiabilité mécanique
+        du convoyeur.
+      </p>
+
+      <h4 style="margin-top:24px; color:var(--blue-dark);">A. Préparation des pièces imprimées</h4>
+      <ol style="margin-left:20px; line-height:1.6;">
+        <li>Ébavurage léger des arêtes afin d’éliminer toute irrégularité due à l’impression.</li>
+        <li>Ponçage localisé des zones d’emboîtement ou de glissière (grain fin).</li>
+        <li>Nettoyage des logements de roulements et axes pour garantir un ajustement précis.</li>
+        <li>Retrait soigneux des éventuels supports d’impression.</li>
+      </ol>
+
+      <h4 style="margin-top:24px; color:var(--blue-dark);">B. Assemblage mécanique</h4>
+      <ol style="margin-left:20px; line-height:1.6;">
+        <li>Insertion des roulements dans les tambours (pièces P01 et P02).</li>
+        <li>Fixation du tambour moteur sur le support P03 à l’aide de vis M4.</li>
+        <li>Montage du tambour libre à l’extrémité opposée.</li>
+        <li>Installation des glissières P04 avec réglage du jeu latéral.</li>
+        <li>Vérification de l’alignement global des axes et de la bande transporteuse.</li>
+      </ol>
+
+      <h4 style="margin-top:24px; color:var(--blue-dark);">C. Installation des éléments fonctionnels</h4>
+      <ol style="margin-left:20px; line-height:1.6;">
+        <li>Montage et raccordement du moteur DC.</li>
+        <li>Fixation des supports capteurs et mise en place des capteurs optiques / laser.</li>
+        <li>Pose et tension de la bande transporteuse.</li>
+        <li>Test manuel de rotation pour vérifier l’absence de frottements ou points durs.</li>
+      </ol>
+
+      <h4 style="margin-top:24px; color:var(--blue-dark);">D. Contrôles finaux</h4>
+      <ul style="margin-left:20px; line-height:1.6;">
+        <li>Tambours alignés et bande centrée.</li>
+        <li>Absence de vibrations ou frottements excessifs.</li>
+        <li>Capteurs correctement positionnés et opérationnels.</li>
+        <li>Rotation fluide et stable lors de la mise sous tension.</li>
+      </ul>
+
+      <h4 style="margin-top:24px; color:var(--blue-dark);">E. Assemblage final — Illustrations</h4>
+      <p>
+        Les photos suivantes présentent le convoyeur complètement assemblé et fonctionnel,
+        après toutes les étapes de post-traitement et d’ajustement.
+      </p>
+
+      <div style="display:flex; flex-wrap:wrap; gap:16px; margin-top:12px; justify-content: center;">
+        <figure style="margin:16px 0;">
+          <img src="assets/imgs/conv-real-img_1.jpg" alt="Convoyeur réel assemblé - image 1"
+            style="max-width:100%; text-align: center; border:1px solid #ccc;">
+          <figcaption style="font-size:0.85em; color:var(--text-light);">Vue du convoyeur physique assemblé - 1
+          </figcaption>
+        </figure>
+        <figure style="margin:16px 0;">
+          <img src="assets/imgs/conv-real-img_2.jpg" alt="Convoyeur réel assemblé - image 2"
+            style="max-width:100%; text-align: center; border:1px solid #ccc;">
+          <figcaption style="font-size:0.85em; color:var(--text-light);">Vue du convoyeur physique assemblé - 2
+          </figcaption>
+        </figure>
+        <figure style="margin:16px 0;">
+          <img src="assets/imgs/conv-real-img_3.jpg" alt="Convoyeur réel assemblé - image 3"
+            style="max-width:100%; text-align: center; border:1px solid #ccc;">
+          <figcaption style="font-size:0.85em; color:var(--text-light);">Vue du convoyeur physique assemblé - 3
+          </figcaption>
+        </figure>
+        <figure style="margin:16px 0;">
+          <img src="assets/imgs/conv-real-img_4.jpg" alt="Convoyeur réel assemblé - image 4"
+            style="max-width:100%; text-align: center; border:1px solid #ccc;">
+          <figcaption style="font-size:0.85em; color:var(--text-light);">Vue du convoyeur physique assemblé - 4
+          </figcaption>
+        </figure>
+        <figure style="margin:16px 0;">
+          <img src="assets/imgs/conv-real-img_5.jpg" alt="Convoyeur réel assemblé - image 5"
+            style="max-width:100%; text-align: center; border:1px solid #ccc;">
+          <figcaption style="font-size:0.85em; color:var(--text-light);">Vue du convoyeur physique assemblé - 5
+          </figcaption>
+        </figure>
+        <figure style="margin:16px 0;">
+          <img src="assets/imgs/conv-real-img_6.jpg" alt="Convoyeur réel assemblé - image 6"
+            style="max-width:100%; text-align: center; border:1px solid #ccc;">
+          <figcaption style="font-size:0.85em; color:var(--text-light);">Vue du convoyeur physique assemblé - 6
+          </figcaption>
+        </figure>
+        <figure style="margin:16px 0;">
+          <img src="assets/imgs/conv-real-img_7.jpg" alt="Convoyeur réel assemblé - image 7"
+            style="max-width:100%; text-align: center; border:1px solid #ccc;">
+          <figcaption style="font-size:0.85em; color:var(--text-light);">Vue du convoyeur physique assemblé - 7
+          </figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <h3 style="color:var(--blue-dark);">Conclusion de la fabrication</h3>
+    <p>
+      La phase de fabrication, incluant l’impression 3D, le post-traitement et l’assemblage final,
+      a permis de concrétiser la conception du convoyeur de manière fidèle aux modèles numériques.
+      Les choix de paramètres d’impression ont garanti la solidité des pièces tout en optimisant
+      le temps de production, et les ajustements manuels ont permis d’obtenir un assemblage fluide
+      et fiable.
+      <br><br>
+      Les premiers tests à vide ont confirmé la bonne rotation des tambours, le centrage correct
+      de la bande transporteuse et l’efficacité des systèmes de fixation, validant ainsi la
+      cohérence entre la conception initiale et le produit final.
+    </p>
+  </section>
+
+  <section id="difficultes-solutions" style="margin-bottom:64px;">
+    <h2 style="color:var(--teal-dark);">Section 6 — Difficultés rencontrées et solutions apportées</h2>
+
+    <p>
+      Au cours de la réalisation, plusieurs imprévus techniques et contraintes
+      pratiques sont apparus, nécessitant des ajustements rapides.
+      Afin de garder une trace claire de ces étapes de résolution, le tableau ci-dessous
+      récapitule les principaux problèmes rencontrés, leur impact potentiel sur le projet
+      et les solutions qui ont été mises en place.
+      Cette synthèse servira de référence pour anticiper ou éviter ces difficultés lors
+      de futures itérations du convoyeur.
+    </p>
+
+    <table style="width:100%; border-collapse:collapse; margin-top:16px; font-size:0.95rem;">
+      <thead>
+        <tr style="background:var(--teal-light); color:#fff;">
+          <th style="padding:8px; border:1px solid var(--border-color); text-align:left;">Problème rencontré</th>
+          <th style="padding:8px; border:1px solid var(--border-color); text-align:left;">Impact</th>
+          <th style="padding:8px; border:1px solid var(--border-color); text-align:left;">Solution mise en place</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding:8px; border:1px solid var(--border-color);">Tolérances d’impression imprécises sur les
+            logements de roulements</td>
+          <td style="padding:8px; border:1px solid var(--border-color);">Montage difficile, risque de jeu ou de
+            blocage</td>
+          <td style="padding:8px; border:1px solid var(--border-color);">Ajustement des modèles 3D avec un jeu
+            fonctionnel de 0,3 mm et test d’impression à blanc</td>
+        </tr>
+        <tr>
+          <td style="padding:8px; border:1px solid var(--border-color);">Alignement imparfait entre tambours et
+            châssis</td>
+          <td style="padding:8px; border:1px solid var(--border-color);">Mouvement de la bande non rectiligne</td>
+          <td style="padding:8px; border:1px solid var(--border-color);">Ajout de glissières de guidage et contrôle au
+            montage avec un gabarit imprimé</td>
+        </tr>
+        <tr>
+          <td style="padding:8px; border:1px solid var(--border-color);">Fixations des capteurs peu robustes</td>
+          <td style="padding:8px; border:1px solid var(--border-color);">Risque de décalage de lecture des capteurs
+          </td>
+          <td style="padding:8px; border:1px solid var(--border-color);">Renforcement des supports et utilisation de
+            vis M3 avec rondelles</td>
+        </tr>
+        <tr>
+          <td style="padding:8px; border:1px solid var(--border-color);">Câblage trop tendu autour du moteur</td>
+          <td style="padding:8px; border:1px solid var(--border-color);">Usure prématurée des fils, risque de rupture
+          </td>
+          <td style="padding:8px; border:1px solid var(--border-color);">Allongement des câbles et fixation par
+            colliers nylon</td>
+        </tr>
+        <tr>
+          <td style="padding:8px; border:1px solid var(--border-color);">Bruit excessif du système en fonctionnement
+          </td>
+          <td style="padding:8px; border:1px solid var(--border-color);">Inconfort d’utilisation, vibrations</td>
+          <td style="padding:8px; border:1px solid var(--border-color);">Ajout de silentblocs sous le châssis et
+            lubrification des pièces en contact</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <article id="contraintes-materiaux" style="margin-bottom:48px;">
+      <h3 style="color:var(--teal-dark);">6.1 Contraintes liées aux matériaux</h3>
+      <p>
+        Le choix du matériau principal pour les pièces imprimées, le PLA, a été dicté par sa
+        disponibilité, sa facilité d’impression et son coût réduit.
+        Cependant, le PLA présente une faible résistance à la chaleur et une rigidité pouvant
+        provoquer des fissures en cas de contraintes mécaniques importantes.
+        Pour pallier ces limites :
+      </p>
+      <ul>
+        <li>Renforcement des zones sollicitées par augmentation de l’épaisseur des parois.</li>
+        <li>Ajout de nervures internes pour limiter la flexion.</li>
+        <li>Orientation stratégique des impressions pour optimiser la résistance dans l’axe des efforts.</li>
+      </ul>
+    </article>
+
+    <article id="ajustements-tolerances" style="margin-bottom:48px;">
+      <h3 style="color:var(--teal-dark);">6.2 Ajustements mécaniques et tolérances</h3>
+      <p>
+        Les impressions 3D présentent souvent des variations dimensionnelles minimes mais critiques
+        lors de l’assemblage.
+        Les logements de roulements, les guides et les logements d’axe ont nécessité des ajustements
+        répétés.
+        Les solutions appliquées :
+      </p>
+      <ul>
+        <li>Application d’un jeu fonctionnel de 0,2 à 0,3 mm pour les pièces mobiles.</li>
+        <li>Ébavurage systématique après impression pour éliminer les aspérités.</li>
+        <li>Utilisation de cales fines pour compenser les écarts lors de l’assemblage.</li>
+      </ul>
+    </article>
+
+    <article id="contraintes-electroniques" style="margin-bottom:48px;">
+      <h3 style="color:var(--teal-dark);">6.3 Adaptation aux contraintes électroniques</h3>
+      <p>
+        L’intégration des capteurs et du moteur a imposé des contraintes supplémentaires :
+      </p>
+      <ul>
+        <li>Positionnement précis des capteurs pour garantir une lecture fiable.</li>
+        <li>Prévoir des chemins de câbles sécurisés afin d’éviter les frottements avec les pièces en mouvement.</li>
+        <li>Stabilisation du moteur sur silentblocs pour réduire les vibrations et protéger les composants
+          électroniques.</li>
+      </ul>
+    </article>
+
+    <article id="conclusion-section6" style="margin-bottom:64px;">
+      <h3 style="color:var(--teal-dark);">Bref conclusion</h3>
+      <p>
+        La réalisation de ce convoyeur a nécessité une approche flexible, combinant modélisation, prototypage
+        et ajustements successifs.
+        Les difficultés rencontrées ont permis de renforcer la robustesse du design et d’optimiser les choix
+        techniques,
+        garantissant un fonctionnement fluide et fiable.
+        Cette phase d’adaptation constitue un retour d’expérience précieux pour toute évolution future du système.
+      </p>
+    </article>
+  </section>
+
+  <section id="conclusion" style="margin-bottom:64px;">
+    <h2 style="color:var(--teal-dark);">Section 7 — Conclusion et perspectives</h2>
+
+    <article id="evaluation-systeme" style="margin-bottom:48px;">
+      <h3 style="color:var(--teal-dark);">7.1 Évaluation du système</h3>
+      <p>
+        Le convoyeur développé répond globalement aux exigences initiales formulées lors de la phase de conception.
+        Les tests effectués ont confirmé :
+      </p>
+      <ul>
+        <li>La bonne stabilité mécanique et le maintien d’un mouvement fluide de la bande.</li>
+        <li>Un alignement précis des composants, minimisant les pertes d’efficacité.</li>
+        <li>Une intégration cohérente des capteurs et du moteur, garantissant un fonctionnement fiable.</li>
+        <li>Une fabrication optimisée pour des moyens d’impression 3D de bureau, sans recours à des procédés
+          industriels lourds.</li>
+      </ul>
+      <p>
+        Malgré quelques ajustements nécessaires en cours de route, le système final présente un niveau de performance
+        satisfaisant
+        et démontre la faisabilité d’un convoyeur compact et modulaire en fabrication additive.
+      </p>
+    </article>
+
+    <article id="pistes-amelioration" style="margin-bottom:48px;">
+      <h3 style="color:var(--teal-dark);">7.2 Pistes d’amélioration</h3>
+      <p>
+        Les résultats obtenus ouvrent la voie à plusieurs optimisations futures :
+      </p> 
+      <ul>
+        <li><strong>Matériaux :</strong> tester l’utilisation de PETG ou d’ABS pour améliorer la résistance thermique
+          et mécanique.</li>
+        <li><strong>Réduction du bruit :</strong> intégrer davantage de pièces amortissantes pour un fonctionnement
+          plus silencieux.</li>
+        <li><strong>Modularité :</strong> prévoir des sections démontables pour faciliter la maintenance et le
+          transport.</li>
+        <li><strong>Automatisation :</strong> intégrer un système de contrôle plus avancé avec retour en temps réel
+          sur l’état du convoyeur.</li>
+        <li><strong>Optimisation énergétique :</strong> utiliser un moteur plus efficace ou un contrôle intelligent de
+          vitesse selon la charge.</li>
+      </ul>
+    </article>
+
+    <article id="cloture" style="margin-bottom:48px;">
+      <h3 style="color:var(--teal-dark);">Clôture</h3>
+      <p>
+        Ce projet a démontré qu’un convoyeur fonctionnel et robuste pouvait être conçu, fabriqué et assemblé avec des
+        moyens accessibles,
+        tout en respectant des contraintes techniques réelles.
+        L’approche par itérations, combinée à l’analyse des problèmes rencontrés, a permis de développer un système
+        adapté à son usage et
+        évolutif pour des besoins futurs.
+        Ces résultats constituent une base solide pour tout développement ultérieur, que ce soit pour augmenter la
+        capacité,
+        améliorer la précision ou intégrer des fonctionnalités avancées.
+      </p>
+    </article>
+  </section>
+</main>

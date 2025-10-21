@@ -1,0 +1,72 @@
+import { Github, Mail, ExternalLink } from "lucide-react"
+
+export function Footer() {
+  return (
+    <footer className="border-t border-border bg-card">
+      <div className="container mx-auto px-4 py-12">
+        <div className="grid md:grid-cols-3 gap-8 mb-8">
+          <div className="space-y-4">
+            <h3 className="text-xl font-bold">TRC Competition</h3>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              Documentation complète de notre parcours dans la compétition robotique TRC 2024.
+            </p>
+          </div>
+
+          <div className="space-y-4">
+            <h4 className="font-semibold">Navigation</h4>
+            <ul className="space-y-2 text-sm text-muted-foreground">
+              <li>
+                <a href="#" className="hover:text-primary transition-colors flex items-center gap-2">
+                  Pré-sélection
+                  <ExternalLink className="w-3 h-3" />
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-primary transition-colors flex items-center gap-2">
+                  Projet Final
+                  <ExternalLink className="w-3 h-3" />
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-primary transition-colors flex items-center gap-2">
+                  Équipe
+                  <ExternalLink className="w-3 h-3" />
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-primary transition-colors flex items-center gap-2">
+                  Galerie
+                  <ExternalLink className="w-3 h-3" />
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div className="space-y-4">
+            <h4 className="font-semibold">Contact</h4>
+            <div className="flex gap-4">
+              <a
+                href="#"
+                className="w-10 h-10 rounded-lg bg-primary/10 hover:bg-primary/20 flex items-center justify-center text-primary transition-colors"
+                aria-label="GitHub"
+              >
+                <Github className="w-5 h-5" />
+              </a>
+              <a
+                href="#"
+                className="w-10 h-10 rounded-lg bg-primary/10 hover:bg-primary/20 flex items-center justify-center text-primary transition-colors"
+                aria-label="Email"
+              >
+                <Mail className="w-5 h-5" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className="pt-8 border-t border-border text-center text-sm text-muted-foreground">
+          <p>© 2025 TRC Competition Documentation. Créé avec passion pour l'innovation robotique.</p>
+        </div>
+      </div>
+    </footer>
+  )
+}
