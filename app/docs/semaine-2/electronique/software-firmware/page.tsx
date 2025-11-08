@@ -158,7 +158,7 @@ export default function FirmwareGuideFRPage() {
                         <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
                           Définit la structure des données (Roulis, Tangage, Accélération Z, Statut) échangées entre la Boîte Noire et la Station de Contrôle.
                         </p>
-                        <Image src="/Documentation/semaine-2/electronique/images/flight_data_structure.png" alt="Diagramme de la structure FlightData" width={600} height={200} className="rounded-md border mx-auto" />
+                        <Image src="/2025-Team-IFRI-Docs/Documentation/semaine-2/electronique/images/flight_data_structure.png" alt="Diagramme de la structure FlightData" width={600} height={200} className="rounded-md border mx-auto" />
                       </div>
 
                       <div className="bg-white dark:bg-gray-900/50 border border-gray-200 dark:border-gray-700 rounded-lg p-6">

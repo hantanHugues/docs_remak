@@ -244,7 +244,7 @@ export default function BlackBoxControlStationPage() {
                           <h4 className="text-lg font-semibold mb-4">Schéma KiCad de la Boîte Noire</h4>
                           <div className="bg-white dark:bg-gray-900 p-4 rounded-lg border">
                             <Image 
-                              src="/Documentation/semaine-2/electronique/images/cube_schema.png" 
+                              src="/2025-Team-IFRI-Docs/Documentation/semaine-2/electronique/images/cube_schema.png" 
                               alt="Schéma KiCad de la Boîte Noire" 
                               width={700} 
                               height={500} 
@@ -265,7 +265,7 @@ export default function BlackBoxControlStationPage() {
                           <div className="grid md:grid-cols-2 gap-4">
                             <div className="bg-white dark:bg-gray-900 p-4 rounded-lg border">
                               <Image 
-                                src="/Documentation/semaine-2/electronique/images/cube_pcb_PCB_3DViewer1.png" 
+                                src="/2025-Team-IFRI-Docs/Documentation/semaine-2/electronique/images/cube_pcb_PCB_3DViewer1.png" 
                                 alt="Vue 3D PCB Boîte Noire - Face 1" 
                                 width={350} 
                                 height={300} 
@@ -274,7 +274,7 @@ export default function BlackBoxControlStationPage() {
                             </div>
                             <div className="bg-white dark:bg-gray-900 p-4 rounded-lg border">
                               <Image 
-                                src="/Documentation/semaine-2/electronique/images/cube_pcb_PCB_3DViewer2.png" 
+                                src="/2025-Team-IFRI-Docs/Documentation/semaine-2/electronique/images/cube_pcb_PCB_3DViewer2.png" 
                                 alt="Vue 3D PCB Boîte Noire - Face 2" 
                                 width={350} 
                                 height={300} 
@@ -380,7 +380,7 @@ export default function BlackBoxControlStationPage() {
                           <h4 className="text-lg font-semibold mb-4">Schéma KiCad de la Station de Contrôle</h4>
                           <div className="bg-white dark:bg-gray-900 p-4 rounded-lg border">
                             <Image 
-                              src="/Documentation/semaine-2/electronique/images/station_schema.png" 
+                              src="/2025-Team-IFRI-Docs/Documentation/semaine-2/electronique/images/station_schema.png" 
                               alt="Schéma KiCad de la Station de Contrôle" 
                               width={700} 
                               height={500} 
@@ -401,7 +401,7 @@ export default function BlackBoxControlStationPage() {
                           <div className="grid md:grid-cols-2 gap-4">
                             <div className="bg-white dark:bg-gray-900 p-4 rounded-lg border">
                               <Image 
-                                src="/Documentation/semaine-2/electronique/images/station_pcb_PCB_3Dviewer1.png" 
+                                src="/2025-Team-IFRI-Docs/Documentation/semaine-2/electronique/images/station_pcb_PCB_3Dviewer1.png" 
                                 alt="Vue 3D PCB Station de Contrôle - Face 1" 
                                 width={350} 
                                 height={300} 
@@ -410,7 +410,7 @@ export default function BlackBoxControlStationPage() {
                             </div>
                             <div className="bg-white dark:bg-gray-900 p-4 rounded-lg border">
                               <Image 
-                                src="/Documentation/semaine-2/electronique/images/station_pcb_PCB_3Dviewer2.png" 
+                                src="/2025-Team-IFRI-Docs/Documentation/semaine-2/electronique/images/station_pcb_PCB_3Dviewer2.png" 
                                 alt="Vue 3D PCB Station de Contrôle - Face 2" 
                                 width={350} 
                                 height={300} 

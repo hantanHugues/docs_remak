@@ -339,7 +339,7 @@ export default function TekbotChallengeGyroscopePage() {
                             <div className="flex items-start gap-6">
                               <div className="flex-shrink-0">
                                 <div className="w-32 h-24 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
-                                  <Image src="/Documentation/semaine-1/electronique/images/Arduino_Uno_-_R3.jpg" alt="Arduino Uno" width={128} height={96} className="w-full h-full object-cover" />
+                                  <Image src="/2025-Team-IFRI-Docs/Documentation/semaine-1/electronique/images/Arduino_Uno_-_R3.jpg" alt="Arduino Uno" width={128} height={96} className="w-full h-full object-cover" />
                                 </div>
                               </div>
                               <div className="flex-1 space-y-3">
@@ -365,7 +365,7 @@ export default function TekbotChallengeGyroscopePage() {
                             <div className="flex items-start gap-6">
                               <div className="flex-shrink-0">
                                 <div className="w-32 h-24 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
-                                  <Image src="/Documentation/semaine-1/electronique/images/MPU6050.jpg" alt="MPU6050" width={128} height={96} className="w-full h-full object-cover" />
+                                  <Image src="/2025-Team-IFRI-Docs/Documentation/semaine-1/electronique/images/MPU6050.jpg" alt="MPU6050" width={128} height={96} className="w-full h-full object-cover" />
                                 </div>
                               </div>
                               <div className="flex-1 space-y-3">
@@ -391,7 +391,7 @@ export default function TekbotChallengeGyroscopePage() {
                             <div className="flex items-start gap-6">
                               <div className="flex-shrink-0">
                                 <div className="w-32 h-24 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
-                                  <Image src="/Documentation/semaine-1/electronique/images/LCD_Screen.jpg" alt="Écran LCD" width={128} height={96} className="w-full h-full object-cover" />
+                                  <Image src="/2025-Team-IFRI-Docs/Documentation/semaine-1/electronique/images/LCD_Screen.jpg" alt="Écran LCD" width={128} height={96} className="w-full h-full object-cover" />
                                 </div>
                               </div>
                               <div className="flex-1 space-y-3">
@@ -417,7 +417,7 @@ export default function TekbotChallengeGyroscopePage() {
                           <div className="bg-white dark:bg-gray-900/50 border border-gray-200 dark:border-gray-700 rounded-lg p-4">
                             <div className="flex items-center gap-4">
                               <div className="w-16 h-12 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded overflow-hidden flex-shrink-0">
-                                <Image src="/Documentation/semaine-1/electronique/images/Pot_10K.jpg" alt="Potentiomètre 10kΩ" width={64} height={48} className="w-full h-full object-cover" />
+                                <Image src="/2025-Team-IFRI-Docs/Documentation/semaine-1/electronique/images/Pot_10K.jpg" alt="Potentiomètre 10kΩ" width={64} height={48} className="w-full h-full object-cover" />
                               </div>
                               <div className="flex-1">
                                 <h5 className="font-medium text-gray-900 dark:text-gray-100 mb-1">Potentiomètre 10kΩ</h5>
@@ -430,7 +430,7 @@ export default function TekbotChallengeGyroscopePage() {
                           <div className="bg-white dark:bg-gray-900/50 border border-gray-200 dark:border-gray-700 rounded-lg p-4">
                             <div className="flex items-center gap-4">
                               <div className="w-16 h-12 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded overflow-hidden flex-shrink-0">
-                                <Image src="/Documentation/semaine-1/electronique/images/Pile_9v.jpg" alt="Pile 9V" width={64} height={48} className="w-full h-full object-cover" />
+                                <Image src="/2025-Team-IFRI-Docs/Documentation/semaine-1/electronique/images/Pile_9v.jpg" alt="Pile 9V" width={64} height={48} className="w-full h-full object-cover" />
                               </div>
                               <div className="flex-1">
                                 <h5 className="font-medium text-gray-900 dark:text-gray-100 mb-1">Pile rechargeable 9V</h5>
@@ -446,10 +446,10 @@ export default function TekbotChallengeGyroscopePage() {
                           <div className="flex items-center gap-4">
                             <div className="flex gap-2">
                               <div className="w-12 h-8 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded overflow-hidden">
-                                <Image src="/Documentation/semaine-1/electronique/images/breadboard.jpeg" alt="Breadboard" width={48} height={32} className="w-full h-full object-cover" />
+                                <Image src="/2025-Team-IFRI-Docs/Documentation/semaine-1/electronique/images/breadboard.jpeg" alt="Breadboard" width={48} height={32} className="w-full h-full object-cover" />
                               </div>
                               <div className="w-12 h-8 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded overflow-hidden">
-                                <Image src="/2025-Team-IFRI-Docs/docs/Documentation/semaine-1/electronique/images/dupont_connectors.avif" alt="Fils Dupont" width={48} height={32} className="w-full h-full object-cover" />
+                                <Image src="/2025-Team-IFRI-Docs/Documentation/semaine-1/electronique/images/dupont_connectors.avif" alt="Fils Dupont" width={48} height={32} className="w-full h-full object-cover" />
                               </div>
                             </div>
                             <div className="flex-1">
@@ -488,7 +488,7 @@ export default function TekbotChallengeGyroscopePage() {
                             </div>
                             <div className="lg:col-span-1">
                               <div className="bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
-                                <Image src="/Documentation/semaine-1/electronique/images/Arduino-IDE-Interface.png" alt="Interface Arduino IDE" width={300} height={200} className="w-full h-32 object-cover" />
+                                <Image src="/2025-Team-IFRI-Docs/Documentation/semaine-1/electronique/images/Arduino-IDE-Interface.png" alt="Interface Arduino IDE" width={300} height={200} className="w-full h-32 object-cover" />
                               </div>
                             </div>
                           </div>
@@ -1126,7 +1126,7 @@ export default function TekbotChallengeGyroscopePage() {
                       </h3>
                       
                       <div className="bg-white dark:bg-gray-900/50 border border-gray-200 dark:border-gray-700 rounded-lg p-4">
-                        <Image src="/Documentation/semaine-1/electronique/images/Kicade-Schema-Official.png" alt="Schéma électronique KiCad" width={800} height={600} className="rounded-md mx-auto w-full object-contain" />
+                        <Image src="/2025-Team-IFRI-Docs/Documentation/semaine-1/electronique/images/Kicade-Schema-Official.png" alt="Schéma électronique KiCad" width={800} height={600} className="rounded-md mx-auto w-full object-contain" />
                       </div>
                     </div>
 

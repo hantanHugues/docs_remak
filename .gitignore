@@ -26,5 +26,5 @@ yarn-error.log*
 *.tsbuildinfo
 
 # documentation folder with md files
-Documentation/
+
 next-env.d.ts

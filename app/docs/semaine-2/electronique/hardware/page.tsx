@@ -219,7 +219,7 @@ export default function HardwareGuideFRPage() {
                           </p>
                         </div>
                         <div className="md:col-span-1">
-                          <Image src="/Documentation/semaine-2/electronique/images/breadboard_jumpers.jpg" alt="Plaque d'essai et fils de connexion" width={200} height={150} className="rounded-md border mx-auto" />
+                          <Image src="/2025-Team-IFRI-Docs/Documentation/semaine-2/electronique/images/breadboard_jumpers.jpg" alt="Plaque d'essai et fils de connexion" width={200} height={150} className="rounded-md border mx-auto" />
                         </div>
                       </div>
                     </div>
@@ -238,7 +238,7 @@ export default function HardwareGuideFRPage() {
                           </a>
                         </div>
                         <div className="md:col-span-1">
-                          <Image src="/Documentation/semaine-2/electronique/images/usb_to_serial_placeholder.jpeg" alt="Adaptateur USB vers Série" width={200} height={150} className="rounded-md border mx-auto" />
+                          <Image src="/2025-Team-IFRI-Docs/Documentation/semaine-2/electronique/images/usb_to_serial_placeholder.jpeg" alt="Adaptateur USB vers Série" width={200} height={150} className="rounded-md border mx-auto" />
                         </div>
                       </div>
                     </div>
@@ -277,7 +277,7 @@ export default function HardwareGuideFRPage() {
                           </a>
                         </div>
                         <div className="md:col-span-1">
-                          <Image src="/Documentation/semaine-2/electronique/images/mpu6050_placeholder.jpg" alt="Module MPU-6050" width={200} height={150} className="rounded-md border mx-auto" />
+                          <Image src="/2025-Team-IFRI-Docs/Documentation/semaine-2/electronique/images/mpu6050_placeholder.jpg" alt="Module MPU-6050" width={200} height={150} className="rounded-md border mx-auto" />
                         </div>
                       </div>
                     </div>
@@ -323,7 +323,7 @@ export default function HardwareGuideFRPage() {
                           </div>
                         </div>
                         <div className="md:col-span-1">
-                          <Image src="/Documentation/semaine-2/electronique/images/lcd_i2c_placeholder.jpeg" alt="Module LCD I2C" width={200} height={150} className="rounded-md border mx-auto" />
+                          <Image src="/2025-Team-IFRI-Docs/Documentation/semaine-2/electronique/images/lcd_i2c_placeholder.jpeg" alt="Module LCD I2C" width={200} height={150} className="rounded-md border mx-auto" />
                         </div>
                       </div>
                     </div>
@@ -350,7 +350,7 @@ export default function HardwareGuideFRPage() {
                           </p>
                         </div>
                         <div className="md:col-span-1">
-                          <Image src="/Documentation/semaine-2/electronique/images/quartz_capacitors.jpeg" alt="Quartz et Condensateurs" width={200} height={150} className="rounded-md border mx-auto" />
+                          <Image src="/2025-Team-IFRI-Docs/Documentation/semaine-2/electronique/images/quartz_capacitors.jpeg" alt="Quartz et Condensateurs" width={200} height={150} className="rounded-md border mx-auto" />
                         </div>
                       </div>
                     </div>
@@ -364,7 +364,7 @@ export default function HardwareGuideFRPage() {
                           </p>
                         </div>
                         <div className="md:col-span-1">
-                          <Image src="/Documentation/semaine-2/electronique/images/resistors_pullup.jpeg" alt="Résistances de Pull-up" width={200} height={150} className="rounded-md border mx-auto" />
+                          <Image src="/2025-Team-IFRI-Docs/Documentation/semaine-2/electronique/images/resistors_pullup.jpeg" alt="Résistances de Pull-up" width={200} height={150} className="rounded-md border mx-auto" />
                         </div>
                       </div>
                     </div>

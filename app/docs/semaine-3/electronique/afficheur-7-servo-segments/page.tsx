@@ -145,23 +145,23 @@ export default function ServoDisplayDocPage() {
                       
                       <h3 id="22-le-contrôleur-de-servomoteurs--pca9685" className="font-semibold text-lg text-gray-800 dark:text-gray-200">2.2. Le Contrôleur de Servomoteurs : PCA9685</h3>
                       <p className="text-gray-700 dark:text-gray-300">Pour piloter les 7 servomoteurs, nous avons opté pour le module <strong>PCA9685</strong>. Il décharge le microcontrôleur de la génération des signaux PWM et communique via I2C.</p>
-                      <Image src="/Documentation/semaine-3/electronique/images_vids/pca9685.jpg" alt="Module PCA9685" width={300} height={200} className="rounded-md border mx-auto" />
-                      <Image src="/Documentation/semaine-3/electronique/images_vids/pca9685-puce-servos.png" alt="Schéma KiCad" width={700} height={400} className="rounded-md border mx-auto" />
+                      <Image src="/2025-Team-IFRI-Docs/Documentation/semaine-3/electronique/images_vids/pca9685.jpg" alt="Module PCA9685" width={300} height={200} className="rounded-md border mx-auto" />
+                      <Image src="/2025-Team-IFRI-Docs/Documentation/semaine-3/electronique/images_vids/pca9685-puce-servos.png" alt="Schéma KiCad" width={700} height={400} className="rounded-md border mx-auto" />
 
                       <h3 id="23-lalimentation--module-mp1584en" className="font-semibold text-lg text-gray-800 dark:text-gray-200">2.3. L'Alimentation : Module MP1584EN</h3>
                       <p className="text-gray-700 dark:text-gray-300">Alimentation par batterie LiPo, régulée par un module DC-DC step-down <strong>MP1584EN</strong> pour son efficacité énergétique. Nous avons créé un footprint KiCad personnalisé pour ce module.</p>
-                      <div className="grid md:grid-cols-2 gap-4"><Image src="/Documentation/semaine-3/electronique/images_vids/dimensions_dcdc.png" alt="Dimensions MP1584EN" width={300} height={200} className="rounded-md border" /><Image src="/Documentation/semaine-3/electronique/images_vids/mp1584en_footprint_kicad.png" alt="Footprint KiCad MP1584EN" width={300} height={200} className="rounded-md border" /></div>
+                      <div className="grid md:grid-cols-2 gap-4"><Image src="/2025-Team-IFRI-Docs/Documentation/semaine-3/electronique/images_vids/dimensions_dcdc.png" alt="Dimensions MP1584EN" width={300} height={200} className="rounded-md border" /><Image src="/2025-Team-IFRI-Docs/Documentation/semaine-3/electronique/images_vids/mp1584en_footprint_kicad.png" alt="Footprint KiCad MP1584EN" width={300} height={200} className="rounded-md border" /></div>
                       
                       <h3 id="24-la-conception-physique-de-lafficheur" className="font-semibold text-lg text-gray-800 dark:text-gray-200">2.4. La Conception Physique de l'Afficheur</h3>
                       <p className="text-gray-700 dark:text-gray-300">Structure principale imprimée en 3D. Chaque segment mobile est connecté à un servo par un fil de fer pour un effet de relief.</p>
-                      <div className="grid md:grid-cols-2 gap-4"><Image src="/Documentation/semaine-3/electronique/images_vids/face_afficheur1.jpeg" alt="Vue de face" width={300} height={200} className="rounded-md border" /><Image src="/Documentation/semaine-3/electronique/images_vids/lateral_afficheur.jpeg" alt="Vue latérale" width={300} height={200} className="rounded-md border" /></div>
+                      <div className="grid md:grid-cols-2 gap-4"><Image src="/2025-Team-IFRI-Docs/Documentation/semaine-3/electronique/images_vids/face_afficheur1.jpeg" alt="Vue de face" width={300} height={200} className="rounded-md border" /><Image src="/2025-Team-IFRI-Docs/Documentation/semaine-3/electronique/images_vids/lateral_afficheur.jpeg" alt="Vue latérale" width={300} height={200} className="rounded-md border" /></div>
                       
                       <h3 id="25-connectique-et-simplifications" className="font-semibold text-lg text-gray-800 dark:text-gray-200">2.5. Connectique et Simplifications</h3>
                       <p className="text-gray-700 dark:text-gray-300">Utilisation de connecteurs pour la modularité. Header ISP et LED RGB retirés pour se concentrer sur l'essentiel.</p>
 
                       <h3 id="26-réalisation-du-circuit-sur-veroboard" className="font-semibold text-lg text-gray-800 dark:text-gray-200">2.6. Réalisation du Circuit sur Veroboard</h3>
                       <p className="text-gray-700 dark:text-gray-300">Montage sur <strong>veroboard</strong> en raison des contraintes de temps.</p>
-                      <div className="grid md:grid-cols-2 gap-4"><Image src="/Documentation/semaine-3/electronique/images_vids/circuit_minimal.png" alt="Circuit minimal KiCad" width={300} height={200} className="rounded-md border" /><Image src="/Documentation/semaine-3/electronique/images_vids/pcb.png" alt="PCB KiCad" width={300} height={200} className="rounded-md border" /></div>
+                      <div className="grid md:grid-cols-2 gap-4"><Image src="/2025-Team-IFRI-Docs/Documentation/semaine-3/electronique/images_vids/circuit_minimal.png" alt="Circuit minimal KiCad" width={300} height={200} className="rounded-md border" /><Image src="/2025-Team-IFRI-Docs/Documentation/semaine-3/electronique/images_vids/pcb.png" alt="PCB KiCad" width={300} height={200} className="rounded-md border" /></div>
                     </CardContent>
                   </Card>
                 </AnimatedSection>
@@ -220,11 +220,11 @@ export default function ServoDisplayDocPage() {
                       <h3 id="51-intégration-matérielle-et-assemblage-final" className="font-semibold text-lg text-gray-800 dark:text-gray-200">5.1. Intégration Matérielle et Assemblage Final</h3>
                       <p className="text-gray-700 dark:text-gray-300">Le circuit sur veroboard a été intégré à la structure 3D, et les composants connectés.</p>
                       <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                        <Image src="/Documentation/semaine-3/electronique/images_vids/image_totale_1.jpeg" alt="Branchement final 1" width={200} height={150} className="rounded-md border" />
-                        <Image src="/Documentation/semaine-3/electronique/images_vids/image.png" alt="Branchement final 2" width={200} height={150} className="rounded-md border" />
-                        <Image src="/Documentation/semaine-3/electronique/images_vids/image_copy.png" alt="Branchement final 3" width={200} height={150} className="rounded-md border" />
-                        <Image src="/Documentation/semaine-3/electronique/images_vids/image_copy1.png" alt="Branchement final 4" width={200} height={150} className="rounded-md border" />
-                        <Image src="/Documentation/semaine-3/electronique/images_vids/image_copy2.png" alt="Branchement final 5" width={200} height={150} className="rounded-md border" />
+                        <Image src="/2025-Team-IFRI-Docs/Documentation/semaine-3/electronique/images_vids/image_totale_1.jpeg" alt="Branchement final 1" width={200} height={150} className="rounded-md border" />
+                        <Image src="/2025-Team-IFRI-Docs/Documentation/semaine-3/electronique/images_vids/image.png" alt="Branchement final 2" width={200} height={150} className="rounded-md border" />
+                        <Image src="/2025-Team-IFRI-Docs/Documentation/semaine-3/electronique/images_vids/image_copy.png" alt="Branchement final 3" width={200} height={150} className="rounded-md border" />
+                        <Image src="/2025-Team-IFRI-Docs/Documentation/semaine-3/electronique/images_vids/image_copy1.png" alt="Branchement final 4" width={200} height={150} className="rounded-md border" />
+                        <Image src="/2025-Team-IFRI-Docs/Documentation/semaine-3/electronique/images_vids/image_copy2.png" alt="Branchement final 5" width={200} height={150} className="rounded-md border" />
                       </div>
                       
                       <h3 id="52-fonctionnement-du-système-complet" className="font-semibold text-lg text-gray-800 dark:text-gray-200">5.2. Fonctionnement du Système Complet</h3>

@@ -84,7 +84,7 @@ export default function StreamlitAppDocPage() {
             <div className="max-w-4xl mx-auto space-y-8">
               
               <AnimatedSection animation="fade-up">
-                <Image src="/Documentation/semaine-2/IT/media/general.png" alt="Vue générale du dashboard Streamlit" width={800} height={450} className="rounded-lg border border-gray-200 dark:border-gray-700 mx-auto" />
+                <Image src="/2025-Team-IFRI-Docs/Documentation/semaine-2/IT/media/general.png" alt="Vue générale du dashboard Streamlit" width={800} height={450} className="rounded-lg border border-gray-200 dark:border-gray-700 mx-auto" />
               </AnimatedSection>
               
               <AnimatedSection animation="fade-up" delay={50}>
@@ -128,22 +128,22 @@ export default function StreamlitAppDocPage() {
                       <h3 className="font-medium text-gray-900 dark:text-gray-100 mb-4 text-lg">1. <strong>Sidebar (panneau de contrôle)</strong></h3>
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div className="space-y-4">
-                          <Image src="/Documentation/semaine-2/IT/media/affichage_historique.png" alt="Bouton Démarrer / Arrêter et Effacement de l’historique" width={200} height={150} className="rounded-md border border-gray-200 dark:border-gray-700" />
+                          <Image src="/2025-Team-IFRI-Docs/Documentation/semaine-2/IT/media/affichage_historique.png" alt="Bouton Démarrer / Arrêter et Effacement de l’historique" width={200} height={150} className="rounded-md border border-gray-200 dark:border-gray-700" />
                           <ul className="list-disc pl-5 text-sm text-gray-600 dark:text-gray-400">
                             <li>Bouton <strong>Démarrer / Arrêter</strong> l’affichage des nouvelles données.</li>
                             <li><strong>Effacement de l’historique</strong> en un clic.</li>
                           </ul>
                         </div>
                         <div className="space-y-4">
-                          <Image src="/Documentation/semaine-2/IT/media/seuil.png" alt="Seuils d’alerte" width={268} height={469} className="rounded-md border border-gray-200 dark:border-gray-700" />
+                          <Image src="/2025-Team-IFRI-Docs/Documentation/semaine-2/IT/media/seuil.png" alt="Seuils d’alerte" width={268} height={469} className="rounded-md border border-gray-200 dark:border-gray-700" />
                           <p className="text-sm text-gray-600 dark:text-gray-400"><strong>Configuration dynamique des seuils d’alerte</strong> (via sliders) pour chaque capteur : Température (°C), Humidité (%), Pression (hPa).</p>
                         </div>
                         <div className="space-y-4">
-                          <Image src="/Documentation/semaine-2/IT/media/actualisation.png" alt="Rafraîchissement" width={291} height={218} className="rounded-md border border-gray-200 dark:border-gray-700" />
+                          <Image src="/2025-Team-IFRI-Docs/Documentation/semaine-2/IT/media/actualisation.png" alt="Rafraîchissement" width={291} height={218} className="rounded-md border border-gray-200 dark:border-gray-700" />
                           <p className="text-sm text-gray-600 dark:text-gray-400">Options de <strong>rafraîchissement</strong> : Activation/désactivation, choix de l’intervalle (1s, 2s, 5s, 10s), et bouton “🔄 Actualiser maintenant”.</p>
                         </div>
                         <div className="space-y-4">
-                          <Image src="/Documentation/semaine-2/IT/media/etat_systeme.png" alt="État du système" width={192} height={181} className="rounded-md border border-gray-200 dark:border-gray-700" />
+                          <Image src="/2025-Team-IFRI-Docs/Documentation/semaine-2/IT/media/etat_systeme.png" alt="État du système" width={192} height={181} className="rounded-md border border-gray-200 dark:border-gray-700" />
                           <p className="text-sm text-gray-600 dark:text-gray-400"><strong>État du système</strong> affiché en temps réel : Statut d’affichage, nombre de mesures, compteur de refreshs.</p>
                           <p className="text-sm text-gray-600 dark:text-gray-400 mt-2"><strong>Instructions rapides</strong> pour l’utilisateur.</p>
                         </div>
@@ -154,11 +154,11 @@ export default function StreamlitAppDocPage() {
                     <div className="bg-white dark:bg-gray-900/50 border border-gray-200 dark:border-gray-700 rounded-lg p-4">
                       <h3 className="font-medium text-gray-900 dark:text-gray-100 mb-4 text-lg">2. <strong>Affichage en temps réel (cartes métriques)</strong></h3>
                       <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">Trois cartes stylisées, avec couleurs et animations selon l’état : 🌡️ <strong>Température</strong>, 💧 <strong>Humidité</strong>, 🌪️ <strong>Pression</strong>. Chaque carte affiche la valeur actuelle, l'unité, une icône et l'état de conformité (`✅` ou `⚠️`).</p>
-                      <Image src="/Documentation/semaine-2/IT/media/dash_normal.png" alt="Affichage en temps réel / Normal" width={700} height={200} className="rounded-md border border-gray-200 dark:border-gray-700 mb-4" />
+                      <Image src="/2025-Team-IFRI-Docs/Documentation/semaine-2/IT/media/dash_normal.png" alt="Affichage en temps réel / Normal" width={700} height={200} className="rounded-md border border-gray-200 dark:border-gray-700 mb-4" />
                       <div className="bg-gray-50 dark:bg-gray-900/30 border border-gray-200 dark:border-gray-700 rounded p-3 text-sm italic">
                         <p className="text-gray-600 dark:text-gray-400">💡 En cas de dépassement des seuils, la carte clignote et un message d'erreur s’affiche.</p>
                       </div>
-                      <Image src="/Documentation/semaine-2/IT/media/dash_pb.png" alt="Affichage en temps réel / Hors plage" width={700} height={200} className="rounded-md border border-gray-200 dark:border-gray-700 mt-4" />
+                      <Image src="/2025-Team-IFRI-Docs/Documentation/semaine-2/IT/media/dash_pb.png" alt="Affichage en temps réel / Hors plage" width={700} height={200} className="rounded-md border border-gray-200 dark:border-gray-700 mt-4" />
                     </div>
 
                     {/* Alertes */}
@@ -175,7 +175,7 @@ export default function StreamlitAppDocPage() {
                     <div className="bg-white dark:bg-gray-900/50 border border-gray-200 dark:border-gray-700 rounded-lg p-4">
                       <h3 className="font-medium text-gray-900 dark:text-gray-100 mb-4 text-lg flex items-center gap-2"><Clock className="w-5 h-5" /> 4. <strong>Dernière mise à jour</strong></h3>
                       <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">Un indicateur donne la <strong>date et l’heure</strong> de la dernière mesure reçue et affichée.</p>
-                      <Image src="/Documentation/semaine-2/IT/media/update_time.png" alt="Dernière mise à jour" width={400} height={50} className="rounded-md border border-gray-200 dark:border-gray-700" />
+                      <Image src="/2025-Team-IFRI-Docs/Documentation/semaine-2/IT/media/update_time.png" alt="Dernière mise à jour" width={400} height={50} className="rounded-md border border-gray-200 dark:border-gray-700" />
                     </div>
                     
                     {/* Onglets dynamiques */}
@@ -190,7 +190,7 @@ export default function StreamlitAppDocPage() {
                             <li>Données historisées jusqu’à 100 mesures</li>
                             <li>Graphiques interactifs : zoom, survol, export</li>
                           </ul>
-                          <Image src="/Documentation/semaine-2/IT/media/plotly.png" alt="Graphiques Plotly" width={700} height={300} className="rounded-md border border-gray-200 dark:border-gray-700" />
+                          <Image src="/2025-Team-IFRI-Docs/Documentation/semaine-2/IT/media/plotly.png" alt="Graphiques Plotly" width={700} height={300} className="rounded-md border border-gray-200 dark:border-gray-700" />
                         </div>
                         <div>
                           <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-2 flex items-center gap-2"><List className="w-4 h-4" /> 📋 <strong>Historique</strong></h4>
@@ -199,7 +199,7 @@ export default function StreamlitAppDocPage() {
                             <li>Affichage formaté : arrondi à 2 décimales, horodatage simplifié</li>
                             <li>Présence d’indicateurs de validation (<code>temp_ok</code>, <code>hum_ok</code>, <code>pres_ok</code>)</li>
                           </ul>
-                          <Image src="/Documentation/semaine-2/IT/media/history_20.png" alt="Historique des 20 dernières mesures" width={700} height={300} className="rounded-md border border-gray-200 dark:border-gray-700" />
+                          <Image src="/2025-Team-IFRI-Docs/Documentation/semaine-2/IT/media/history_20.png" alt="Historique des 20 dernières mesures" width={700} height={300} className="rounded-md border border-gray-200 dark:border-gray-700" />
                         </div>
                         <div>
                           <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-2 flex items-center gap-2"><BarChart2 className="w-4 h-4" /> 📊 <strong>Statistiques</strong></h4>
@@ -208,7 +208,7 @@ export default function StreamlitAppDocPage() {
                             <li>Affichage clair dans 3 colonnes</li>
                             <li>Mise à jour automatique à chaque ajout de donnée</li>
                           </ul>
-                          <Image src="/Documentation/semaine-2/IT/media/stat.png" alt="Statistiques" width={700} height={150} className="rounded-md border border-gray-200 dark:border-gray-700" />
+                          <Image src="/2025-Team-IFRI-Docs/Documentation/semaine-2/IT/media/stat.png" alt="Statistiques" width={700} height={150} className="rounded-md border border-gray-200 dark:border-gray-700" />
                         </div>
                       </div>
                     </div>

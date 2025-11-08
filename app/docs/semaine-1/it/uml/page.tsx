@@ -8,6 +8,8 @@ import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Monitor, ArrowLeft, ArrowRight, AlertCircle, CheckCircle, BookOpen, Target } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
+import { MermaidDiagram } from "@/components/mermaid-diagram"
 
 
 export default function UMLPage() {
@@ -105,6 +107,90 @@ export default function UMLPage() {
                 </Card>
               </AnimatedSection>
 
+              {/* Diagramme de classes */}
+              <AnimatedSection animation="fade-up" delay={200}>
+                <Card>
+                  <CardHeader>
+                    <CardTitle>Diagramme de classes - Hiérarchie robotique</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="bg-slate-900 p-4 rounded-lg">
+                      <MermaidDiagram
+                        chart={`
+classDiagram
+    class Robot {
+        <<abstract>>
+        -UUID id
+        -str name
+        -Tuple position
+        -float orientation
+        -str energy_source
+        -int generator_level
+        -bool is_active
+        -List sensors
+        +start() None
+        +distance_to(other) float
+        +consume_energy(amount) None
+        +add_sensor(sensor) None
+        +remove_sensor(sensor) None
+        +move(direction, distance)* None
+        +rotate(angle)* None
+        +stop()* None
+        +status()* str
+    }
+    
+    class WheeledRobot {
+        -float wheel_base
+        -int storage_capacity
+        -State state
+        -List storage_bag
+        -float obstacle_threshold
+        -float v_lin_cmd
+        -float v_ang_cmd
+        +set_motor_speed(left, right) None
+        +add_to_storage(item) bool
+        +detect_obstacle(pos) bool
+        +avoid_obstacle() bool
+        +is_storage_full() bool
+    }
+    
+    class RoboticArm {
+        -List joint_angles
+        -int num_joints
+        -Tuple end_effector_position
+        -Optional holding_item
+        +set_joint_angle(index, angle) None
+        +reset_arm() None
+        +pick(item) None
+        +place(item, pos) None
+    }
+    
+    class State {
+        <<enumeration>>
+        IDLE
+        NAVIGATING
+        AVOIDING
+        UPDATING_STORAGE
+        RETURNING
+        CHARGING
+        SHUTDOWN
+    }
+    
+    Robot <|-- WheeledRobot
+    Robot <|-- RoboticArm
+    WheeledRobot --> State
+                        `}
+                        className="w-full"
+                      />
+                    </div>
+                    <p className="text-sm text-muted-foreground mt-4">
+                      Hiérarchie des classes basée sur la documentation : Robot (classe abstraite) avec ses 
+                      implémentations WheeledRobot et RoboticArm, incluant leurs vrais attributs et méthodes.
+                    </p>
+                  </CardContent>
+                </Card>
+              </AnimatedSection>
+
               {/* Qu'est-ce qu'UML */}
               <AnimatedSection animation="fade-up" delay={100}>
                 <Card>
@@ -129,61 +215,33 @@ export default function UMLPage() {
                 </Card>
               </AnimatedSection>
 
-              {/* Diagramme de classes */}
+              {/* Architecture système */}
               <AnimatedSection animation="fade-up" delay={200}>
                 <Card>
                   <CardHeader>
                     <CardTitle className="flex items-center gap-2">
-                      <Monitor className="w-5 h-5 text-orange-600" />
-                      Diagramme de classes - Système robotique
+                      <BookOpen className="w-5 h-5 text-blue-600" />
+                      Architecture système robotique
                     </CardTitle>
+                    <CardDescription>
+                      Diagramme UML complet du système avec toutes les classes et leurs relations
+                    </CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <div className="bg-slate-900 text-slate-100 p-4 rounded-lg overflow-x-auto">
-                      <pre className="text-sm">
-{`┌─────────────────────────────────┐
-│            Robot                │
-├─────────────────────────────────┤
-│ - nom: String                   │
-│ - position: Position            │
-│ - batterie: Float               │
-│ - etat: EtatRobot               │
-├─────────────────────────────────┤
-│ + demarrer(): void              │
-│ + arreter(): void               │
-│ + deplacer(pos: Position): void │
-│ + getBatterie(): Float          │
-└─────────────────────────────────┘
-                │
-                │ hérite
-                ▼
-┌─────────────────────────────────┐
-│         RobotMobile             │
-├─────────────────────────────────┤
-│ - vitesse: Float                │
-│ - direction: Float              │
-├─────────────────────────────────┤
-│ + avancer(): void               │
-│ + tourner(angle: Float): void   │
-│ + naviguer(cible: Position)     │
-└─────────────────────────────────┘
-                │
-                │ composition
-                ▼
-┌─────────────────────────────────┐
-│           Capteur               │
-├─────────────────────────────────┤
-│ - type: TypeCapteur             │
-│ - valeur: Float                 │
-│ - precision: Float              │
-├─────────────────────────────────┤
-│ + lire(): Float                 │
-│ + calibrer(): void              │
-└─────────────────────────────────┘`}
-                      </pre>
+                    <div className="bg-white dark:bg-gray-900/50 border border-gray-200 dark:border-gray-700 rounded-lg p-4 mb-4">
+                      <Image 
+                        src="/2025-Team-IFRI-Docs/Documentation/semaine-1/it/diagram.png" 
+                        alt="Diagramme UML complet - Architecture robotique" 
+                        width={800} 
+                        height={600} 
+                        className="w-full h-auto rounded-md"
+                      />
                     </div>
-                    <p className="text-sm text-muted-foreground mt-4">
-                      Ce diagramme montre la hiérarchie des classes, leurs attributs, méthodes et relations.
+                    <p className="text-sm text-muted-foreground">
+                      Ce diagramme présente l'architecture complète du système robotique, illustrant la classe abstraite 
+                      <strong> Robot</strong> et ses implémentations concrètes (<strong>WheeledRobot</strong>, <strong>RoboticArm</strong>), 
+                      ainsi que leurs attributs, méthodes et relations d'héritage. Il montre également les interactions 
+                      avec les capteurs et autres composants du système.
                     </p>
                   </CardContent>
                 </Card>
@@ -193,35 +251,53 @@ export default function UMLPage() {
               <AnimatedSection animation="fade-up" delay={300}>
                 <Card>
                   <CardHeader>
-                    <CardTitle>Diagramme de séquence - Navigation autonome</CardTitle>
+                    <CardTitle>Diagramme de séquence - WheeledRobot Navigation</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <div className="bg-slate-900 text-slate-100 p-4 rounded-lg overflow-x-auto">
-                      <pre className="text-sm">
-{`Utilisateur    Contrôleur    Robot    CapteurDistance    Moteurs
-    │              │            │             │              │
-    │─naviguer()──▶│            │             │              │
-    │              │─demarrer()─▶│             │              │
-    │              │            │─lire()─────▶│              │
-    │              │            │◀─distance───│              │
-    │              │◀─position──│             │              │
-    │              │            │             │              │
-    │              │─avancer()──▶│             │              │
-    │              │            │─vitesse────────────────────▶│
-    │              │            │             │              │
-    │              │            │─lire()─────▶│              │
-    │              │            │◀─obstacle───│              │
-    │              │            │             │              │
-    │              │─tourner()──▶│             │              │
-    │              │            │─rotation───────────────────▶│
-    │              │            │             │              │
-    │              │─arreter()──▶│             │              │
-    │              │            │─stop───────────────────────▶│
-    │◀─terminé─────│            │             │              │`}
-                      </pre>
+                    <div className="bg-slate-900 p-4 rounded-lg">
+                      <MermaidDiagram
+                        chart={`
+sequenceDiagram
+    participant U as Utilisateur
+    participant WR as WheeledRobot
+    participant S as Sensors
+    participant SB as StorageBag
+    
+    U->>WR: start()
+    WR->>WR: is_active = True
+    WR->>WR: state = IDLE
+    
+    U->>WR: move(direction, distance)
+    WR->>WR: state = NAVIGATING
+    WR->>WR: consume_energy(amount)
+    WR->>WR: position = new_position
+    
+    U->>WR: detect_obstacle(position)
+    WR->>S: check distance
+    S-->>WR: distance < threshold
+    WR->>WR: state = AVOIDING
+    
+    U->>WR: avoid_obstacle()
+    WR->>WR: rotate(π/2)
+    WR->>WR: move(forward, 0.5)
+    WR->>WR: state = NAVIGATING
+    
+    U->>WR: add_to_storage(item)
+    WR->>WR: state = UPDATING_STORAGE
+    WR->>SB: append(item)
+    SB-->>WR: storage_updated
+    WR->>WR: state = IDLE
+    
+    U->>WR: stop()
+    WR->>WR: is_active = False
+    WR-->>U: status()
+                        `}
+                        className="w-full"
+                      />
                     </div>
                     <p className="text-sm text-muted-foreground mt-4">
-                      Ce diagramme illustre l'ordre chronologique des interactions entre objets.
+                      Séquence d'interactions basée sur les vraies méthodes du WheeledRobot : start(), move(), 
+                      detect_obstacle(), avoid_obstacle(), add_to_storage(), stop().
                     </p>
                   </CardContent>
                 </Card>
@@ -231,50 +307,56 @@ export default function UMLPage() {
               <AnimatedSection animation="fade-up" delay={400}>
                 <Card>
                   <CardHeader>
-                    <CardTitle>Diagramme d'états - Comportement robot</CardTitle>
+                    <CardTitle>Diagramme d'états - WheeledRobot</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <div className="bg-slate-900 text-slate-100 p-4 rounded-lg overflow-x-auto">
-                      <pre className="text-sm">
-{`                    ┌─────────────┐
-                    │   Arrêté    │◀─── [État initial]
-                    └─────────────┘
-                           │
-                    demarrer()
-                           │
-                           ▼
-                    ┌─────────────┐
-               ┌───▶│   Actif     │
-               │    └─────────────┘
-               │           │
-               │    obstacle_detecte()
-               │           │
-               │           ▼
-               │    ┌─────────────┐
-               │    │ Évitement   │
-               │    └─────────────┘
-               │           │
-               │    chemin_libre()
-               │           │
-               └───────────┘
-                           │
-                    batterie_faible()
-                           │
-                           ▼
-                    ┌─────────────┐
-                    │  Recharge   │
-                    └─────────────┘
-                           │
-                    batterie_pleine()
-                           │
-                           ▼
-                    ┌─────────────┐
-                    │   Arrêté    │
-                    └─────────────┘`}
-                      </pre>
+                    <div className="bg-slate-900 p-4 rounded-lg">
+                      <MermaidDiagram
+                        chart={`
+stateDiagram-v2
+    [*] --> IDLE : Robot initialized
+    
+    IDLE --> NAVIGATING : start_navigation()
+    NAVIGATING --> AVOIDING : detect_obstacle()
+    AVOIDING --> NAVIGATING : obstacle_cleared()
+    NAVIGATING --> UPDATING_STORAGE : add_to_storage()
+    UPDATING_STORAGE --> IDLE : storage_updated
+    
+    NAVIGATING --> RETURNING : storage_full()
+    UPDATING_STORAGE --> RETURNING : storage_full()
+    RETURNING --> CHARGING : battery_low()
+    CHARGING --> IDLE : battery_full()
+    
+    IDLE --> SHUTDOWN : shutdown()
+    NAVIGATING --> SHUTDOWN : shutdown()
+    AVOIDING --> SHUTDOWN : shutdown()
+    UPDATING_STORAGE --> SHUTDOWN : shutdown()
+    RETURNING --> SHUTDOWN : shutdown()
+    CHARGING --> SHUTDOWN : shutdown()
+    
+    SHUTDOWN --> [*]
+    
+    note right of IDLE
+        Robot is ready
+        and waiting for commands
+    end note
+    
+    note right of NAVIGATING
+        Robot is moving
+        and consuming energy
+    end note
+    
+    note right of AVOIDING
+        Robot detected obstacle
+        and performing avoidance
+    end note
+                        `}
+                        className="w-full"
+                      />
                     </div>
                     <p className="text-sm text-muted-foreground mt-4">
-                      Ce diagramme montre les différents états du robot et les transitions entre eux.
+                      Diagramme d'états du WheeledRobot basé sur l'enum State : IDLE, NAVIGATING, AVOIDING, 
+                      UPDATING_STORAGE, RETURNING, CHARGING, SHUTDOWN.
                     </p>
                   </CardContent>
                 </Card>
@@ -284,41 +366,72 @@ export default function UMLPage() {
               <AnimatedSection animation="fade-up" delay={500}>
                 <Card>
                   <CardHeader>
-                    <CardTitle>Cas d'usage - Système de surveillance</CardTitle>
+                    <CardTitle>Diagramme de cas d'usage - Système robotique</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <div className="bg-slate-900 text-slate-100 p-4 rounded-lg overflow-x-auto">
-                      <pre className="text-sm">
-{`                    Système de Surveillance Robotique
-                    
-    Opérateur                                    Robot de Surveillance
-        │                                              │
-        │──── Programmer mission ─────────────────────▶│
-        │                                              │
-        │◀─── Confirmer mission ──────────────────────│
-        │                                              │
-        │──── Démarrer patrouille ────────────────────▶│
-        │                                              │
-        │◀─── Rapport de position ────────────────────│
-        │                                              │
-        │◀─── Alerte intrusion ───────────────────────│
-        │                                              │
-        │──── Investiguer zone ───────────────────────▶│
-        │                                              │
-        │◀─── Données capteurs ───────────────────────│
-        │                                              │
-        │──── Retour base ────────────────────────────▶│
+                    <div className="bg-slate-900 p-4 rounded-lg">
+                      <MermaidDiagram
+                        chart={`
+flowchart TD
+    subgraph Système["🤖 Système Robotique"]
+        subgraph Robot["Robot (ABC)"]
+            UC1((Démarrer robot))
+            UC2((Consommer énergie))
+            UC3((Gérer capteurs))
+            UC4((Calculer distance))
+            UC5((Arrêter robot))
+        end
         
-    Capteurs inclus:
-    • Caméra thermique
-    • Détecteur de mouvement  
-    • Capteur audio
-    • GPS/Navigation`}
-                      </pre>
+        subgraph WR["WheeledRobot"]
+            UC6((Naviguer))
+            UC7((Éviter obstacles))
+            UC8((Collecter objets))
+            UC9((Gérer stockage))
+            UC10((Contrôler moteurs))
+            UC11((Retourner base))
+        end
+        
+        subgraph RA["RoboticArm"]
+            UC12((Contrôler joints))
+            UC13((Saisir objets))
+            UC14((Placer objets))
+            UC15((Réinitialiser bras))
+        end
+    end
+    
+    User[👤 Utilisateur]
+    Operator[👨‍💼 Opérateur]
+    System[🖥️ Système de contrôle]
+    
+    User --- UC1
+    User --- UC5
+    User --- UC6
+    User --- UC8
+    User --- UC11
+    
+    Operator --- UC12
+    Operator --- UC13
+    Operator --- UC14
+    Operator --- UC15
+    
+    System --- UC2
+    System --- UC3
+    System --- UC4
+    System --- UC7
+    System --- UC9
+    System --- UC10
+                        `}
+                        className="w-full"
+                      />
                     </div>
+                    <p className="text-sm text-muted-foreground mt-4">
+                      Diagramme de cas d'usage basé sur les vraies fonctionnalités documentées : Robot (classe abstraite), 
+                      WheeledRobot (navigation, évitement, stockage) et RoboticArm (manipulation d'objets).
+                    </p>
                   </CardContent>
                 </Card>
               </AnimatedSection>
+
 
               {/* Bonnes pratiques */}
               <AnimatedSection animation="fade-up" delay={600}>

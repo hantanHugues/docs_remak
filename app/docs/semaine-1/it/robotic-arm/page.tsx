@@ -95,7 +95,7 @@ export default function RoboticArmDocFRPage() {
                   <CardContent className="pt-6 prose prose-gray dark:prose-invert max-w-none p-6">
                     <div className="not-prose mb-6">
                       <div className="w-24 h-24 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg flex items-center justify-center mx-auto">
-                        <Image src="/Documentation/semaine-1/it/robotic_arm.svg" alt="Bras Robotique" width={48} height={48} className="opacity-60" />
+                        <Image src="/2025-Team-IFRI-Docs/Documentation/semaine-1/it/robotic_arm.svg" alt="Bras Robotique" width={48} height={48} className="opacity-60" />
                       </div>
                     </div>
                     <div className="text-gray-700 dark:text-gray-300 leading-relaxed">

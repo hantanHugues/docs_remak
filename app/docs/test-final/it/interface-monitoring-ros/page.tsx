@@ -142,23 +142,23 @@ export default function ConveyorSupervisionDocPage() {
                   </CardHeader>
                   <CardContent className="p-6 space-y-6">
                     <h3 className="font-semibold">1. Page du Tableau de Bord (Dashboard)</h3>
-                    <Image src="/Documentation/test-final/FinalTest_Conv/ass/dashboard.png" alt="Dashboard" width={700} height={400} className="rounded-md border"/>
+                    <Image src="/2025-Team-IFRI-Docs/Documentation/test-final/FinalTest_Conv/ass/dashboard.png" alt="Dashboard" width={700} height={400} className="rounded-md border"/>
                     <p className="text-sm">Fournit une vue d'ensemble de l'état du système avec des widgets de statut en temps réel, un graphique d'activité moteur (avec Recharts) et des compteurs de tri, le tout mis à jour via un `RosContext`.</p>
                     
                     <h3 className="font-semibold">2. Page de Calibration</h3>
-                    <Image src="/Documentation/test-final/FinalTest_Conv/ass/calibrate.png" alt="Calibration" width={700} height={400} className="rounded-md border"/>
+                    <Image src="/2025-Team-IFRI-Docs/Documentation/test-final/FinalTest_Conv/ass/calibrate.png" alt="Calibration" width={700} height={400} className="rounded-md border"/>
                     <p className="text-sm">Permet d'adapter le logiciel au monde réel. La capture d'empreinte couleur se fait via un service ROS. La synchronisation des données entre modules utilise le patron "remontée d'état" de React.</p>
                     
                     <h3 className="font-semibold">3. Page de Contrôle en Direct (Live Control)</h3>
-                    <Image src="/Documentation/test-final/FinalTest_Conv/ass/livecontrol.png" alt="Live Control" width={700} height={400} className="rounded-md border"/>
+                    <Image src="/2025-Team-IFRI-Docs/Documentation/test-final/FinalTest_Conv/ass/livecontrol.png" alt="Live Control" width={700} height={400} className="rounded-md border"/>
                     <p className="text-sm">Offre un contrôle direct et une visualisation 3D ("jumeau numérique") avec `@react-three/fiber`, ainsi qu'un terminal interactif basé sur `xterm.js`.</p>
                     
                     <h3 className="font-semibold">4. Page de Supervision ROS</h3>
-                    <Image src="/Documentation/test-final/FinalTest_Conv/ass/ros_supervision.png" alt="Supervision ROS" width={700} height={400} className="rounded-md border"/>
+                    <Image src="/2025-Team-IFRI-Docs/Documentation/test-final/FinalTest_Conv/ass/ros_supervision.png" alt="Supervision ROS" width={700} height={400} className="rounded-md border"/>
                     <p className="text-sm">Fournit une vue de débogage de bas niveau listant les topics, services et nœuds actifs, en utilisant les fonctions natives de `roslibjs`.</p>
 
                     <h3 className="font-semibold">5. Page des Logs</h3>
-                    <Image src="/Documentation/test-final/FinalTest_Conv/ass/logs.png" alt="Logs" width={700} height={400} className="rounded-md border"/>
+                    <Image src="/2025-Team-IFRI-Docs/Documentation/test-final/FinalTest_Conv/ass/logs.png" alt="Logs" width={700} height={400} className="rounded-md border"/>
                     <p className="text-sm">Fournit une traçabilité complète des événements système, gérée par un `LogContext` React, avec une capacité de filtrage par origine.</p>
                   </CardContent>
                 </Card>

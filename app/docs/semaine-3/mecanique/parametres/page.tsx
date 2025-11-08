@@ -136,15 +136,77 @@ export default function MechanicsAdvancedTestPage() {
                         3. Processus et méthodologie
                       </CardTitle>
                     </CardHeader>
-                    <CardContent className="p-6 space-y-4">
-                      <p>Nous avons respecté toutes les côtes et tolérances du document fourni. Chaque étape contient un emplacement pour insérer vos captures d’écran afin d’illustrer l’avancement.</p>
-                      <h3 className="font-medium">1. Import des plans et préparation du fichier</h3>
-                      <h3 className="font-medium">2. Esquisse de la forme principale</h3>
-                      <h3 className="font-medium">3. Extrusion et découpe initiale</h3>
-                      <h3 className="font-medium">4. Création des évidements secondaires et rainures</h3>
-                      <h3 className="font-medium">5. Perçages et congés</h3>
-                      <h3 className="font-medium">6. Découpe inclinée et formes angulaires</h3>
-                      <h3 className="font-medium">7. Détails finaux et contrôle qualité</h3>
+                    <CardContent className="p-6 space-y-6">
+                      <p>Nous avons respecté toutes les côtes et tolérances du document fourni. Chaque étape contient un emplacement pour insérer vos captures d'écran afin d'illustrer l'avancement.</p>
+                      
+                      <div className="space-y-6">
+                        <div>
+                          <h3 className="font-semibold text-blue-700 dark:text-blue-300 mb-2">1. Import des plans et préparation du fichier</h3>
+                          <p className="text-sm text-gray-600 dark:text-gray-400 mb-2"><strong>But</strong> : récupérer les vues 2D/3D et caler l'origine.</p>
+                          <ol className="list-decimal pl-5 text-sm text-gray-600 dark:text-gray-400 space-y-1">
+                            <li>Ouvrir le modèle de base (template CAO).</li>
+                            <li>Insérer les esquisses des vues (dessus, face, coupe).</li>
+                            <li>Vérifier l'échelle (MMGS) et la position de l'origine.</li>
+                          </ol>
+                        </div>
+
+                        <div>
+                          <h3 className="font-semibold text-blue-700 dark:text-blue-300 mb-2">2. Esquisse de la forme principale</h3>
+                          <p className="text-sm text-gray-600 dark:text-gray-400 mb-2"><strong>But</strong> : tracer la silhouette trapézoïdale et les grands évidements.</p>
+                          <ol className="list-decimal pl-5 text-sm text-gray-600 dark:text-gray-400 space-y-1">
+                            <li>Sur le plan supérieur, dessiner le contour extérieur avec les valeurs adéquates.</li>
+                            <li>Ajouter les cavités carrées (grandes alvéoles) centrées.</li>
+                            <li>Placer l'axe de symétrie pour assurer la symétrie des opérations suivantes.</li>
+                          </ol>
+                        </div>
+
+                        <div>
+                          <h3 className="font-semibold text-blue-700 dark:text-blue-300 mb-2">3. Extrusion et découpe initiale</h3>
+                          <p className="text-sm text-gray-600 dark:text-gray-400 mb-2"><strong>But</strong> : donner l'épaisseur de base et définir les volumes à enlever.</p>
+                          <ol className="list-decimal pl-5 text-sm text-gray-600 dark:text-gray-400 space-y-1">
+                            <li>Extruder la forme principale à la hauteur demandée (zones basses et hautes).</li>
+                            <li>Appliquer une coupe droite pour séparer les deux hauteurs selon.</li>
+                          </ol>
+                        </div>
+
+                        <div>
+                          <h3 className="font-semibold text-blue-700 dark:text-blue-300 mb-2">4. Création des évidements secondaires et rainures</h3>
+                          <p className="text-sm text-gray-600 dark:text-gray-400 mb-2"><strong>But</strong> : réaliser la rainure centrale et les évidements latéraux.</p>
+                          <ol className="list-decimal pl-5 text-sm text-gray-600 dark:text-gray-400 space-y-1">
+                            <li>Sur la face supérieure, esquisser la rainure (épaisseur 5 mm, profondeur 2,5 mm).</li>
+                            <li>Extruder enlevé sur la profondeur spécifiée.</li>
+                            <li>Reproduire l'opération de chaque côté selon symétrie.</li>
+                          </ol>
+                        </div>
+
+                        <div>
+                          <h3 className="font-semibold text-blue-700 dark:text-blue-300 mb-2">5. Perçages et congés</h3>
+                          <p className="text-sm text-gray-600 dark:text-gray-400 mb-2"><strong>But</strong> : ajouter tous les trous débouchants et arrondir les arêtes intérieures.</p>
+                          <ol className="list-decimal pl-5 text-sm text-gray-600 dark:text-gray-400 space-y-1">
+                            <li>Modéliser chaque perçage Ø10 aux emplacements spécifiés.</li>
+                            <li>Appliquer les congés R10 sur les 12 arrêtes intérieures.</li>
+                          </ol>
+                        </div>
+
+                        <div>
+                          <h3 className="font-semibold text-blue-700 dark:text-blue-300 mb-2">6. Découpe inclinée et formes angulaires</h3>
+                          <p className="text-sm text-gray-600 dark:text-gray-400 mb-2"><strong>But</strong> : réaliser une coupe à travers la pièce et les transitions.</p>
+                          <ol className="list-decimal pl-5 text-sm text-gray-600 dark:text-gray-400 space-y-1">
+                            <li>Esquisser la ligne de coupe inclinée sur la vue latérale.</li>
+                            <li>Extruder enlevé en traversant tout le volume.</li>
+                            <li>Vérifier l'angle et ajuster si nécessaire.</li>
+                          </ol>
+                        </div>
+
+                        <div>
+                          <h3 className="font-semibold text-blue-700 dark:text-blue-300 mb-2">7. Détails finaux et contrôle qualité</h3>
+                          <ol className="list-decimal pl-5 text-sm text-gray-600 dark:text-gray-400 space-y-1">
+                            <li>Vérifier toutes les côtes critiques avec l'outil de mesure.</li>
+                            <li>Comparer visuellement avec les rendus 3D fournis (couleur, placement des éléments).</li>
+                            <li>Enregistrer et nommer correctement le fichier <code className="bg-gray-100 dark:bg-gray-800 px-1 rounded">.SLDPRT</code>.</li>
+                          </ol>
+                        </div>
+                      </div>
                     </CardContent>
                   </Card>
                 </AnimatedSection>
@@ -159,7 +221,7 @@ export default function MechanicsAdvancedTestPage() {
                     <CardContent className="p-6">
                       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
                         {[...Array(29)].map((_, i) => (
-                          <Image key={i} src={`/assets/imgs/img_${i + 1}.png`} alt={`Processus image ${i + 1}`} width={150} height={100} className="rounded-md border"/>
+                          <Image key={i} src={`/Documentation/semaine-3/mecanique/assets/imgs/img_${i + 1}.png`} alt={`Processus image ${i + 1}`} width={150} height={100} className="rounded-md border" unoptimized/>
                         ))}
                       </div>
                       <p className="text-sm text-center mt-4 italic text-gray-500">Figure : Processus en image de construction de la pièce du test 3.</p>
@@ -217,8 +279,8 @@ export default function MechanicsAdvancedTestPage() {
                     </CardHeader>
                     <CardContent className="p-6">
                       <div className="grid md:grid-cols-2 gap-4">
-                        <figure><Image src="/assets/imgs/a_modeliser_1.png" alt="Rendu 1 - vue de dessus" width={400} height={300} className="rounded-md border"/><figcaption className="text-sm italic text-center mt-2">Rendu 1 : Vue de dessus - de droite - trisométrie</figcaption></figure>
-                        <figure><Image src="/assets/imgs/a_modeliser_2.png" alt="Rendu 2 - vue de face" width={400} height={300} className="rounded-md border"/><figcaption className="text-sm italic text-center mt-2">Rendu 2 : Vue de face - trisométrie</figcaption></figure>
+                        <figure><Image src="/2025-Team-IFRI-Docs/Documentation/semaine-3/mecanique/assets/imgs/a_modeliser_1.png" alt="Rendu 1 - vue de dessus" width={400} height={300} className="rounded-md border" unoptimized/><figcaption className="text-sm italic text-center mt-2">Rendu 1 : Vue de dessus - de droite - trisométrie</figcaption></figure>
+                        <figure><Image src="/2025-Team-IFRI-Docs/Documentation/semaine-3/mecanique/assets/imgs/a_modeliser_2.png" alt="Rendu 2 - vue de face" width={400} height={300} className="rounded-md border" unoptimized/><figcaption className="text-sm italic text-center mt-2">Rendu 2 : Vue de face - trisométrie</figcaption></figure>
                       </div>
                     </CardContent>
                   </Card>
@@ -242,25 +304,105 @@ export default function MechanicsAdvancedTestPage() {
                           </tbody>
                         </table>
                       </div>
-                      <h3 className="font-medium">Captures d’écran des masses obtenues</h3>
-                      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                        <figure><Image src="/assets/imgs/a_masse.png" alt="Capture volume Q3a" width={200} height={150} className="rounded-md border"/><figcaption className="text-xs italic text-center mt-1">Figure 1 : Calcul pour Q3a</figcaption></figure>
-                        <figure><Image src="/assets/imgs/b_masse.png" alt="Capture volume Q3b" width={200} height={150} className="rounded-md border"/><figcaption className="text-xs italic text-center mt-1">Figure 2 : Calcul pour Q3b</figcaption></figure>
-                        <figure><Image src="/assets/imgs/c_masse.png" alt="Capture volume Q3c" width={200} height={150} className="rounded-md border"/><figcaption className="text-xs italic text-center mt-1">Figure 3 : Calcul pour Q3c</figcaption></figure>
+                      <h3 className="font-medium">Captures d'écran des masses obtenues</h3>
+                      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                        <figure><Image src="/2025-Team-IFRI-Docs/Documentation/semaine-3/mecanique/assets/imgs/a_masse.png" alt="Capture volume Q3a" width={200} height={150} className="rounded-md border" unoptimized/><figcaption className="text-xs italic text-center mt-1">Figure 1 : Calcul pour Q3a</figcaption></figure>
+                        <figure><Image src="/2025-Team-IFRI-Docs/Documentation/semaine-3/mecanique/assets/imgs/b_masse.png" alt="Capture volume Q3b" width={200} height={150} className="rounded-md border" unoptimized/><figcaption className="text-xs italic text-center mt-1">Figure 2 : Calcul pour Q3b</figcaption></figure>
+                        <figure><Image src="/2025-Team-IFRI-Docs/Documentation/semaine-3/mecanique/assets/imgs/c_masse.png" alt="Capture volume Q3c" width={200} height={150} className="rounded-md border" unoptimized/><figcaption className="text-xs italic text-center mt-1">Figure 3 : Calcul pour Q3c</figcaption></figure>
+                      </div>
+                      
+                      <h3 className="font-medium">Captures d'écran CAO</h3>
+                      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+                        <figure><Image src="/2025-Team-IFRI-Docs/Documentation/semaine-3/mecanique/assets/imgs/dessus_face.png" alt="Vue de dessus" width={200} height={150} className="rounded-md border" unoptimized/><figcaption className="text-xs italic text-center mt-1">Vue de dessus</figcaption></figure>
+                        <figure><Image src="/2025-Team-IFRI-Docs/Documentation/semaine-3/mecanique/assets/imgs/en_face.png" alt="Vue de face" width={200} height={150} className="rounded-md border" unoptimized/><figcaption className="text-xs italic text-center mt-1">Vue de face</figcaption></figure>
+                        <figure><Image src="/2025-Team-IFRI-Docs/Documentation/semaine-3/mecanique/assets/imgs/droite_face.png" alt="Vue de droite" width={200} height={150} className="rounded-md border" unoptimized/><figcaption className="text-xs italic text-center mt-1">Vue de droite</figcaption></figure>
+                        <figure><Image src="/2025-Team-IFRI-Docs/Documentation/semaine-3/mecanique/assets/imgs/trisométrique.png" alt="Vue trisométrique" width={200} height={150} className="rounded-md border" unoptimized/><figcaption className="text-xs italic text-center mt-1">Vue trisométrique</figcaption></figure>
                       </div>
                       <h3 className="font-medium">Pièces réalisées</h3>
                       <ol className="list-decimal pl-5 text-sm text-blue-600 dark:text-blue-400">
-                        <li><Link href="/assets/pieces/third_test-final_piece-a.SLDPRT" className="hover:underline">Pièce finale - Q3a</Link></li>
-                        <li><Link href="/assets/pieces/third_test_final_piece-b.SLDPRT" className="hover:underline">Pièce finale - Q3b</Link></li>
-                        <li><Link href="/assets/pieces/third_test_final_piece-c.SLDPRT" className="hover:underline">Pièce finale - Q3c</Link></li>
+                        <li><Link href="/Documentation/semaine-3/mecanique/assets/pieces/third_test-final_piece-a.SLDPRT" className="hover:underline">Pièce finale - Q3a</Link></li>
+                        <li><Link href="/Documentation/semaine-3/mecanique/assets/pieces/third_test_final_piece-b.SLDPRT" className="hover:underline">Pièce finale - Q3b</Link></li>
+                        <li><Link href="/Documentation/semaine-3/mecanique/assets/pieces/third_test_final_piece-c.SLDPRT" className="hover:underline">Pièce finale - Q3c</Link></li>
                       </ol>
                       <h3 className="font-medium">Vidéos illustratives</h3>
-                      <div className="aspect-video rounded-lg overflow-hidden border">
+                      <div className="aspect-video rounded-lg overflow-hidden border mb-4">
                         <iframe src="https://player.vimeo.com/video/1097167515?h=204e839d21" width="100%" height="100%" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen></iframe>
                       </div>
+                      <p className="text-sm text-gray-600 dark:text-gray-400">
+                        Vidéo de présentation de la pièce cible : <a href="https://vimeo.com/1097167515/204e839d21?share=copy" className="text-blue-600 hover:underline inline-flex items-center gap-1" target="_blank" rel="noopener noreferrer">cliquez ici <ExternalLink className="w-3 h-3"/></a>
+                      </p>
                     </CardContent>
                   </Card>
               </AnimatedSection>
+
+                <AnimatedSection animation="fade-up" delay={100}>
+                  <Card className="border border-gray-200 dark:border-gray-700">
+                    <CardHeader className="bg-white dark:bg-gray-900/50 border-b border-gray-200 dark:border-gray-700">
+                      <CardTitle className="flex items-center gap-2 text-gray-900 dark:text-gray-100">
+                        <BookOpen className="w-5 h-5 text-gray-600 dark:text-gray-400" />
+                        8. 📚 Ressources et Références
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent className="p-6 space-y-6">
+                      <div>
+                        <h3 className="font-semibold mb-3">Documentation technique</h3>
+                        <ul className="list-disc pl-5 text-gray-700 dark:text-gray-300">
+                          <li><em>SolidWorks: Le guide du débutant</em> – [PDF]</li>
+                        </ul>
+                      </div>
+                      
+                      <div>
+                        <h3 className="font-semibold mb-3">Outils et logiciels</h3>
+                        <div className="overflow-x-auto">
+                          <table className="w-full text-sm border-collapse">
+                            <thead>
+                              <tr className="bg-gray-50 dark:bg-gray-800">
+                                <th className="border p-2 text-left">Outil</th>
+                                <th className="border p-2 text-left">Version</th>
+                                <th className="border p-2 text-left">Usage</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td className="border p-2">SolidWorks</td>
+                                <td className="border p-2">2025</td>
+                                <td className="border p-2">Modélisation et calcul de volume</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      
+                      <div>
+                        <h3 className="font-semibold mb-3">Composants & matériaux</h3>
+                        <ol className="list-decimal pl-5 text-gray-700 dark:text-gray-300 space-y-1">
+                          <li><strong>Aluminium 1060</strong> (ρ = 2700 kg/m³)</li>
+                          <li><strong>Filet R10</strong> pour les congés</li>
+                          <li><strong>Perçages</strong> : diamètre selon plan</li>
+                        </ol>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </AnimatedSection>
+
+                <AnimatedSection animation="fade-up" delay={100}>
+                  <Card className="border border-gray-200 dark:border-gray-700">
+                    <CardHeader className="bg-white dark:bg-gray-900/50 border-b border-gray-200 dark:border-gray-700">
+                      <CardTitle className="flex items-center gap-2 text-gray-900 dark:text-gray-100">
+                        <FileText className="w-5 h-5 text-gray-600 dark:text-gray-400" />
+                        9. 📎 Annexes
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent className="p-6">
+                      <p className="text-gray-700 dark:text-gray-300 mb-4">Aucune annexe pour l'instant. Cette section pourra accueillir :</p>
+                      <ol className="list-decimal pl-5 text-gray-600 dark:text-gray-400 space-y-1">
+                        <li>plans détaillés</li>
+                        <li>calculs avancés</li>
+                        <li>échanges techniques</li>
+                      </ol>
+                    </CardContent>
+                  </Card>
+                </AnimatedSection>
                 
               </div>
 

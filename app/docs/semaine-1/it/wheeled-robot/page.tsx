@@ -95,7 +95,7 @@ export default function WheeledRobotDocFRPage() {
                   <CardContent className="p-6">
                     <div className="space-y-4">
                       <div className="not-prose mb-6 flex justify-center">
-                        <Image src="/Documentation/semaine-1/it/wheeled-robot.svg" alt="Robot à Roues" width={100} height={100} className="opacity-80" />
+                        <Image src="/2025-Team-IFRI-Docs/Documentation/semaine-1/it/wheeled-robot.svg" alt="Robot à Roues" width={100} height={100} className="opacity-80" />
                       </div>
                       <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
                         La classe <code className="bg-gray-100 dark:bg-gray-800 px-1 rounded">WheeledRobot</code> est une implémentation concrète de la classe de base abstraite <code className="bg-gray-100 dark:bg-gray-800 px-1 rounded">Robot</code>. Elle représente un robot mobile qui se déplace à l'aide de roues et est capable de navigation, d'évitement d'obstacles de base et de transporter des objets dans un compartiment de stockage.

@@ -276,17 +276,17 @@ export default function FinalTestDocPage() {
                       <h3 className="font-semibold text-lg text-gray-800 dark:text-gray-200 mb-2">7.1 Conception Électronique (KiCad)</h3>
                       <p className="text-gray-700 dark:text-gray-300 mb-4">Le circuit a été conçu sur KiCad et intègre tous les composants sur un PCB unique pour une robustesse et une organisation optimales. L'évolution du design est détaillée en Annexe B.</p>
                       <div className="grid md:grid-cols-2 gap-4">
-                        <figure><Image src="/Documentation/test-final/elec/media/Schema-V3-I2C-BSS.png" alt="Schéma KiCad Final (V3)" width={400} height={300} className="rounded-md border"/><figcaption className="text-sm italic text-center mt-2">Figure 1 : Schéma électrique final avec I2C et convertisseur de niveau.</figcaption></figure>
-                        <figure><Image src="/Documentation/test-final/elec/media/PCB-V3-I2C-BSS.png" alt="PCB KiCad Final (V3)" width={400} height={300} className="rounded-md border"/><figcaption className="text-sm italic text-center mt-2">Figure 2 : Routage du PCB final.</figcaption></figure>
+                        <figure><Image src="/2025-Team-IFRI-Docs/Documentation/test-final/elec/media/Schema-V3-I2C-BSS.png" alt="Schéma KiCad Final (V3)" width={400} height={300} className="rounded-md border"/><figcaption className="text-sm italic text-center mt-2">Figure 1 : Schéma électrique final avec I2C et convertisseur de niveau.</figcaption></figure>
+                        <figure><Image src="/2025-Team-IFRI-Docs/Documentation/test-final/elec/media/PCB-V3-I2C-BSS.png" alt="PCB KiCad Final (V3)" width={400} height={300} className="rounded-md border"/><figcaption className="text-sm italic text-center mt-2">Figure 2 : Routage du PCB final.</figcaption></figure>
                       </div>
-                      <figure className="mt-4"><Image src="/Documentation/test-final/elec/media/3D-V3-I2C-BSS.png" alt="Vue 3D du PCB Final" width={600} height={400} className="rounded-md border mx-auto"/><figcaption className="text-sm italic text-center mt-2">Figure 3 : PCB final avec I2C et convertisseur de niveau. Vue 3D</figcaption></figure>
+                      <figure className="mt-4"><Image src="/2025-Team-IFRI-Docs/Documentation/test-final/elec/media/3D-V3-I2C-BSS.png" alt="Vue 3D du PCB Final" width={600} height={400} className="rounded-md border mx-auto"/><figcaption className="text-sm italic text-center mt-2">Figure 3 : PCB final avec I2C et convertisseur de niveau. Vue 3D</figcaption></figure>
                     </div>
                     <div>
                       <h3 className="font-semibold text-lg text-gray-800 dark:text-gray-200 mb-2">7.2 Prototype et Démonstration Fonctionnelle</h3>
                       <p className="text-gray-700 dark:text-gray-300 mb-4">Le système électronique a été assemblé pour validation. La vidéo et les images ci-dessous présentent un cycle complet de tri et les tests des fonctionnalités clés.</p>
                       <p className="text-gray-500 italic mb-4">[Placeholder pour la vidéo de démonstration finale]</p>
                       <div className="grid md:grid-cols-3 gap-4">
-                        <figure><Image src="/Documentation/test-final/elec/media/prototype_convoyeur_photo.png" alt="Photo du prototype assemblé" width={300} height={200} className="rounded-md border"/><figcaption className="text-sm italic text-center mt-2">Figure 4 : Le système de contrôle assemblé et câblé.</figcaption></figure>
+                        <figure><Image src="/2025-Team-IFRI-Docs/Documentation/test-final/elec/media/prototype_convoyeur_photo.png" alt="Photo du prototype assemblé" width={300} height={200} className="rounded-md border"/><figcaption className="text-sm italic text-center mt-2">Figure 4 : Le système de contrôle assemblé et câblé.</figcaption></figure>
                         <figure className="flex items-center justify-center border rounded-md h-[200px] bg-gray-100 dark:bg-gray-800"><span className="text-sm text-gray-500 p-4 text-center">[Placeholder image/gif du cube coupant le faisceau]</span><figcaption className="text-sm italic text-center mt-2 sr-only">Figure 5 : Le Laser 1 détecte un cube et le firmware commande le moteur.</figcaption></figure>
                         <figure className="flex items-center justify-center border rounded-md h-[200px] bg-gray-100 dark:bg-gray-800"><span className="text-sm text-gray-500 p-4 text-center">[Placeholder image/gif du cube sous le capteur couleur]</span><figcaption className="text-sm italic text-center mt-2 sr-only">Figure 6 : Le système identifie un cube Rouge.</figcaption></figure>
                       </div>
@@ -338,23 +338,23 @@ export default function FinalTestDocPage() {
                         <h4 className="font-semibold">1.2. Composants et Fonctionnement Détaillé</h4>
                         <h5 className="font-medium">1.2.1. Unité de Traitement Principale (Arduino Nano - ATmega328P)</h5>
                         <p>L'Arduino Nano, basé sur le microcontrôleur ATmega328P, constitue le cœur logique du système de tri...</p>
-                        <Image src="/Documentation/test-final/elec/media/ArduinoNano.jpeg" alt="Arduino Nano" width={300} height={200} className="rounded-md border my-2"/>
+                        <Image src="/2025-Team-IFRI-Docs/Documentation/test-final/elec/media/ArduinoNano.jpeg" alt="Arduino Nano" width={300} height={200} className="rounded-md border my-2"/>
                         <h5 className="font-medium">1.2.2. Module de Communication et Interface Web (ESP32 Dev Kit v1)</h5>
                         <p>Le module ESP32 Dev Kit v1 est spécifiquement intégré pour répondre à l'exigence d'une interface web...</p>
-                        <Image src="/Documentation/test-final/elec/media/ESP32.jpeg" alt="ESP32" width={300} height={200} className="rounded-md border my-2"/>
+                        <Image src="/2025-Team-IFRI-Docs/Documentation/test-final/elec/media/ESP32.jpeg" alt="ESP32" width={300} height={200} className="rounded-md border my-2"/>
                         <h5 className="font-medium">1.2.3. Convertisseur de Niveau Logique Bidirectionnel (Module BSS138)</h5>
                         <p>Le module convertisseur de niveau logique, basé sur le transistor MOSFET BSS138, est un composant essentiel...</p>
-                        <Image src="/Documentation/test-final/elec/media/BSS138.jpeg" alt="Convertisseur BSS138" width={300} height={200} className="rounded-md border my-2"/>
+                        <Image src="/2025-Team-IFRI-Docs/Documentation/test-final/elec/media/BSS138.jpeg" alt="Convertisseur BSS138" width={300} height={200} className="rounded-md border my-2"/>
                         <p><strong>Fonctionnement et Justification du Choix Optimal :</strong> Le principe de fonctionnement...</p>
                         <h5 className="font-medium">1.2.4. Capteur de Couleur (Module GY-33)</h5>
                         <p>Le module capteur de couleur GY-33 (TCS34725) identifie la couleur des déchets...</p>
-                        <Image src="/Documentation/test-final/elec/media/GY33.jpeg" alt="Capteur GY-33" width={300} height={200} className="rounded-md border my-2"/>
+                        <Image src="/2025-Team-IFRI-Docs/Documentation/test-final/elec/media/GY33.jpeg" alt="Capteur GY-33" width={300} height={200} className="rounded-md border my-2"/>
                         <h5 className="font-medium">1.2.5. Capteurs de Présence (Modules Laser KY-008 et Photorésistances)</h5>
                         <p>Deux modules Laser KY-008 et des photorésistances détectent les déchets...</p>
-                        <Image src="/Documentation/test-final/elec/media/KY008.jpeg" alt="Laser KY-008" width={300} height={200} className="rounded-md border my-2"/>
+                        <Image src="/2025-Team-IFRI-Docs/Documentation/test-final/elec/media/KY008.jpeg" alt="Laser KY-008" width={300} height={200} className="rounded-md border my-2"/>
                         <h5 className="font-medium">1.2.6. Contrôle du Moteur du Convoyeur (Driver L298N)</h5>
                         <p>Le module L298N (pont en H) pilote le moteur DC...</p>
-                        <Image src="/Documentation/test-final/elec/media/L298N.jpeg" alt="Driver L298N" width={300} height={200} className="rounded-md border my-2"/>
+                        <Image src="/2025-Team-IFRI-Docs/Documentation/test-final/elec/media/L298N.jpeg" alt="Driver L298N" width={300} height={200} className="rounded-md border my-2"/>
                         <h5 className="font-medium">1.2.7. Module d'Alimentation (Buck DC-DC - U3)</h5>
                         <p>Le régulateur Buck DC-DC convertit la tension variable de la batterie Lithium en un 5V stable...</p>
                         <h5 className="font-medium">1.2.8. Condensateurs de Découplage (C1, C2, C3, C4)</h5>
@@ -371,21 +371,21 @@ export default function FinalTestDocPage() {
                         <h5 className="font-medium">1.3.1. Version 1 : Schéma avec Liaison UART</h5>
                         <ul className="list-disc pl-5 text-sm">
                           <li><strong>Description</strong> : La première itération privilégiait une communication série UART...</li>
-                          <li><strong>Schéma</strong> : <Image src="/Documentation/test-final/elec/media/Schema-V1-UART.png" alt="Schéma V1 UART" width={400} height={300} className="rounded-md border my-2 inline-block"/></li>
-                          <li><strong>PCB Associé</strong> : <Image src="/Documentation/test-final/elec/media/PCB-V1-UART.png" alt="PCB V1 UART" width={400} height={300} className="rounded-md border my-2 inline-block"/></li>
+                          <li><strong>Schéma</strong> : <Image src="/2025-Team-IFRI-Docs/Documentation/test-final/elec/media/Schema-V1-UART.png" alt="Schéma V1 UART" width={400} height={300} className="rounded-md border my-2 inline-block"/></li>
+                          <li><strong>PCB Associé</strong> : <Image src="/2025-Team-IFRI-Docs/Documentation/test-final/elec/media/PCB-V1-UART.png" alt="PCB V1 UART" width={400} height={300} className="rounded-md border my-2 inline-block"/></li>
                           <li><strong>Abandon</strong> : Complexité logicielle trop élevée...</li>
                         </ul>
                         <h5 className="font-medium">1.3.2. Version 2 : Schéma avec I2C et Résistances Pull-up Simples</h5>
                         <ul className="list-disc pl-5 text-sm">
                           <li><strong>Description</strong> : Migration vers le protocole I2C...</li>
-                          <li><strong>Schéma</strong> : <Image src="/Documentation/test-final/elec/media/Schema-V2-I2C-Pullup.png" alt="Schéma V2 I2C Pullup" width={400} height={300} className="rounded-md border my-2 inline-block"/></li>
+                          <li><strong>Schéma</strong> : <Image src="/2025-Team-IFRI-Docs/Documentation/test-final/elec/media/Schema-V2-I2C-Pullup.png" alt="Schéma V2 I2C Pullup" width={400} height={300} className="rounded-md border my-2 inline-block"/></li>
                           <li><strong>Abandon</strong> : Analyse technique révélant une marge de sécurité trop faible...</li>
                         </ul>
                         <h5 className="font-medium">1.3.3. Version 3 (Finale) : Schéma avec I2C et Convertisseur de Niveau Dédié</h5>
                         <ul className="list-disc pl-5 text-sm">
                           <li><strong>Description</strong> : Solution finale et la plus robuste, utilisant un convertisseur...</li>
-                          <li><strong>Schéma</strong> : <Image src="/Documentation/test-final/elec/media/Schema-V3-I2C-BSS.png" alt="Schéma V3 I2C BSS" width={400} height={300} className="rounded-md border my-2 inline-block"/></li>
-                          <li><strong>PCB Final</strong> : <Image src="/Documentation/test-final/elec/media/PCB-V3-I2C-BSS.png" alt="PCB V3 I2C BSS" width={400} height={300} className="rounded-md border my-2 inline-block"/></li>
+                          <li><strong>Schéma</strong> : <Image src="/2025-Team-IFRI-Docs/Documentation/test-final/elec/media/Schema-V3-I2C-BSS.png" alt="Schéma V3 I2C BSS" width={400} height={300} className="rounded-md border my-2 inline-block"/></li>
+                          <li><strong>PCB Final</strong> : <Image src="/2025-Team-IFRI-Docs/Documentation/test-final/elec/media/PCB-V3-I2C-BSS.png" alt="PCB V3 I2C BSS" width={400} height={300} className="rounded-md border my-2 inline-block"/></li>
                           <li><strong>Optimisation du PCB</strong> : Le design a été optimisé...</li>
                         </ul>
                       </div>

@@ -1,136 +1,142 @@
-import { Users, Github, Linkedin, Instagram } from "lucide-react"
+import { Users, Github, Linkedin, Mail } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
+import { getImagePath } from "@/lib/image-path"
 
 export function ExpertiseSection() {
   const teamMembers = [
+    // Chef d'équipe
     {
       id: 1,
-      name: "Alex Martin",
-      role: "Chef d'équipe & Développeur Full-Stack",
-      domain: "Informatique",
-      image: "/api/placeholder/150/150",
-      bio: "Passionné par l'IA et les systèmes distribués",
+      name: "Hugues HANTAN",
+      role: "Chef d'équipe & Ingénieur IT/Électronique",
+      domain: "Électronique/IT",
+      image: "/2025-Team-IFRI-Docs/placeholder-user.jpg",
+      bio: "Leader technique multidisciplinaire",
       social: {
-        github: "https://github.com/alexmartin",
-        linkedin: "https://linkedin.com/in/alexmartin",
-        instagram: "https://instagram.com/alexmartin"
+        github: "https://github.com/hugueshantan",
+        linkedin: "https://linkedin.com/in/hugueshantan",
+        email: "mailto:hugues.hantan@example.com"
       }
     },
+    // Équipe Électronique
     {
       id: 2,
-      name: "Sarah Chen",
+      name: "Cendrelle FAGLA",
       role: "Ingénieure Électronique",
       domain: "Électronique",
-      image: "/api/placeholder/150/150",
-      bio: "Spécialiste en systèmes embarqués et IoT",
+      image: "/2025-Team-IFRI-Docs/placeholder-user.jpg",
+      bio: "Spécialiste en systèmes embarqués",
       social: {
-        github: "https://github.com/sarahchen",
-        linkedin: "https://linkedin.com/in/sarahchen",
-        instagram: "https://instagram.com/sarahchen"
+        github: "https://github.com/cendrellefagla",
+        linkedin: "https://linkedin.com/in/cendrellefagla",
+        email: "mailto:cendrellefagla"
       }
     },
     {
       id: 3,
-      name: "Lucas Dubois",
-      role: "Concepteur Mécanique",
-      domain: "Mécanique",
-      image: "/api/placeholder/150/150",
-      bio: "Expert en CAO et fabrication additive",
+      name: "Marielle AGBOSSOUNON",
+      role: "Ingénieure Électronique",
+      domain: "Électronique",
+      image: "/2025-Team-IFRI-Docs/placeholder-user.jpg",
+      bio: "Expert en conception de circuits",
       social: {
-        github: "https://github.com/lucasdubois",
-        linkedin: "https://linkedin.com/in/lucasdubois",
-        instagram: "https://instagram.com/lucasdubois"
+        github: "https://github.com/marielleagbossounon",
+        linkedin: "https://linkedin.com/in/marielleagbossounon",
+        email: "mailto:marielleagbossounon"
       }
     },
     {
       id: 4,
-      name: "Emma Rodriguez",
-      role: "Développeuse IA & Vision",
-      domain: "Informatique",
-      image: "/api/placeholder/150/150",
-      bio: "Spécialisée en computer vision et ML",
+      name: "ODJO Eunice",
+      role: "Ingénieure Électronique",
+      domain: "Électronique",
+      image: "/2025-Team-IFRI-Docs/placeholder-user.jpg",
+      bio: "Spécialiste en microcontrôleurs",
       social: {
-        github: "https://github.com/emmarodriguez",
-        linkedin: "https://linkedin.com/in/emmarodriguez",
-        instagram: "https://instagram.com/emmarodriguez"
+        github: "https://github.com/odjoeunice",
+        linkedin: "https://linkedin.com/in/odjoeunice",
+        email: "mailto:odjoeunice"
       }
     },
+    // Équipe IT
     {
       id: 5,
-      name: "Thomas Leroy",
-      role: "Ingénieur Systèmes Embarqués",
-      domain: "Électronique",
-      image: "/api/placeholder/150/150",
-      bio: "Expert en microcontrôleurs et communication",
+      name: "CODO Eudes",
+      role: "Développeur IT",
+      domain: "Informatique",
+      image: "/2025-Team-IFRI-Docs/placeholder-user.jpg",
+      bio: "Expert en développement logiciel",
       social: {
-        github: "https://github.com/thomasleroy",
-        linkedin: "https://linkedin.com/in/thomasleroy",
-        instagram: "https://instagram.com/thomasleroy"
+        github: "https://github.com/codoeudes",
+        linkedin: "https://linkedin.com/in/codoeudes",
+        email: "mailto:codoeudes"
       }
     },
     {
       id: 6,
-      name: "Léa Moreau",
-      role: "Designer UX/UI",
+      name: "BEHOUNDJA Rosas",
+      role: "Développeur IT",
       domain: "Informatique",
-      image: "/api/placeholder/150/150",
-      bio: "Créatrice d'interfaces intuitives",
+      image: "/2025-Team-IFRI-Docs/placeholder-user.jpg",
+      bio: "Spécialiste en systèmes distribués",
       social: {
-        github: "https://github.com/leamoreau",
-        linkedin: "https://linkedin.com/in/leamoreau",
-        instagram: "https://instagram.com/leamoreau"
+        github: "https://github.com/behoundjarosas",
+        linkedin: "https://linkedin.com/in/behoundjarosas",
+        email: "mailto:behoundjarosas"
       }
     },
     {
       id: 7,
-      name: "Antoine Blanc",
-      role: "Ingénieur Mécatronique",
-      domain: "Mécanique",
-      image: "/api/placeholder/150/150",
-      bio: "Intégration mécanique et électronique",
+      name: "Ismael OGOUBIYI",
+      role: "Développeur IT",
+      domain: "Informatique",
+      image: "/2025-Team-IFRI-Docs/placeholder-user.jpg",
+      bio: "Expert en intelligence artificielle",
       social: {
-        github: "https://github.com/antoineblanc",
-        linkedin: "https://linkedin.com/in/antoineblanc",
-        instagram: "https://instagram.com/antoineblanc"
+        github: "https://github.com/ismaelogoubiyi",
+        linkedin: "https://linkedin.com/in/ismaelogoubiyi",
+        email: "mailto:ismaelogoubiyi"
       }
     },
+    // Équipe Mécanique
     {
       id: 8,
-      name: "Camille Petit",
-      role: "Développeuse Backend",
-      domain: "Informatique",
-      image: "/api/placeholder/150/150",
-      bio: "Architecte de systèmes robustes",
+      name: "Phoris AGBOZOGNIGBE",
+      role: "Ingénieur Mécanique",
+      domain: "Mécanique",
+      image: "/2025-Team-IFRI-Docs/placeholder-user.jpg",
+      bio: "Expert en CAO et modélisation 3D",
       social: {
-        github: "https://github.com/camillepetit",
-        linkedin: "https://linkedin.com/in/camillepetit",
-        instagram: "https://instagram.com/camillepetit"
+        github: "https://github.com/phorisagbozognigbe",
+        linkedin: "https://linkedin.com/in/phorisagbozognigbe",
+        email: "mailto:phorisagbozognigbe"
       }
     },
     {
       id: 9,
-      name: "Maxime Roux",
-      role: "Ingénieur PCB & Prototypage",
-      domain: "Électronique",
-      image: "/api/placeholder/150/150",
-      bio: "Conception de circuits et prototypage rapide",
+      name: "Lauviah VLAVONOU",
+      role: "Ingénieure Mécanique",
+      domain: "Mécanique",
+      image: "/2025-Team-IFRI-Docs/placeholder-user.jpg",
+      bio: "Spécialiste en fabrication et assemblage",
       social: {
-        github: "https://github.com/maximeroux",
-        linkedin: "https://linkedin.com/in/maximeroux",
-        instagram: "https://instagram.com/maximeroux"
+        github: "https://github.com/lauviahvlavonou",
+        linkedin: "https://linkedin.com/in/lauviahvlavonou",
+        email: "mailto:lauviahvlavonou"
       }
     },
     {
       id: 10,
-      name: "Julie Fabre",
-      role: "Ingénieure Fabrication",
-      domain: "Mécanique",
-      image: "/api/placeholder/150/150",
-      bio: "Spécialiste usinage et assemblage",
+      name: "[À définir]",
+      role: "Membre de l'équipe",
+      domain: "Informatique",
+      image: "/2025-Team-IFRI-Docs/placeholder-user.jpg",
+      bio: "Membre à venir",
       social: {
-        github: "https://github.com/juliefabre",
-        linkedin: "https://linkedin.com/in/juliefabre",
-        instagram: "https://instagram.com/juliefabre"
+        github: "https://github.com/",
+        linkedin: "https://linkedin.com/in/",
+        email: "mailto:"
       }
     }
   ]
@@ -141,6 +147,8 @@ export function ExpertiseSection() {
         return 'text-chart-2 bg-chart-2/10 border-chart-2/20'
       case 'Électronique':
         return 'text-primary bg-primary/10 border-primary/20'
+      case 'Électronique/IT':
+        return 'text-purple-600 bg-purple-600/10 border-purple-600/20'
       case 'Mécanique':
         return 'text-chart-1 bg-chart-1/10 border-chart-1/20'
       default:
@@ -200,14 +208,18 @@ export function ExpertiseSection() {
               <div className="group text-center space-y-4">
                 {/* Profile Image */}
                 <div className="relative mx-auto w-28 h-28">
-                  <img 
+                  <Image 
                     src={member.image} 
                     alt={member.name}
+                    width={112}
+                    height={112}
                     className="w-full h-full rounded-full object-cover shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105"
+                    unoptimized
                   />
                   <div className={`absolute -inset-1 rounded-full border-3 transition-all duration-300 ${
                     member.domain === 'Informatique' ? 'border-chart-2/50 group-hover:border-chart-2' :
                     member.domain === 'Électronique' ? 'border-primary/50 group-hover:border-primary' : 
+                    member.domain === 'Électronique/IT' ? 'border-purple-600/50 group-hover:border-purple-600' :
                     'border-chart-1/50 group-hover:border-chart-1'
                   }`} />
                 </div>
@@ -242,12 +254,12 @@ export function ExpertiseSection() {
                     <Linkedin className="w-4 h-4 group-hover/social:scale-110 transition-transform" />
                   </Link>
                   <Link 
-                    href={member.social.instagram} 
-                    className="p-2 rounded-full bg-muted/20 hover:bg-pink-500/20 hover:text-pink-600 transition-all duration-300 group/social"
+                    href={member.social.email} 
+                    className="p-2 rounded-full bg-muted/20 hover:bg-orange-500/20 hover:text-orange-600 transition-all duration-300 group/social"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Instagram className="w-4 h-4 group-hover/social:scale-110 transition-transform" />
+                    <Mail className="w-4 h-4 group-hover/social:scale-110 transition-transform" />
                   </Link>
                 </div>
               </div>
@@ -282,6 +294,7 @@ export function ExpertiseSection() {
                       <div className={`absolute -inset-1 rounded-full border-3 transition-all duration-300 ${
                         member.domain === 'Informatique' ? 'border-chart-2/50 group-hover:border-chart-2' :
                         member.domain === 'Électronique' ? 'border-primary/50 group-hover:border-primary' : 
+                        member.domain === 'Électronique/IT' ? 'border-purple-600/50 group-hover:border-purple-600' :
                         'border-chart-1/50 group-hover:border-chart-1'
                       }`} />
                     </div>
@@ -316,12 +329,12 @@ export function ExpertiseSection() {
                         <Linkedin className="w-4 h-4 group-hover/social:scale-110 transition-transform" />
                       </Link>
                       <Link 
-                        href={member.social.instagram} 
-                        className="p-2 rounded-full bg-muted/20 hover:bg-pink-500/20 hover:text-pink-600 transition-all duration-300 group/social"
+                        href={member.social.email} 
+                        className="p-2 rounded-full bg-muted/20 hover:bg-orange-500/20 hover:text-orange-600 transition-all duration-300 group/social"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <Instagram className="w-4 h-4 group-hover/social:scale-110 transition-transform" />
+                        <Mail className="w-4 h-4 group-hover/social:scale-110 transition-transform" />
                       </Link>
                     </div>
                   </div>
@@ -355,6 +368,7 @@ export function ExpertiseSection() {
                       <div className={`absolute -inset-1 rounded-full border-3 transition-all duration-300 ${
                         member.domain === 'Informatique' ? 'border-chart-2/50 group-hover:border-chart-2' :
                         member.domain === 'Électronique' ? 'border-primary/50 group-hover:border-primary' : 
+                        member.domain === 'Électronique/IT' ? 'border-purple-600/50 group-hover:border-purple-600' :
                         'border-chart-1/50 group-hover:border-chart-1'
                       }`} />
                     </div>
@@ -389,12 +403,12 @@ export function ExpertiseSection() {
                         <Linkedin className="w-4 h-4 group-hover/social:scale-110 transition-transform" />
                       </Link>
                       <Link 
-                        href={member.social.instagram} 
-                        className="p-2 rounded-full bg-muted/20 hover:bg-pink-500/20 hover:text-pink-600 transition-all duration-300 group/social"
+                        href={member.social.email} 
+                        className="p-2 rounded-full bg-muted/20 hover:bg-orange-500/20 hover:text-orange-600 transition-all duration-300 group/social"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <Instagram className="w-4 h-4 group-hover/social:scale-110 transition-transform" />
+                        <Mail className="w-4 h-4 group-hover/social:scale-110 transition-transform" />
                       </Link>
                     </div>
                   </div>

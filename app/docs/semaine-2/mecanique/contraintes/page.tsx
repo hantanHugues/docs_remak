@@ -8,7 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import {
-  ArrowLeft, ArrowRight, HardHat, Cog, BookOpen, Download, PlayCircle, FolderArchive, Target, CheckCircle, BarChart2, AlertTriangle, ExternalLink
+  ArrowLeft, ArrowRight, HardHat, Cog, BookOpen, Download, PlayCircle, FolderArchive, Target, CheckCircle, BarChart2, AlertTriangle, ExternalLink, Settings, Layers, Calculator
 } from "lucide-react";
 import Link from "next/link";
 import Image from 'next/image';
@@ -195,13 +195,60 @@ export default function MechanicsDocPage() {
                     <div>
                       <h3 className="font-semibold text-lg text-gray-800 dark:text-gray-200">5.3. Processus de modélisation</h3>
                       <div className="space-y-4 mt-2">
-                        <h4 className="font-medium">5.3.1. Préparation du Fichier</h4>
-                        <h4 className="font-medium">5.3.2. Esquisse 2D Détaillée</h4>
-                        <h4 className="font-medium">5.3.3. Définition des Variables Globales</h4>
-                        <p className="text-sm"><strong>A</strong> = 81 / 84 mm, <strong>B</strong> = 57 / 59 mm, <strong>C</strong> = 43 / 45 mm</p>
-                        <h4 className="font-medium">5.3.4. Opérations de Volume (Extrusion, Congés)</h4>
-                        <h4 className="font-medium">5.3.5. Contrôles et Validation Géométrique</h4>
-                        <h4 className="font-medium">5.3.6. Exportation des Pièces</h4>
+                        <div>
+                          <h4 className="font-medium text-blue-700 dark:text-blue-300">5.3.1. Préparation du Fichier</h4>
+                          <ol className="list-decimal pl-5 mt-2 text-sm text-gray-600 dark:text-gray-400">
+                            <li>Ouvrir un nouveau document pièce, format MMGS.</li>
+                            <li>Définir tolérances par défaut dans Propriétés du document.</li>
+                            <li>Enregistrer sous <code className="bg-gray-100 dark:bg-gray-800 px-1 rounded">modele_base.SLDPRT</code>.</li>
+                          </ol>
+                        </div>
+                        
+                        <div>
+                          <h4 className="font-medium text-blue-700 dark:text-blue-300">5.3.2. Esquisse 2D Détaillée</h4>
+                          <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">Plan de face (Front Plane). Esquisse des profils :</p>
+                          <ol className="list-decimal pl-5 text-sm text-gray-600 dark:text-gray-400">
+                            <li>Ligne principale de base (longueur A).</li>
+                            <li>Arcs et cercles (incl. trou Ø14 mm centré).</li>
+                            <li>Positionnement des congés internes (R5) et externes (R29).</li>
+                            <li>Cotes angulaires (45°, 10°) appliquées via contrainte de cote.</li>
+                          </ol>
+                        </div>
+                        
+                        <div>
+                          <h4 className="font-medium text-blue-700 dark:text-blue-300">5.3.3. Définition des Variables Globales</h4>
+                          <div className="bg-blue-50 dark:bg-blue-900/20 p-3 rounded mt-2">
+                            <p className="text-sm"><strong>A</strong> = 81 / 84 mm<br/><strong>B</strong> = 57 / 59 mm<br/><strong>C</strong> = 43 / 45 mm</p>
+                          </div>
+                        </div>
+                        
+                        <div>
+                          <h4 className="font-medium text-blue-700 dark:text-blue-300">5.3.4. Opérations de Volume (Extrusion, Congés)</h4>
+                          <ol className="list-decimal pl-5 mt-2 text-sm text-gray-600 dark:text-gray-400">
+                            <li><strong>Extrusion Bossage/Base</strong> sur épaisseur C.</li>
+                            <li><strong>Découpe</strong> : extrémités profilées selon A, B.</li>
+                            <li><strong>Congés</strong> :
+                              <ul className="list-disc pl-5 mt-1">
+                                <li>R5 sur arêtes internes avant enlèvement latéral.</li>
+                                <li>R29 sur bords externes en finition.</li>
+                              </ul>
+                            </li>
+                          </ol>
+                        </div>
+                        
+                        <div>
+                          <h4 className="font-medium text-blue-700 dark:text-blue-300">5.3.5. Contrôles et Validation Géométrique</h4>
+                          <ul className="list-disc pl-5 mt-2 text-sm text-gray-600 dark:text-gray-400">
+                            <li>Utiliser la fonction « Vérifier géométrie » pour détecter surfaces non-manifold.</li>
+                            <li>Visualiser la masse via Propriétés → Propriétés de masse.</li>
+                            <li>Comparer contre valeurs attendues.</li>
+                          </ul>
+                        </div>
+                        
+                        <div>
+                          <h4 className="font-medium text-blue-700 dark:text-blue-300">5.3.6. Exportation des Pièces</h4>
+                          <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">Enregistrer chaque variante sous <code className="bg-gray-100 dark:bg-gray-800 px-1 rounded">partieX.SLDPRT</code>.</p>
+                        </div>
                       </div>
                     </div>
                     <div>
@@ -223,29 +270,49 @@ export default function MechanicsDocPage() {
                   <CardContent className="p-6 space-y-6">
                     <div>
                       <h3 className="font-semibold text-lg text-gray-800 dark:text-gray-200">7.1. Partie 1 – Variations de A, B, C</h3>
-                      <Image src="/assets/imgs/picture_piece_partie1.png" alt="Vue détaillée de la pièce - Partie 1" width={700} height={400} className="rounded-md border my-4"/>
+                      <Image src="/2025-Team-IFRI-Docs/Documentation/semaine-2/mecanique/assets/imgs/picture_piece_partie1.png" alt="Vue détaillée de la pièce - Partie 1" width={700} height={400} className="rounded-md border my-4" unoptimized/>
                       <div className="grid md:grid-cols-2 gap-4">
                         <div className="bg-gray-50 dark:bg-gray-900/30 border border-gray-200 dark:border-gray-700 rounded p-4">
-                          <h4>Question A</h4>
-                          <ul className="text-sm"><li>Valeurs : <strong>A = 81 mm, B = 57 mm, C = 43 mm</strong></li><li>Masse : <strong>939.54 grammes</strong></li></ul>
-                          <Image src="/assets/imgs/picture_mass_properties_partie1_a.jpg" alt="Propriétés de masse - Partie1 A" width={200} height={150} className="rounded-md border mt-2"/>
+                          <h4 className="font-semibold mb-2">Question A</h4>
+                          <ul className="text-sm space-y-1">
+                            <li>Valeurs : <strong>A = 81 mm, B = 57 mm, C = 43 mm</strong></li>
+                            <li>Masse : <strong>939.54 grammes</strong></li>
+                            <li><a href="/Documentation/semaine-2/mecanique/assets/pieces/piece1/piece_partie1_a.SLDPRT" className="text-blue-600 hover:underline inline-flex items-center gap-1"><Download className="w-3 h-3"/>Télécharger la pièce</a></li>
+                          </ul>
+                          <Image src="/2025-Team-IFRI-Docs/Documentation/semaine-2/mecanique/assets/imgs/picture_mass_properties_partie1_a.jpg" alt="Propriétés de masse - Partie1 A" width={200} height={150} className="rounded-md border mt-2" unoptimized/>
                         </div>
                         <div className="bg-gray-50 dark:bg-gray-900/30 border border-gray-200 dark:border-gray-700 rounded p-4">
-                          <h4>Question B</h4>
-                          <ul className="text-sm"><li>Valeurs : <strong>A = 84 mm, B = 59 mm, C = 45 mm</strong></li><li>Masse : <strong>1032.32 grammes</strong></li></ul>
-                           <Image src="/assets/imgs/picture_mass_properties_partie1_b.png" alt="Propriétés de masse - Partie1 B" width={200} height={150} className="rounded-md border mt-2"/>
+                          <h4 className="font-semibold mb-2">Question B</h4>
+                          <ul className="text-sm space-y-1">
+                            <li>Valeurs : <strong>A = 84 mm, B = 59 mm, C = 45 mm</strong></li>
+                            <li>Masse : <strong>1032.32 grammes</strong></li>
+                            <li><a href="/Documentation/semaine-2/mecanique/assets/pieces/piece1/piece_partie1_b.SLDPRT" className="text-blue-600 hover:underline inline-flex items-center gap-1"><Download className="w-3 h-3"/>Télécharger la pièce</a></li>
+                          </ul>
+                          <Image src="/2025-Team-IFRI-Docs/Documentation/semaine-2/mecanique/assets/imgs/picture_mass_properties_partie1_b.png" alt="Propriétés de masse - Partie1 B" width={200} height={150} className="rounded-md border mt-2" unoptimized/>
                         </div>
                       </div>
                     </div>
                     <div>
                       <h3 className="font-semibold text-lg text-gray-800 dark:text-gray-200">7.2. Partie 2 – Cas supplémentaire</h3>
-                      <Image src="/assets/imgs/picture_piece_partie2.png" alt="Vue détaillée de la pièce - Partie 2" width={700} height={400} className="rounded-md border my-4"/>
-                      <p><strong>Masse : 628.18 grammes</strong></p>
+                      <Image src="/2025-Team-IFRI-Docs/Documentation/semaine-2/mecanique/assets/imgs/picture_piece_partie2.png" alt="Vue détaillée de la pièce - Partie 2" width={700} height={400} className="rounded-md border my-4" unoptimized/>
+                      <div className="flex items-center gap-4 mb-4">
+                        <p><strong>Masse : 628.18 grammes</strong></p>
+                        <a href="/Documentation/semaine-2/mecanique/assets/pieces/piece2/piece_partie2.SLDPRT" className="text-blue-600 hover:underline inline-flex items-center gap-1">
+                          <Download className="w-4 h-4"/>Télécharger la pièce
+                        </a>
+                      </div>
+                      <Image src="/2025-Team-IFRI-Docs/Documentation/semaine-2/mecanique/assets/imgs/picture_mass_properties_partie2.png" alt="Propriétés de masse - Partie2" width={300} height={200} className="rounded-md border" unoptimized/>
                     </div>
                     <div>
                       <h3 className="font-semibold text-lg text-gray-800 dark:text-gray-200">7.3. Partie 3 – Exemple de réduction</h3>
-                      <Image src="/assets/imgs/picture_piece_partie3.png" alt="Vue détaillée de la pièce - Partie 3" width={700} height={400} className="rounded-md border my-4"/>
-                      <p><strong>Masse : 432.58 grammes</strong></p>
+                      <Image src="/2025-Team-IFRI-Docs/Documentation/semaine-2/mecanique/assets/imgs/picture_piece_partie3.png" alt="Vue détaillée de la pièce - Partie 3" width={700} height={400} className="rounded-md border my-4" unoptimized/>
+                      <div className="flex items-center gap-4 mb-4">
+                        <p><strong>Masse : 432.58 grammes</strong></p>
+                        <a href="/Documentation/semaine-2/mecanique/assets/pieces/piece3/picture_piece_partie3.SLDPRT" className="text-blue-600 hover:underline inline-flex items-center gap-1">
+                          <Download className="w-4 h-4"/>Télécharger la pièce
+                        </a>
+                      </div>
+                      <Image src="/2025-Team-IFRI-Docs/Documentation/semaine-2/mecanique/assets/imgs/picture_mass_properties_partie3.png" alt="Propriétés de masse - Partie3" width={300} height={200} className="rounded-md border" unoptimized/>
                     </div>
                     <div>
                       <h3 className="font-semibold text-lg text-gray-800 dark:text-gray-200">7.4. Assemblage et Centre de Masse</h3>
@@ -255,17 +322,23 @@ export default function MechanicsDocPage() {
                         <li>Config. B (A=30°, B=115°, C=135°): <strong>(X=348.66, Y=-88.48, Z=-91.40)</strong></li>
                       </ul>
                       <div className="grid md:grid-cols-2 gap-4 my-4">
-                        <Image src="/assets/imgs/picture_assemblage_a.png" alt="Assemblage - Question A" width={300} height={200} className="rounded-md border"/>
-                        <Image src="/assets/imgs/picture_assemblage_b.png" alt="Assemblage - Question B" width={300} height={200} className="rounded-md border"/>
+                        <Image src="/2025-Team-IFRI-Docs/Documentation/semaine-2/mecanique/assets/imgs/picture_assemblage_a.png" alt="Assemblage - Question A" width={300} height={200} className="rounded-md border" unoptimized/>
+                        <Image src="/2025-Team-IFRI-Docs/Documentation/semaine-2/mecanique/assets/imgs/picture_assemblage_b.png" alt="Assemblage - Question B" width={300} height={200} className="rounded-md border" unoptimized/>
                       </div>
                       <div className="grid md:grid-cols-2 gap-4">
                         <div>
-                          <p>a) Coordonnées pour A=25°; B=125°; C=130° : (X=<strong>327.67</strong>, Y=<strong>-98.39</strong>, Z=<strong>-102.91</strong>)</p>
-                          <Image src="/assets/imgs/picture_mass_properties_a.png" alt="Propriétés masse - Question A" width={300} height={200} className="rounded-md border mt-2"/>
+                          <p className="mb-2">a) Coordonnées pour A=25°; B=125°; C=130° : (X=<strong>327.67</strong>, Y=<strong>-98.39</strong>, Z=<strong>-102.91</strong>)</p>
+                          <a href="/Documentation/semaine-2/mecanique/assets/pieces/assemblage/Question_A.zip" className="text-blue-600 hover:underline inline-flex items-center gap-1 mb-2">
+                            <Download className="w-4 h-4"/>Télécharger assemblage - Question A
+                          </a>
+                          <Image src="/2025-Team-IFRI-Docs/Documentation/semaine-2/mecanique/assets/imgs/picture_mass_properties_a.png" alt="Propriétés masse - Question A" width={300} height={200} className="rounded-md border mt-2" unoptimized/>
                         </div>
                         <div>
-                          <p>b) Coordonnées pour A=30°; B=115°; C=135° : (X=<strong>348.66</strong>, Y=<strong>-88.48</strong>, Z=<strong>-91.40</strong>)</p>
-                          <Image src="/assets/imgs/picture_mass_properties_b.png" alt="Propriétés masse - Question B" width={300} height={200} className="rounded-md border mt-2"/>
+                          <p className="mb-2">b) Coordonnées pour A=30°; B=115°; C=135° : (X=<strong>348.66</strong>, Y=<strong>-88.48</strong>, Z=<strong>-91.40</strong>)</p>
+                          <a href="/Documentation/semaine-2/mecanique/assets/pieces/assemblage/Question_B.zip" className="text-blue-600 hover:underline inline-flex items-center gap-1 mb-2">
+                            <Download className="w-4 h-4"/>Télécharger assemblage - Question B
+                          </a>
+                          <Image src="/2025-Team-IFRI-Docs/Documentation/semaine-2/mecanique/assets/imgs/picture_mass_properties_b.png" alt="Propriétés masse - Question B" width={300} height={200} className="rounded-md border mt-2" unoptimized/>
                         </div>
                       </div>
                     </div>
@@ -283,11 +356,25 @@ export default function MechanicsDocPage() {
                   </CardHeader>
                   <CardContent className="p-6">
                     <div className="overflow-x-auto">
-                      <table className="w-full text-sm">
-                        <thead><tr className="bg-gray-50 dark:bg-gray-800"><th className="px-4 py-2 text-left font-medium">Problème</th><th className="px-4 py-2 text-left font-medium">Analyse</th><th className="px-4 py-2 text-left font-medium">Solution</th></tr></thead>
+                      <table className="w-full text-sm border-collapse">
+                        <thead>
+                          <tr className="bg-orange-100 dark:bg-orange-900/30">
+                            <th className="border p-3 text-left font-medium">Problème</th>
+                            <th className="border p-3 text-left font-medium">Analyse détaillée</th>
+                            <th className="border p-3 text-left font-medium">Solution mise en place</th>
+                          </tr>
+                        </thead>
                         <tbody>
-                          <tr><td className="px-4 py-2 border">Application des congés</td><td className="px-4 py-2 border">Erreurs de géométrie</td><td className="px-4 py-2 border">Séparation en deux opérations</td></tr>
-                          <tr><td className="px-4 py-2 border">Validation du centre de masse</td><td className="px-4 py-2 border">Position non-conforme</td><td className="px-4 py-2 border">Calibration via mesures et ajustement des axes</td></tr>
+                          <tr>
+                            <td className="border p-3">Application des congés dans espaces étroits</td>
+                            <td className="border p-3">Impossibilité de sélectionner toutes les arêtes sans erreurs de géométrie</td>
+                            <td className="border p-3">Séparation en deux opérations : congés internes d'abord, puis externes</td>
+                          </tr>
+                          <tr>
+                            <td className="border p-3">Validation du centre de masse</td>
+                            <td className="border p-3">Position non-conforme aux spécifications angulaires</td>
+                            <td className="border p-3">Calibration via mesures sur assemblage simulé, ajustement des axes de référence</td>
+                          </tr>
                         </tbody>
                       </table>
                     </div>

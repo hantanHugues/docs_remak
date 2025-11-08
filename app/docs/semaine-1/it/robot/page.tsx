@@ -94,7 +94,7 @@ export default function RobotClassDocFRPage() {
                   <CardContent className="prose prose-gray dark:prose-invert max-w-none p-6">
                     <div className="not-prose mb-6">
                       <div className="w-24 h-24 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg flex items-center justify-center mx-auto">
-                        <Image src="/Documentation/semaine-1/it/robot.svg" alt="Icône de Robot" width={48} height={48} className="opacity-60" />
+                        <Image src="/2025-Team-IFRI-Docs/Documentation/semaine-1/it/robot.svg" alt="Icône de Robot" width={48} height={48} className="opacity-60" />
                       </div>
                     </div>
                     <div className="text-gray-700 dark:text-gray-300 leading-relaxed">
@@ -695,7 +695,7 @@ def __eq__(self, other: object) -> bool:
                   </CardHeader>
                   <CardContent className="p-6">
                     <div className="bg-white dark:bg-gray-900/50 border border-gray-200 dark:border-gray-700 rounded-lg p-4">
-                      <Image src="/Documentation/semaine-1/it/diagram.png" alt="Diagramme UML de la classe Robot" width={800} height={600} className="rounded-md mx-auto w-full object-contain" />
+                      <Image src="/2025-Team-IFRI-Docs/Documentation/semaine-1/it/diagram.png" alt="Diagramme UML de la classe Robot" width={800} height={600} className="rounded-md mx-auto w-full object-contain" />
                     </div>
                     <div className="mt-4 text-sm text-gray-600 dark:text-gray-400">
                       <p>

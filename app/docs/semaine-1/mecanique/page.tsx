@@ -13,9 +13,14 @@ import {
   Target, 
   Clock,
   BookOpen,
-  AlertCircle
+  AlertCircle,
+  Download,
+  Play,
+  Settings,
+  Layers
 } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Semaine1MecaniquePage() {
   return (
@@ -128,7 +133,7 @@ export default function Semaine1MecaniquePage() {
                     <Link href="/docs/semaine-1/mecanique/cao">
                       <Button variant="outline" className="w-full justify-start">
                         <Wrench className="w-4 h-4 mr-2" />
-                        Documentation CAO
+                        Documentation CAO Complète
                         <ArrowRight className="w-4 h-4 ml-auto" />
                       </Button>
                     </Link>
@@ -136,7 +141,7 @@ export default function Semaine1MecaniquePage() {
                 </Card>
               </AnimatedSection>
 
-              <AnimatedSection animation="fade-up" delay={300}>
+              <AnimatedSection animation="fade-up" delay={500}>
                 <Card className="border-yellow-200 bg-yellow-50/50 dark:border-yellow-800 dark:bg-yellow-900/10">
                   <CardHeader>
                     <CardTitle className="flex items-center gap-2 text-yellow-800 dark:text-yellow-200">
