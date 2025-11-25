@@ -63,20 +63,7 @@ export default function StreamlitAppDocPage() {
           </AnimatedSection>
 
           {/* Navigation */}
-          <div className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-16 md:top-20 z-30">
-            <div className="container mx-auto px-4">
-              <div className="flex items-center justify-between py-3 max-w-4xl mx-auto">
-                <Link href="/docs/semaine-2/it/sensor-subscriber">
-                  <Button variant="ghost" size="sm">
-                    <ArrowLeft className="w-4 h-4 mr-2" />
-                    Sensor Subscriber
-                  </Button>
-                </Link>
-                <div className="text-sm text-muted-foreground">
-                  Dernière page de la section IT
-                </div>
-              </div>
-            </div>
+          <PageNavigation />
           </div>
 
           {/* Contenu */}

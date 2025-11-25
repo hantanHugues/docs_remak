@@ -16,9 +16,10 @@ const _sourceSerif_4 = V0_Font_Source_Serif_4({ subsets: ['latin'], weight: ["20
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "TRC Competition Documentation",
+  title: "IFRI TRC Docs",
   description: "Documentation for TRC Robotics Competition - From Learning to Excellence",
   generator: "v0.app",
+  // Le fichier app/icon.png sera automatiquement détecté par Next.js
 }
 
 export default function RootLayout({

@@ -83,27 +83,7 @@ export default function BlackBoxControlStationPage() {
           </AnimatedSection>
 
           {/* Navigation */}
-          <div className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-16 md:top-20 z-30">
-            <div className="container mx-auto px-4">
-              <div className="flex items-center justify-between py-3 max-w-4xl mx-auto">
-                <Link href="/docs/semaine-2/electronique">
-                  <Button variant="ghost" size="sm">
-                    <ArrowLeft className="w-4 h-4 mr-2" />
-                    Électronique
-                  </Button>
-                </Link>
-                <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                  <FileText className="w-4 h-4" />
-                  <span>Guide d'assemblage</span>
-                </div>
-                <Link href="#">
-                  <Button variant="ghost" size="sm">
-                    Suivant
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Button>
-                </Link>
-              </div>
-            </div>
+          <PageNavigation />
           </div>
 
           {/* Contenu */}

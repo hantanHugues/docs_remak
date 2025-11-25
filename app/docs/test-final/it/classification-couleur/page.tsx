@@ -57,24 +57,7 @@ export default function ColorDetectionDocPage() {
           </AnimatedSection>
 
           {/* Navigation */}
-          <div className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-16 md:top-20 z-30">
-            <div className="container mx-auto px-4">
-              <div className="flex items-center justify-between py-3 max-w-4xl mx-auto">
-                <Link href="#">
-                  <Button variant="ghost" size="sm">
-                    <ArrowLeft className="w-4 h-4 mr-2" />
-                    Page Précédente
-                  </Button>
-                </Link>
-                <Link href="#">
-                  <Button variant="ghost" size="sm">
-                    Page Suivante
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Button>
-                </Link>
-              </div>
-            </div>
-          </div>
+          <PageNavigation />
 
           {/* Contenu */}
           <div className="container mx-auto px-4 py-8">

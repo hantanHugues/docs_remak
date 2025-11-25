@@ -2,6 +2,7 @@
 
 import { Navbar } from "@/components/navbar";
 import { DocsSidebarWrapper } from "@/components/docs-sidebar-wrapper";
+import { PageNavigation } from "@/components/page-navigation";
 import { AnimatedSection } from "@/components/animated-section"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
@@ -54,23 +55,7 @@ export default function LCDPage() {
           </AnimatedSection>
 
           {/* Navigation */}
-          <div className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-16 md:top-20 z-30">
-            <div className="container mx-auto px-4">
-              <div className="flex items-center justify-between py-3 max-w-4xl mx-auto">
-                <Link href="/docs/semaine-1/electronique/i2c">
-                  <Button variant="ghost" size="sm">
-                    <ArrowLeft className="w-4 h-4 mr-2" />
-                    Circuit I2C
-                  </Button>
-                </Link>
-                <Link href="/docs/semaine-1/electronique">
-                  <Button variant="ghost" size="sm">
-                    Retour à l'Électronique
-                  </Button>
-                </Link>
-              </div>
-            </div>
-          </div>
+          <PageNavigation />
 
           {/* Content */}
           <div className="container mx-auto px-4 py-8">

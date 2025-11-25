@@ -3,6 +3,7 @@
 import { Navbar } from "@/components/navbar";
 import { DocsSidebarWrapper } from "@/components/docs-sidebar-wrapper";
 import { AnimatedSection } from "@/components/animated-section";
+import { PageNavigation } from "@/components/page-navigation";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -15,7 +16,6 @@ import {
 import Link from "next/link";
 import Image from 'next/image';
 import { useMounted } from "@/hooks/use-mounted";
-
 
 export default function TekbotChallengeGyroscopePage() {
   const mounted = useMounted();
@@ -75,25 +75,7 @@ export default function TekbotChallengeGyroscopePage() {
           </AnimatedSection>
 
           {/* Navigation */}
-          <div className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-16 md:top-20 z-30">
-            <div className="container mx-auto px-4">
-              <div className="flex items-center justify-between py-3 max-w-4xl mx-auto">
-                {/* NOTE: Mettez à jour les liens de navigation */}
-                <Link href="#">
-                  <Button variant="ghost" size="sm">
-                    <ArrowLeft className="w-4 h-4 mr-2" />
-                    Page Précédente
-                  </Button>
-                </Link>
-                <Link href="#">
-                  <Button variant="ghost" size="sm">
-                    Page Suivante
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Button>
-                </Link>
-              </div>
-            </div>
-          </div>
+          <PageNavigation />
 
           {/* Content */}
           <div className="container mx-auto px-4 py-8">

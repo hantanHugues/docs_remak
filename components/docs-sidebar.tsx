@@ -219,7 +219,7 @@ export function DocsSidebar({ items }: DocsSidebarProps) {
 
   return (
     <motion.aside
-      className="sticky top-16 md:top-20 h-[calc(100vh-4rem)] md:h-[calc(100vh-5rem)] bg-sidebar/95 backdrop-blur-lg border-r border-sidebar-border/60 z-40 shadow-2xl flex-shrink-0 relative"
+      className="sticky top-16 md:top-20 h-[calc(100vh-4rem)] md:h-[calc(100vh-5rem)] bg-sidebar/95 backdrop-blur-lg border-r z-40 shadow-lg flex-shrink-0 relative group"
       animate={{ 
         width: isExpanded ? 288 : 64 
       }}
@@ -232,6 +232,20 @@ export function DocsSidebar({ items }: DocsSidebarProps) {
       onMouseEnter={() => setIsExpanded(true)}
       onMouseLeave={() => setIsExpanded(false)}
     >
+      {/* Flèche indicatrice d'expansion */}
+      <motion.div
+        className="absolute right-1 top-1/2 -translate-y-1/2 pointer-events-none"
+        animate={{
+          opacity: isExpanded ? 0 : [0.4, 0.8, 0.4],
+          x: isExpanded ? -10 : [0, 3, 0],
+        }}
+        transition={{
+          opacity: { duration: 2, repeat: Infinity, ease: "easeInOut" },
+          x: { duration: 2, repeat: Infinity, ease: "easeInOut" },
+        }}
+      >
+        <ChevronRight className="h-5 w-5 text-sidebar-primary/70" />
+      </motion.div>
       <div className="flex flex-col h-full">
         {/* Home Button */}
         <div className="p-3 border-b border-sidebar-border/60">

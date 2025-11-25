@@ -1,12 +1,48 @@
 import { Github, Mail, ExternalLink } from "lucide-react"
+import Image from "next/image"
 
 export function Footer() {
   return (
     <footer className="border-t border-border bg-card">
       <div className="container mx-auto px-4 py-12">
+        {/* Section Partenaires */}
+        <div className="mb-12 pb-8 border-b border-border/50">
+          <h4 className="text-center text-sm font-semibold text-muted-foreground mb-6 uppercase tracking-wide">
+            Nos Partenaires
+          </h4>
+          <div className="flex items-center justify-center gap-12 flex-wrap">
+            <div className="relative group">
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-chart-1/20 rounded-lg blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="relative bg-background/50 backdrop-blur-sm p-4 rounded-lg border border-border/50 hover:border-primary/30 transition-all duration-300">
+                <Image
+                  src="/IFRI-300x300.png"
+                  alt="IFRI - École des Participants"
+                  width={80}
+                  height={80}
+                  className="object-contain mix-blend-multiply dark:mix-blend-screen dark:opacity-90"
+                />
+                <p className="text-xs text-center mt-2 text-muted-foreground">École IFRI</p>
+              </div>
+            </div>
+            <div className="relative group">
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-chart-1/20 rounded-lg blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="relative bg-background/50 backdrop-blur-sm p-4 rounded-lg border border-border/50 hover:border-primary/30 transition-all duration-300">
+                <Image
+                  src="/téléchargé.png"
+                  alt="TRC - Organisateurs"
+                  width={100}
+                  height={60}
+                  className="object-contain"
+                />
+                <p className="text-xs text-center mt-2 text-muted-foreground">Organisateurs TRC</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div className="space-y-4">
-            <h3 className="text-xl font-bold">TRC Competition</h3>
+            <h3 className="text-xl font-bold">IFRI TRC Docs</h3>
             <p className="text-sm text-muted-foreground leading-relaxed">
               Documentation complète de notre parcours dans la compétition robotique TRC 2024.
             </p>
