@@ -3,6 +3,8 @@
 import { Navbar } from "@/components/navbar";
 import { DocsSidebarWrapper } from "@/components/docs-sidebar-wrapper";
 import { AnimatedSection } from "@/components/animated-section";
+import { PageNavigation } from "@/components/page-navigation";
+
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -84,7 +86,6 @@ export default function BlackBoxControlStationPage() {
 
           {/* Navigation */}
           <PageNavigation />
-          </div>
 
           {/* Contenu */}
           <div className="container mx-auto px-4 py-12">

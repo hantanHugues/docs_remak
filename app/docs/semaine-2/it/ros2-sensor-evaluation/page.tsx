@@ -3,13 +3,12 @@
 import { Navbar } from "@/components/navbar";
 import { DocsSidebarWrapper } from "@/components/docs-sidebar-wrapper";
 import { AnimatedSection } from "@/components/animated-section";
+import { PageNavigation } from "@/components/page-navigation";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import {
-  ArrowLeft, ArrowRight, Code, BookOpen, GitBranch, PlayCircle, FolderTree, BarChart2, Upload, Download, Rocket
-} from "lucide-react";
+import { ArrowLeft, ArrowRight, Code, BookOpen, GitBranch, PlayCircle, FolderTree, BarChart2, Upload, Download, Rocket } from "lucide-react";
 import Link from "next/link";
 
 export default function Ros2SensorEvalPage() {

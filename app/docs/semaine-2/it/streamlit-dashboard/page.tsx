@@ -3,12 +3,28 @@
 import { Navbar } from "@/components/navbar";
 import { DocsSidebarWrapper } from "@/components/docs-sidebar-wrapper";
 import { AnimatedSection } from "@/components/animated-section";
+import { PageNavigation } from "@/components/page-navigation";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import {
-  ArrowLeft, ArrowRight, Code, BookOpen, BarChart2, PlayCircle, Columns, Settings, AlertCircle, Clock, LineChart, List, FileText, CheckCheck, Lock, Palette
+import { 
+  ArrowLeft, 
+  ArrowRight, 
+  Code, 
+  BookOpen, 
+  BarChart2, 
+  PlayCircle, 
+  Columns, 
+  Settings, 
+  AlertCircle, 
+  Clock, 
+  LineChart, 
+  List, 
+  FileText, 
+  CheckCheck, 
+  Lock, 
+  Palette 
 } from "lucide-react";
 import Link from "next/link";
 import Image from 'next/image';
@@ -64,7 +80,6 @@ export default function StreamlitAppDocPage() {
 
           {/* Navigation */}
           <PageNavigation />
-          </div>
 
           {/* Contenu */}
           <div className="container mx-auto px-4 py-8">
