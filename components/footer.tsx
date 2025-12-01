@@ -15,7 +15,7 @@ export function Footer() {
               <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-chart-1/20 rounded-lg blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="relative bg-background/50 backdrop-blur-sm p-4 rounded-lg border border-border/50 hover:border-primary/30 transition-all duration-300">
                 <Image
-                  src="/IFRI-300x300.png"
+                  src="/2025-Team-IFRI-Docs/IFRI-300x300.png"
                   alt="IFRI - École des Participants"
                   width={80}
                   height={80}
@@ -28,7 +28,7 @@ export function Footer() {
               <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-chart-1/20 rounded-lg blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="relative bg-background/50 backdrop-blur-sm p-4 rounded-lg border border-border/50 hover:border-primary/30 transition-all duration-300">
                 <Image
-                  src="/téléchargé.png"
+                  src="/2025-Team-IFRI-Docs/téléchargé.png"
                   alt="TRC - Organisateurs"
                   width={100}
                   height={60}

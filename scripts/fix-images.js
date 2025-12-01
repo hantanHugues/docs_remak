@@ -5,13 +5,28 @@ const path = require('path');
 function fixImagesInFile(filePath) {
   const content = fs.readFileSync(filePath, 'utf8');
   
-  // Remplace les chemins d'images
+  // Remplace les chemins d'images et logos
   const fixedContent = content
+    // Documentation images
     .replace(/src="\/Documentation\//g, 'src="/2025-Team-IFRI-Docs/Documentation/')
-    .replace(/src="\/placeholder-/g, 'src="/2025-Team-IFRI-Docs/placeholder-')
     .replace(/src: "\/Documentation\//g, 'src: "/2025-Team-IFRI-Docs/Documentation/')
+    // Placeholder images
+    .replace(/src="\/placeholder-/g, 'src="/2025-Team-IFRI-Docs/placeholder-')
     .replace(/src: "\/placeholder-/g, 'src: "/2025-Team-IFRI-Docs/placeholder-')
-    .replace(/image: "\/placeholder-/g, 'image: "/2025-Team-IFRI-Docs/placeholder-');
+    .replace(/image: "\/placeholder-/g, 'image: "/2025-Team-IFRI-Docs/placeholder-')
+    // Logos IFRI
+    .replace(/src="\/Ifri_logo\.png/g, 'src="/2025-Team-IFRI-Docs/Ifri_logo.png')
+    .replace(/src: "\/Ifri_logo\.png/g, 'src: "/2025-Team-IFRI-Docs/Ifri_logo.png')
+    .replace(/src="\/IFRI-300x300\.png/g, 'src="/2025-Team-IFRI-Docs/IFRI-300x300.png')
+    .replace(/src: "\/IFRI-300x300\.png/g, 'src: "/2025-Team-IFRI-Docs/IFRI-300x300.png')
+    // Autres logos téléchargés
+    .replace(/src="\/téléchargé\.png/g, 'src="/2025-Team-IFRI-Docs/téléchargé.png')
+    .replace(/src: "\/téléchargé\.png/g, 'src: "/2025-Team-IFRI-Docs/téléchargé.png')
+    .replace(/src="\/téléchargé2\.png/g, 'src="/2025-Team-IFRI-Docs/téléchargé2.png')
+    .replace(/src: "\/téléchargé2\.png/g, 'src: "/2025-Team-IFRI-Docs/téléchargé2.png')
+    // Pattern générique pour toutes les images .png, .jpg, .svg à la racine de public
+    .replace(/src="\/([a-zA-Z0-9_-]+\.(png|jpg|jpeg|svg|gif))"/g, 'src="/2025-Team-IFRI-Docs/$1"')
+    .replace(/src: "\/([a-zA-Z0-9_-]+\.(png|jpg|jpeg|svg|gif))"/g, 'src: "/2025-Team-IFRI-Docs/$1"');
   
   if (content !== fixedContent) {
     fs.writeFileSync(filePath, fixedContent);

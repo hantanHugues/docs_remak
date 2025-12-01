@@ -36,7 +36,7 @@ export function Navbar() {
             <div className="flex items-center gap-4">
               <div className="relative h-14 w-40 bg-white dark:bg-white/95 rounded-xl flex items-center justify-center border border-border/30 px-4">
                 <Image
-                  src="/téléchargé.png"
+                  src="/2025-Team-IFRI-Docs/téléchargé.png"
                   alt="TRC Logo"
                   width={150}
                   height={56}
@@ -93,7 +93,7 @@ export function Navbar() {
             <div className="hidden lg:flex items-center mr-4">
               <div className="relative w-14 h-14 opacity-90 hover:opacity-100 transition-opacity">
                 <Image
-                  src="/IFRI-300x300.png"
+                  src="/2025-Team-IFRI-Docs/IFRI-300x300.png"
                   alt="IFRI - École"
                   width={56}
                   height={56}
@@ -111,7 +111,7 @@ export function Navbar() {
                 )}
               >
                 <Image
-                  src="/téléchargé.png"
+                  src="/2025-Team-IFRI-Docs/téléchargé.png"
                   alt="TRC Logo"
                   width={150}
                   height={56}
